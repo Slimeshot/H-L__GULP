@@ -1,0 +1,112 @@
+.ur {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column: span 15;
+    grid-row: span 8;
+    --nr:8; /* number of rows */
+    --nc:15; /* number of columns */
+    --b:1px; /* border length */
+    
+    width: 100%;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.2) 0;
+    background:
+      linear-gradient(to right, var(--g)),
+      linear-gradient(to bottom,var(--g)), $accent;
+    background-size:
+      calc((100% - var(--b)*(var(--nc) - 1))/var(--nc) + var(--b)) 100%,
+      100% calc((100% - var(--b)*(var(--nr) - 1))/var(--nr) + var(--b));
+}
+.bg__ur {
+    grid-column: 2 / 8;
+    grid-row: 2 / 8;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+   
+}
+
+.ur__logo {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: center;
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.6em;
+    line-height: 1em;
+    color: #FFFFFF;
+    text-decoration: none;
+    &:hover {
+        color: #fff;
+    }
+}
+
+.ur__navigation {
+    grid-column: 3 / 7;
+    grid-row: 1 / 2;
+    z-index: 1;
+}
+
+.ur__social {
+    grid-column: 15 / 16;
+    grid-row: 1 / 5;
+}
+
+.ur__title {
+    grid-column: 8 / 14;
+    grid-row: 4 / 6;
+    align-self: center;
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9.6em;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.ur__subtitle {
+    grid-column: 12 / 14;
+    grid-row: 4 / 5;
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.4em;
+    line-height: 1.2em;
+    text-align: right;
+    color: #FFFFFF;
+    align-self: center;
+    justify-self: start;
+}
+.ur__btn {
+    grid-column: 9 / 12;
+    grid-row: 6 / 7;
+}
+.btn {
+}
+
+.ur__btn-green {
+    grid-column: 13 / 16;
+    grid-row: 8 / 9;
+    background-color: $darkgreen;
+    &:hover {
+        color: #fff;
+        background-color: lighten($darkgreen, 2);
+    }
+    &:active {
+        background-color: darken($darkgreen, 2);
+    }
+}
+
+.ur__color-1 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: $darkgreen;
+}
+
+.ur__color-2 {
+    grid-column: 7 / 8;
+    grid-row: 8 / 9;
+    background-color: $darkgreen;
+}
+

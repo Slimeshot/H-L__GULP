@@ -1,0 +1,57 @@
+.green__block {
+    background-color: #1F7537;
+    color: #FFFFFF;
+    padding: 3.2em 0px 0px 3.2em;
+}
+.green__block-work {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2em;
+    line-height: 1em;
+    color: #FFFFFF;
+    margin-bottom: 2em;
+}
+.green__block-number {
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14em;
+    line-height: 0.8em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.green__block-period {
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6em;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+
+@media (max-width: 1024px) {
+    .green__block-work {
+        font-size: 1.8em;
+        margin-bottom: 5em;
+    }
+    .green__block-number {
+        font-size: 10em;
+        line-height: 0.8em;
+    }
+
+}
+
+@media (max-width: 540px) {
+    .green__block-work {
+        font-size: 1.8em;
+        margin-bottom: 7em;
+    }
+    .green__block-number {
+        font-size: 10em;
+        line-height: 0.8em;
+    }
+
+}

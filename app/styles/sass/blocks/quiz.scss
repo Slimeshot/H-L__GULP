@@ -1,0 +1,36 @@
+.quiz {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.quiz__number {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: center;
+    justify-self: end;
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9.6em;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.quiz__prev {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #A5C8AF;
+}
+.quiz__next {
+    cursor: pointer;
+    grid-column: 7 / 8;
+    grid-row: 3 / 4;
+}
+.btn {
+}
+.quiz__block {
+}

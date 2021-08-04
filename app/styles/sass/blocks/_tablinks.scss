@@ -1,0 +1,17 @@
+.tablinks {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2em;
+    line-height: 1.2em;
+    color: #1F7537;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+}
+.tablinks.active {
+    background-color: #1F7537;
+    color: #fff; 
+}

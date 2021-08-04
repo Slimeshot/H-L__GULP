@@ -1,0 +1,46 @@
+.bankruptcy {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column: span 15;
+    grid-row: span 7;
+}
+.bankruptcy__title {
+    grid-column: 2 / 10;
+    grid-row: 2 / 3;
+}
+.bankruptcy__info {
+    grid-column: 3 / 8;
+    grid-row: 4 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bankruptcy__count {
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.6em;
+    line-height: 1em;
+    color: #1F7537;
+}
+.bankruptcy__subtitle {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2em;
+    line-height: 1.6em;
+    color: #818181;
+}
+.bankruptcy__btn {
+    grid-column: 3 / 7;
+    grid-row: 6 / 7;
+}
+
+.bankruptcy__img {
+    grid-column: 10 / 16;
+    grid-row: 2 / 7;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

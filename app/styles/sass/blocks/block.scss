@@ -1,0 +1,22 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column: span 15;
+    grid-row: span 6;
+}
+.board__bg {
+    grid-column: 2 / 15;
+    grid-row: 2 / 6;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background: #F1F7F3;
+}
+.board__title {
+    grid-column: 3 / 12;
+    grid-row: 1 / 4;
+    text-align: center;
+    align-self: center;
+}
+

@@ -1,0 +1,42 @@
+.tabcontent {
+    grid-column: span 11;
+    grid-row: span 2;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.tabcontent__menu {
+    grid-column: 1 / 8;
+    grid-row: 1 / 3;
+}
+.tabcontent__list {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2em;
+    line-height: 2em;
+    color: #4D4D4D;
+    &::before {
+        content: "\2022";  
+        color: #E9A237; 
+        font-weight: bold; 
+        display: inline-block; 
+        width: 1em;  
+    }
+}
+.tabcontent__price {
+    grid-column: 9 / 11;
+    grid-row: 2 / 3;
+    justify-self: center;
+    align-self: center;
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.8em;
+    line-height: 1.6em;
+    color: #000000;
+}
+.tabcontent__btn {
+    grid-column: 11 / 12;
+    grid-row: 2 / 3;
+}

@@ -1,0 +1,30 @@
+.info__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #D2E3D7;
+}
+.info__block-title {
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6.4em;
+    line-height: 1em;
+    text-transform: uppercase;
+    // color: #D2E3D7;
+}
+.info__block-subtitle {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8em;
+    line-height: 1.8em;
+    // color: #D2E3D7;
+    
+}
+
+.need {
+    .info__block {
+        color: $darkgreen;
+    }
+}

@@ -1,0 +1,274 @@
+.fiz {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column: span 15;
+    grid-row: span 8;
+    --nr:8; /* number of rows */
+    --nc:15; /* number of columns */
+    --b:1px; /* border length */
+    
+    width: 100%;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.2) 0;
+    background:
+      linear-gradient(to right, var(--g)),
+      linear-gradient(to bottom,var(--g)), $accent;
+    background-size:
+      calc((100% - var(--b)*(var(--nc) - 1))/var(--nc) + var(--b)) 100%,
+      100% calc((100% - var(--b)*(var(--nr) - 1))/var(--nr) + var(--b));
+}
+.fiz__navigation {
+    grid-column: 3 / 7;
+    grid-row: 1 / 2;
+    z-index: 1;
+}
+
+.fiz__social {
+    grid-column: 15 / 16;
+    grid-row: 1 / 5;
+}
+
+.fiz__title {
+    grid-column: 2 / 8;
+    grid-row: 3 / 5;
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9.6em;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.fiz__subtitle {
+    grid-column: 6 / 8;
+    grid-row: 3 / 4;
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.4em;
+    line-height: 2.8em;
+    color: #FFFFFF;
+    align-self: center;
+}
+.fiz__btn {
+    grid-column: 3 / 6;
+    grid-row: 5 / 6;
+}
+.bg__fiz {
+    grid-column: 9 / 15;
+    grid-row: 1 / 7;
+    background-image: url(../images/dist/Bg__fiz.png);
+    background-size: cover;
+}
+.fiz__logo {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: center;
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.6em;
+    line-height: 1em;
+    color: #FFFFFF;
+    text-decoration: none;
+    &:hover {
+        color: #fff;
+    }
+}
+
+
+.fiz__block-1 {
+    grid-column: 5 / 8;
+    grid-row: 7 / 9;
+}
+.fiz__block-2 {
+    grid-column: 8 / 11;
+    grid-row: 7 / 9;
+}
+.fiz__block-3 {
+    grid-column: 11 / 14;
+    grid-row: 7 / 9;
+}
+
+
+.fiz__color-1 {
+    grid-column: 1 / 4;
+    grid-row: 7 / 9;
+    background-color: $darkgreen;
+}
+.fiz__color-2 {
+    grid-column: 15 / 16;
+    grid-row: 7 / 8;
+    background-color: $darkgreen;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .fiz {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        grid-column: span 8;
+        grid-row: span 12;
+        --nr:12; /* number of rows */
+        --nc:8; /* number of columns */
+    }
+    .fiz__navigation {
+        grid-column: 3 / 8;
+        grid-row: 1 / 2;
+        z-index: 1;
+    }
+    
+    .fiz__social {
+        grid-column: 8 / 9;
+        grid-row: 1 / 5;
+    }
+    
+    .fiz__title {
+        grid-column: 2 / 6;
+        grid-row: 6 / 7;
+        font-size: 6.4em;
+    }
+    .fiz__subtitle {
+        grid-column: 4 / 6;
+        grid-row: 6 / 7;
+        font-size: 2em;
+        line-height: 1em;
+        align-self: start;
+        margin-top: 1.5em;
+        justify-self: center;
+    }
+    .fiz__btn {
+        grid-column: 6 / 9;
+        grid-row: 8 / 9;
+    }
+    .bg__fiz {
+        grid-column: 1 / 9;
+        grid-row: 2 / 6;
+        background-image: url(../images/dist/Bg__fiz-tablet.png);
+    }
+    .fiz__logo {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        font-size: 3.2em;
+    }
+    
+    
+    .fiz__block-1 {
+        grid-column: 2 / 4;
+        grid-row: 8 / 10;
+    }
+    .fiz__block-2 {
+        grid-column: 2 / 4;
+        grid-row: 10 / 12;
+    }
+    .fiz__block-3 {
+        grid-column: 6 / 8;
+        grid-row: 10 / 12;
+    }
+    
+    
+    .fiz__color-1 {
+        grid-column: 1 / 2;
+        grid-row: 12 / 13;
+        background-color: $darkgreen;
+    }
+    .fiz__color-2 {
+        display: none;
+    }
+    
+    
+}
+
+
+@media (max-width: 540px) {
+    .fiz {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(14, 1fr);
+        grid-column: span 5;
+        grid-row: span 14;
+        --nr:14; /* number of rows */
+        --nc:5; /* number of columns */
+    }
+    .fiz__social {
+        grid-column: 5 / 6;
+        grid-row: 1 / 6;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        z-index: 3;
+        .social__list:nth-child(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+        .social__list:nth-child(2) {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+        .social__list:nth-child(3) {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+        }
+        .social__list:nth-child(4) {
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+        }
+    }
+    
+    .fiz__title {
+        grid-column: 1 / 5;
+        grid-row: 6 / 8;
+        font-size: 5.2em;
+        align-self: center;
+        padding-left: 0.5em;
+    }
+    .fiz__subtitle {
+        grid-column: 3 / 5;
+        grid-row: 6 / 7;
+        font-size: 1.6em;
+        line-height: 1em;
+        align-self: end;
+        margin-bottom: 0.5em;
+        justify-self: center;
+    }
+    .fiz__btn {
+        grid-column: 3 / 6;
+        grid-row: 14 / 15;
+    }
+    .bg__fiz {
+        grid-column: 1 / 6;
+        grid-row: 2 / 6;
+        background-image: url(../images/dist/Bg__fiz-mobile.png);
+    }
+    .fiz__logo {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        font-size: 2.4em;
+    }
+    
+    
+    .fiz__block-1 {
+        grid-column: 1 / 5;
+        grid-row: 8 / 10;
+        padding-left: 2.5em;
+    }
+    .fiz__block-2 {
+        grid-column: 1 / 5;
+        grid-row: 10 / 12;
+        padding-left: 2.5em;
+    }
+    .fiz__block-3 {
+        grid-column: 1 / 5;
+        grid-row: 12 / 14;
+        padding-left: 2.5em;
+    }
+    
+    
+    .fiz__color-1 {
+        display: none;
+    }
+
+    
+}

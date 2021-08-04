@@ -1,0 +1,98 @@
+.spec {
+    grid-column: span 15;
+    grid-row: span 9;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    display: grid;
+}
+.spec__title {
+    grid-column: 2 / 8;
+    grid-row: 2 / 4;
+    align-self: center;
+    z-index: 1;
+}
+.spec__img {
+    grid-column: 1 / 10;
+    grid-row: 3 / 10;
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+.spec__form {
+    grid-column: 8 / 15;
+    grid-row: 4 / 6;
+}
+
+.spec__name {
+    font-style: normal;
+    font-weight: normal;
+    line-height: 3.2em;
+    color: #4C915F;
+    span:first-child {
+        font-family: Forum;
+        font-size: 2.8em;
+        text-transform: uppercase;
+    }
+    span:last-child {
+        font-family: Gilroy;
+        font-size: 2em;
+    }
+    grid-column: 9 / 12;
+    grid-row: 7 / 9;
+}
+
+.spec__color-1 {
+    grid-column: 9 / 10;
+    grid-row: 1 / 2;
+    background-color: $lightorange;
+}
+.spec__color-2 {
+    grid-column: 14 / 15;
+    grid-row: 2 / 3;
+    background-color: $lightgreen;
+}
+.spec__color-3 {
+    grid-column: 13 / 14;
+    grid-row: 3 / 4;
+    background-color: $lightorange;
+}
+.spec__color-4 {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+    background-color: darken($lightorange, 20);
+    opacity: 0.1;
+}
+.spec__color-5 {
+    grid-column: 15 / 16;
+    grid-row: 7 / 8;
+    background-color: $lightorange;
+}
+.spec__color-6 {
+    grid-column: 1 / 2;
+    grid-row: 8 / 9;
+    background-color: $lightorange;
+}
+.spec__color-7 {
+    grid-column: 7 / 8;
+    grid-row: 7 / 8;
+    background-color: darken($lightgreen, 30);
+    opacity: 0.1;
+}
+.spec__color-8 {
+    grid-column: 8 / 9;
+    grid-row: 8 / 9;
+    background-color: darken($lightorange, 30);
+    opacity: 0.1;
+}
+.spec__color-9 {
+    grid-column: 5 / 6;
+    grid-row: 9 / 10;
+    background-color: $lightgreen;
+}
+.spec__color-10 {
+    grid-column: 13 / 14;
+    grid-row: 9 / 10;
+    background-color: $lightgreen;
+}

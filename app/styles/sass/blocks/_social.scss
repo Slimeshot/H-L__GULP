@@ -1,0 +1,37 @@
+.social {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: span 4;
+}
+.social__list {
+    &:nth-child(1) {
+        .social__link {
+            background-color: #E9A237;
+            &:hover {
+                background-color: lighten(#E9A237, 5);
+            }
+            &:active {
+                background-color: darken(#E9A237, 5);
+            }
+        }
+    }
+}
+.social__link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0D5220;
+    transition: background-color .2s ease-in-out;
+    &:hover {
+        background-color: lighten(#0D5220, 3);
+    }
+    &:active {
+        background-color: darken(#0D5220, 5);
+    }
+    img {
+        height: 2.4em;
+        width: 2.4em;
+    }
+}
+
