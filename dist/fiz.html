@@ -27,15 +27,30 @@
 	
 <div class="physical">
     <div class="grid">
+        <div class="bg__black"></div>
+        <section class="call">
+			<img src="../images/dist/cross.png" alt="cross" class="call__button">
+			<h6 class="call__title">Свяжитесь с нами</h6>
+			<form class="call__form" id="index__call">
+				<input class="call__name" name="name" type="text" placeholder="Имя" required> 
+				<input class="call__phone" name="phone" type="text" placeholder="Телефон" required> 
+				<input class="call__text" name="text" type="text" placeholder="Вопрос" required> 
+				<input type="submit" id="sendCall__index" value="Оставить заявку" class="btn call__btn">
+			</form>
+		</section>
         <header class="fiz">
             
-            <div class="header__burger">
-                <div class="line line-1"></div>
-                <div class="line line-2"></div>
-                <div class="line line 3"></div>
-            </div>
+            <div class="burger">
+			</div>
             <a href="index.html" class="fiz__logo">H&L</a>
             <nav class="fiz__navigation navigation">
+                <img src="images/dist/green__block.jpg" class="grid__sizers" alt="block" aria-hidden="true">
+				<ul class="navigation__social social">
+					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/search.svg" alt=""></a></li>
+					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/mail.svg" alt=""></a></li>
+					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/viber.svg" alt=""></a></li>
+					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/telegram.svg" alt=""></a></li>
+				</ul>
                 <ul class="navigation__menu">
                     <li class="navigation__list"><a href="#" class="navigation__link">Услуги</a></li>
                     <li class="navigation__list"><a href="#" class="navigation__link">Контакты</a></li>
@@ -52,9 +67,8 @@
             </ul>
             <h1 class="fiz__title">Юрист <br> по банкротству</h1>
             <span class="fiz__subtitle">Для физических лиц</span>
-            <a href="#" class="fiz__btn btn">Получить консультацию <span><img src="images/dist/arrow-right.svg" alt="arrow-right"></span></a>
-            <img src="images/dist/Bg__fiz.png" alt="" class="bg__fiz">
-
+            <a href="#" class="fiz__btn btn cons__btn"><span>Получить консультацию</span> <span><img src="images/dist/arrow-right.svg" alt="arrow-right"></span></a>
+            <div class="bg__fiz"></div>
             <div class="fiz__block-1 info__block">
                 <span class="info__block-title">01</span>
                 <span class="info__block-subtitle">спишем задолженность <br>
@@ -71,15 +85,31 @@
             </div>
             <div class="fiz__color-1"></div>
             <div class="fiz__color-2"></div>
-
+            <img src="images/dist/green__block.jpg" class="grid__sizer" alt="block" aria-hidden="true">
         </header>
 
 
         <section class="option">
-            <h2 class="option__title title">Варианты списания долгов</h2>
+            <h2 class="option__title title">Варианты<br> списания долгов</h2>
+            <!-- <select class="option__select-tabs">
+                <option value="0">Реструктуризация долга</option>
+                <option value="1">Реализация имущества</option>
+                <option value="2">Внесудебное банкротство</option>
+            </select> -->
+            <div class="select option__select-tablinks">
+                <div class="select__header">
+                    <span class="select__current">Реализация имущества</span>
+                    <div class="select__icon"></div>
+                </div>
+                <div class="select__body">
+                    <div class="select__item option__select">Реструктуризация долга</div>
+                    <div class="select__item option__select">Реализация имущества</div>
+                    <div class="select__item option__select">Внесудебное банкротство</div>
+                </div>
+            </div>
             <h3 class="option__tabs-1 option__tabs" id="defaultOpen">Реструктуризация долга</h3>
             <h3 class="option__tabs-2 option__tabs">Реализация имущества</h3>
-            <h3 class="option__tabs-3 option__tabs">Внесудебное банкротство </h3>
+            <h3 class="option__tabs-3 option__tabs">Внесудебное банкротство</h3>
             <div class="option__label-1 option__label">Требования к гражданину:</div>
             <div class="option__label-2 option__label">Преимущества:</div>
             <div id="debt" class="option__info">
@@ -123,20 +153,18 @@
 
 
         <section class="spec">
-            <h2 class="spec__title title">Есть вопрос? 
+            <h2 class="spec__title title">Есть вопрос? <br>
             Задайте его специалисту</h2>
-            <div class="spec__img">
-                <img src="images/dist/men_2.jpg" alt="man">
-            </div>
+            <div class="spec__img"></div>
             <form class="spec__form form js-scroll slide-right">
                 <input class="form__name" name="name" type="text" placeholder="Имя"> 
                 <input class="form__phone" name="phone" type="text" placeholder="Телефон"> 
                 <input class="form__quest" name="question" type="text" placeholder="Вопрос"> 
                 <input type="submit" value="" class="form__btn-primary">
             </form>
-            <div class="spec__name"><span>Дмитрий Кузнецов</span><span> Адвокат по банкротству 
-                и административному праву</span>
-            </div>
+            <div class="spec__name">Дмитрий<br><span>Кузнецов</span></div>
+            <div class="spec__prof"><span>Адвокат по банкротству<br>
+                и административному праву</span></div>
             <div class="spec__color-1"></div>
             <div class="spec__color-2"></div>
             <div class="spec__color-3"></div>
@@ -155,6 +183,22 @@
             <h3 class="price__tablinks-1 tablinks" id="defaultOpens">Реструктуризация долга</h3>
             <h3 class="price__tablinks-2 tablinks">Реализация имущества</h3>
             <h3 class="price__tablinks-3 tablinks">Внесудебное банкротство </h3>
+            <!-- <select class="price__select-tablinks">
+                <option value="0">Реструктуризация долга</option>
+                <option value="1">Реализация имущества</option>
+                <option value="2">Внесудебное банкротство</option>
+            </select> -->
+            <div class="select price__select-tablinks">
+                <div class="select__header">
+                    <span class="select__current">Реализация имущества</span>
+                    <div class="select__icon"></div>
+                </div>
+                <div class="select__body">
+                    <div class="select__item select__price">Реструктуризация долга</div>
+                    <div class="select__item select__price">Реализация имущества</div>
+                    <div class="select__item select__price">Внесудебное банкротство</div>
+                </div>
+            </div>
             <div class="price__tabcontent tabcontent">
                 <ul class="tabcontent__menu">
                     <li class="tabcontent__list">Подготовка необходимого для обращения в суд пакета документов</li>
@@ -191,16 +235,114 @@
 
         <section class="ask">
             <h2 class="ask__title title">
-                Ответьте на вопросы
-                и получите решение 
+                Ответьте на вопросы<br>и получите решение 
             </h2>
             <div class="ask_quiz">
                 <form action="" class="quiz">
-                    <div class="quiz__number">01</div>
-                    <div class="quiz__prev">Назад</div>
-                    <div class="quiz__next btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></div>
-                    <div class="quiz__block"></div>
-                    
+                    <button class="quiz__prev" disabled>Назад</button>
+                    <button class="quiz__next btn" disabled><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
+                    <div class="quiz__step quiz__step-active" data-step="0">
+                        <div class="quiz__number">01</div>
+                        <div class="quiz__title">Кредиторы подали на вас в суд?</div>
+                        <div class="quiz__block">
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="marshrut" name="firstAsk" value="Да" type="radio">
+                                <label class="quiz__radioLabel" for="marshrut">
+                                    <span>Да</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="pol" name="firstAsk" value="Нет" type="radio">
+                                <label class="quiz__radioLabel" for="pol">
+                                    <span>Нет</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="thin" name="firstAsk" value="Говорили о намерении" type="radio">
+                                <label class="quiz__radioLabel" for="thin">
+                                    <span>Говорили о намерении</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__step" data-step="1">
+                        <div class="quiz__number">02</div>
+                        <div class="quiz__title">Имеется ли ипотечный кредит?</div>
+                        <div class="quiz__block">
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="marshruts" name="secondAsk" value="Да" type="radio">
+                                <label class="quiz__radioLabel" for="marshruts">
+                                    <span>Да</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="pols" name="secondAsk" value="Нет" type="radio">
+                                <label class="quiz__radioLabel" for="pols">
+                                    <span>Нет</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__step" data-step="2">
+                        <div class="quiz__number">03</div>
+                        <div class="quiz__title">Общая сумма вашего долга?</div>
+                        <div class="quiz__block">
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="mal" name="thirdAsk" value="до 500.000 руб" type="radio">
+                                <label class="quiz__radioLabel" for="mal">
+                                    <span>До 500.000 руб</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="med" name="thirdAsk" value="от 500.000 до 1.000.000 руб" type="radio">
+                                <label class="quiz__radioLabel" for="med">
+                                    <span>От 500.000 до 1.000.000&nbsp;руб</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="big" name="thirdAsk" value="более 1.000.000 руб" type="radio">
+                                <label class="quiz__radioLabel" for="big">
+                                    <span>Более 1.000.000 руб</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__step" data-step="3">
+                        <div class="quiz__number">04</div>
+                        <div class="quiz__title">Общая сумма вашего долга?</div>
+                        <div class="quiz__block">
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="netu" name="fourthAsk" value="отсутсвует" type="radio">
+                                <label class="quiz__radioLabel" for="netu">
+                                    <span>Отсутсвует</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="mot" name="fourthAsk" value="до 3х месяцев" type="radio">
+                                <label class="quiz__radioLabel" for="mot">
+                                    <span>До 3х месяцев</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="bol" name="fourthAsk" value="от 3х месяцев и более" type="radio">
+                                <label class="quiz__radioLabel" for="bol">
+                                    <span>От 3х месяцев и более</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__step" data-step="4">
+                        <div class="quiz__number">05</div>
+                        <div class="quiz__title">Куда отправить решение?</div>
+                        <div class="quiz__block">  
+                            <input class="quiz__input" name="phone" type="text" placeholder="Телефон" required> 
+						    <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" class="quiz__input" type="email" name="email" placeholder="E-mail" required>
+                        </div>
+                    </div>
+                    <div class="quiz__finish">
+                        <img src="images/dist/icon/check.svg" alt="chek" class="quiz__check">
+                        <div class="quiz__message">Спасибо, ваша<br>заявка получена!</div>
+                    </div>
                 </form>
             </div>
 
@@ -210,7 +352,7 @@
 
 
         <section class="experts">
-            <h2 class="experts__title title">Банкротство - это не страшно,
+            <h2 class="title experts__title">Банкротство - это не страшно,<br>
                 когда вам помогают эксперты</h2>
             <div class="experts__block-1 green__block">
                 <div class="green__block-work">На рынке</div>
@@ -236,25 +378,34 @@
         </section>
 
         <section class="get">
-            <h2 class="get__title get__title-fiz title js-scroll fade-in-bottom">По завершении процедуры банкротства, вы получите</h2>
-            <div class="get__block-1 get__block js-scroll fade-in-bottom">
-                <div class="get__block-square"></div>
-                <h3 class="get__block-title">Свободу</h3>
-                <p class="get__block-description">от долговых обязательств
-                    перед кредиторами</p>
-            </div>
-            <div class="get__block-2 get__block js-scroll fade-in-bottom">
-                <div class="get__block-square"></div>
-                <h3 class="get__block-title">Спокойствие</h3>
-                <p class="get__block-description">звонков от кредитора
-                    больше не будет</p>
-            </div>
-            <div class="get__block-3 get__block js-scroll fade-in-bottom">
-                <div class="get__block-square"></div>
-                <h3 class="get__block-title">Возможность</h3>
-                <p class="get__block-description">спокойно распоряжаться своим имуществом, и ездить за границу</p>
-            </div>
-        </section>
+			<h2 class="title get__title js-scroll fade-in-bottom">По завершении процедуры банкротства, вы получите</h2>
+			<div class="get__block-1 get__block js-scroll fade-in-bottom">
+				<div class="get__block-square"></div>
+				<div class="get__block-text">
+					<h3 class="get__block-title">Свободу</h3>
+					<p class="get__block-description">от долговых обязательств<br>
+						перед кредиторами</p>
+				</div>
+			</div>
+			<div class="get__block-2 get__block js-scroll fade-in-bottom">
+				<div class="get__block-square"></div>
+				<div class="get__block-text">
+					<h3 class="get__block-title">Спокойствие</h3>
+					<p class="get__block-description">звонков от кредитора<br>
+						больше не будет</p>
+				</div>
+			</div>
+			<div class="get__block-3 get__block js-scroll fade-in-bottom">
+				<div class="get__block-square"></div>
+				<div class="get__block-text">
+					<h3 class="get__block-title">Возможность</h3>
+					<p class="get__block-description">спокойно распоряжаться своим имуществом, и ездить за границу</p>
+				</div>
+			</div>
+            <div class="get__color-1"></div>
+            <div class="get__color-2"></div>
+            <div class="get__color-3"></div>
+		</section>
 
 
         <section class="paper">

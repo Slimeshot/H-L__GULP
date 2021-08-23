@@ -23,6 +23,26 @@ body {
     font-size: 0.52083vw;
 }
 
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #A5C8AF;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #A5C8AF;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #A5C8AF;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #A5C8AF;
+}
+
+
+
+
+body.active {
+    overflow: hidden;
+}
+
 p,h1,h2,h3 {
     padding: 0;
     margin: 0;

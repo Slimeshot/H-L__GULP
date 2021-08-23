@@ -27,6 +27,17 @@
 	
 <div class="index">
 	<div class="grid">
+		<div class="bg__black"></div>
+		<section class="call">
+			<img src="../images/dist/cross.png" alt="cross" class="call__button">
+			<h6 class="call__title">Свяжитесь с нами</h6>
+			<form class="call__form" id="index__call">
+				<input class="call__name" name="name" type="text" placeholder="Имя" required> 
+				<input class="call__phone" name="phone" type="text" placeholder="Телефон" required> 
+				<input class="call__text" name="text" type="text" placeholder="Вопрос" required> 
+				<input type="submit" id="sendCall__index" value="Оставить заявку" class="btn call__btn">
+			</form>
+		</section>
 		<header class="header">
 			<div class="header__animate animate">
 				<div class="animate__block-1 animate__block js-scroll-animation slide-left-anim"></div>
@@ -63,12 +74,15 @@
 			<!-- <img src="images/dist/Bg__Intro.png" alt="" class="bg__intro"> -->
 			<!-- <img src="images/dist/Bg__Intro-tablet.png" alt="" class="header__bg"> -->
 			<div class="header__bg"></div>	
-			<button class="burger">
-				<div class="line-1 line"></div>
-				<div class="line-2 line"></div>
-				<div class="line-3 line"></div>
-			</button>
+			<div class="burger"></div>
 			<nav class="header__navigation navigation">
+				<img src="images/dist/green__block.jpg" class="grid__sizers" alt="block" aria-hidden="true">
+				<ul class="navigation__social social">
+					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/search.svg" alt=""></a></li>
+					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/mail.svg" alt=""></a></li>
+					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/viber.svg" alt=""></a></li>
+					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/telegram.svg" alt=""></a></li>
+				</ul>
 				<ul class="navigation__menu">
 					<li class="navigation__list"><a href="#" class="navigation__link">Услуги</a></li>
 					<li class="navigation__list"><a href="#" class="navigation__link">Контакты</a></li>
@@ -87,10 +101,10 @@
 				<h1 class="header__title ">Hear Listen</h1>
 				<span class="header__subtitle">Адвокатское бюро</span>
 			</div>
-			<a href="#" class="header__btn btn">Получить консультацию <span><img src="images/dist/arrow-right.svg" alt="arrow-right"></span></a>
+			<a href="#" class="header__btn btn cons__btn">Получить консультацию <span><img src="images/dist/arrow-right.svg" alt="arrow-right"></span></a>
 			<div class="header__color">
-				<img src="images/dist/green__block.jpg" alt="block" aria-hidden="true">
 			</div>
+			<img src="images/dist/green__block.jpg" class="grid__sizer" alt="block" aria-hidden="true">
 		</header>
 
 		<section class="about">
@@ -116,30 +130,30 @@
 
 		<section class="way">
 			<h2 class="way_title title js-scroll fade-in-bottom">Направления работы</h2>
-			<div class="way__block-1 way__block js-scroll slide-left">
+			<a href="fiz.html" class="way__block-1 way__block js-scroll slide-left">
 				<h3 class="way__block-title">банкротство ФИЗИЧЕСКИХ лиц</h3>
 				<div class="way__block-char">+</div>
-			</div>
-			<div class="way__block-2 way__block js-scroll slide-right">
+			</a>
+			<a href="property.html" class="way__block-2 way__block js-scroll slide-right">
 				<h3 class="way__block-title">Споры по недвижимости</h3>
 				<div class="way__block-char">+</div>
-			</div> 
-			<div class="way__block-3 way__block js-scroll slide-right">
+			</a> 
+			<a href="arbitr.html" class="way__block-3 way__block js-scroll slide-right">
 				<h3 class="way__block-title">Коммерческие споры</h3>
 				<div class="way__block-char">+</div>
-			</div>
-			<div class="way__block-4 way__block js-scroll slide-left">
+			</a>
+			<a href="nal.html" class="way__block-4 way__block js-scroll slide-left">
 				<h3 class="way__block-title">Налоговое право</h3>
 				<div class="way__block-char">+</div>
-			</div>
-			<div class="way__block-5 way__block js-scroll slide-right">
+			</a>
+			<a href="ur.html" class="way__block-5 way__block js-scroll slide-right">
 				<h3 class="way__block-title">банкротство юридических лиц</h3>
 				<div class="way__block-char">+</div>
-			</div>
-			<div class="way__block-6 way__block js-scroll slide-right">
+			</a>
+			<a href="admin.html" class="way__block-6 way__block js-scroll slide-right">
 				<h3 class="way__block-title">Споры с гос.органами</h3>
 				<div class="way__block-char">+</div>
-			</div>
+			</a>
 			<div class="way__color-1"></div>
 			<div class="way__color-2"></div>
 			<div class="way__color-3"></div>
@@ -151,7 +165,7 @@
 
 		<section class="question">
 			<div class="question__text js-scroll slide-left">
-				<h2 class="question__title title">Не нашли свой вопрос?</h2>
+				<h2 class="question__title title">Не нашли<br> свой вопрос?</h2>
 				<p class="question__subtitle subtitle">Оставьте свои данные и мы вам перезвоноим</p>		
 			</div>
 			<form class="question__form form js-scroll slide-right">

@@ -57,7 +57,7 @@
 .bg__fiz {
     grid-column: 9 / 15;
     grid-row: 1 / 7;
-    background-image: url(../images/dist/Bg__fiz.png);
+    background-image: url(../images/dist/fiz/bg__fiz.png);
     background-size: cover;
 }
 .fiz__logo {
@@ -118,7 +118,7 @@
     .fiz__navigation {
         grid-column: 3 / 8;
         grid-row: 1 / 2;
-        z-index: 1;
+        z-index: 5;
     }
     
     .fiz__social {
@@ -147,7 +147,7 @@
     .bg__fiz {
         grid-column: 1 / 9;
         grid-row: 2 / 6;
-        background-image: url(../images/dist/Bg__fiz-tablet.png);
+        background-image: url(../images/dist/fiz/bg__fiz-tablet.png);
     }
     .fiz__logo {
         grid-column: 2 / 3;
@@ -157,15 +157,15 @@
     
     
     .fiz__block-1 {
-        grid-column: 2 / 4;
+        grid-column: 2 / 5;
         grid-row: 8 / 10;
     }
     .fiz__block-2 {
-        grid-column: 2 / 4;
+        grid-column: 2 / 5;
         grid-row: 10 / 12;
     }
     .fiz__block-3 {
-        grid-column: 6 / 8;
+        grid-column: 6 / 9;
         grid-row: 10 / 12;
     }
     
@@ -186,10 +186,10 @@
 @media (max-width: 540px) {
     .fiz {
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(14, 1fr);
+        grid-template-rows: repeat(13, 1fr);
         grid-column: span 5;
-        grid-row: span 14;
-        --nr:14; /* number of rows */
+        grid-row: span 13;
+        --nr:13; /* number of rows */
         --nc:5; /* number of columns */
     }
     .fiz__social {
@@ -234,35 +234,41 @@
         justify-self: center;
     }
     .fiz__btn {
-        grid-column: 3 / 6;
-        grid-row: 14 / 15;
+        grid-column: 5 / 6;
+        grid-row: 13 / 14;
+        span {
+            &:first-child {
+                display: none;
+            }
+        }
     }
     .bg__fiz {
         grid-column: 1 / 6;
         grid-row: 2 / 6;
-        background-image: url(../images/dist/Bg__fiz-mobile.png);
+        background-image: url(../images/dist/fiz/bg__fiz-mobile.png);
     }
     .fiz__logo {
         grid-column: 3 / 4;
         grid-row: 1 / 2;
         font-size: 2.4em;
+        justify-self: center;
     }
     
     
     .fiz__block-1 {
-        grid-column: 1 / 5;
-        grid-row: 8 / 10;
-        padding-left: 2.5em;
+        grid-column: 1 / 6;
+        grid-row: 8 / 9;
+        padding-left: 0em;
     }
     .fiz__block-2 {
-        grid-column: 1 / 5;
-        grid-row: 10 / 12;
-        padding-left: 2.5em;
+        grid-column: 1 / 6;
+        grid-row: 9 / 11;
+        padding-left: 0em;
     }
     .fiz__block-3 {
-        grid-column: 1 / 5;
-        grid-row: 12 / 14;
-        padding-left: 2.5em;
+        grid-column: 1 / 6;
+        grid-row: 11 / 12;
+        padding-left: 0em;
     }
     
     

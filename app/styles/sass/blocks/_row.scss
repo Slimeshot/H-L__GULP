@@ -1,0 +1,25 @@
+.row {
+    grid-column: span 15;
+    grid-row: span 1;
+    display: grid;
+    grid-template-columns: repeat((15, 1fr));
+    grid-template-rows: repeat((1, 1fr));
+}
+
+@media (max-width: 1024px) {
+    .row {
+        grid-column: span 8;
+        grid-row: span 2;
+        grid-template-columns: repeat((8, 1fr));
+        grid-template-rows: repeat((2, 1fr));
+    }
+}
+
+@media (max-width: 540px) {
+    .row {
+        grid-column: span 5;
+        grid-row: span 2;
+        grid-template-columns: repeat((5, 1fr));
+        grid-template-rows: repeat((2, 1fr));
+    }
+}

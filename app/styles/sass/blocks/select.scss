@@ -1,0 +1,76 @@
+.select {
+    display: none;
+}
+
+
+@media (max-width: 1024px) {
+
+    .select {
+        display: block;
+        position: relative;
+        background-color: #1F7537;
+    }
+    .select.is-active .select__body {
+        display: block;
+    }
+    .select__header {
+        border: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        height: 100%;
+        cursor: pointer;
+        color: #fff;
+    }
+    .select__icon {
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        display: flex;
+        flex-shrink: 0;
+        justify-content: center;
+        text-align: center;
+        background-image: url(../../../images/dist/icon/arrow-down.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .select__icon.active {
+        transform: rotate(180deg);
+    }
+    .select__current {
+        font-size: 2.2em;
+        line-height: 24px;
+        padding: 8px;
+    }
+    .select__body {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        display: none;
+        border: 1px solid #ccc;
+        z-index: 100;
+        background-color: #fff;
+    }
+    .select__item {
+        line-height: 24px;
+        padding: 32px 16px;
+        color: #1F7537;
+        font-size: 2.2em;
+        cursor: pointer;
+        text-align: center;
+    
+        &:hover {
+            background: #F1F7F3;
+            // border: 1px solid #D2E3D7;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .select {
+        position: relative;
+        background-color: #1F7537;
+    }
+}

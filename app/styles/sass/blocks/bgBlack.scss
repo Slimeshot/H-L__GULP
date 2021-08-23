@@ -1,0 +1,17 @@
+.bg__black {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 8;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    z-index: -1;
+}
+
+.bg__black.active {
+    z-index: 7;
+    opacity: 0.5;
+}

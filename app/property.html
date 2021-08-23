@@ -3,15 +3,31 @@
 
 <div class="lawyer">
 	<div class="grid">
+        <div class="bg__black"></div>
+        <section class="call">
+			<img src="../images/dist/cross.png" alt="cross" class="call__button">
+			<h6 class="call__title">Свяжитесь с нами</h6>
+			<form class="call__form" id="index__call">
+				<input class="call__name" name="name" type="text" placeholder="Имя" required> 
+				<input class="call__phone" name="phone" type="text" placeholder="Телефон" required> 
+				<input class="call__text" name="text" type="text" placeholder="Вопрос" required> 
+				<input type="submit" id="sendCall__index" value="Оставить заявку" class="btn call__btn">
+			</form>
+		</section>
         <header class="property">
             <a href="index.html" class="property__logo">H&L</a>
-            <img src="images/dist/Bg__property.png" alt="" class="bg__property">
-			<div class="header__burger">
-				<div class="line-1 line"></div>
-				<div class="line-2 line"></div>
-				<div class="line-3 line"></div>
-			</div>
+            <img src="images/dist/green__block.jpg" class="grid__sizer" alt="block" aria-hidden="true">
+            <!-- <img src="images/dist/Bg__property.png" alt="" class="bg__property"> -->
+            <div class="bg__property"></div>
+			<div class="burger"></div>
 			<nav class="property__navigation navigation">
+                <img src="images/dist/green__block.jpg" class="grid__sizers" alt="block" aria-hidden="true">
+				<ul class="navigation__social social">
+					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/search.svg" alt=""></a></li>
+					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/mail.svg" alt=""></a></li>
+					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/viber.svg" alt=""></a></li>
+					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/telegram.svg" alt=""></a></li>
+				</ul>
 				<ul class="navigation__menu">
 					<li class="navigation__list"><a href="#" class="navigation__link">Услуги</a></li>
 					<li class="navigation__list"><a href="#" class="navigation__link">Контакты</a></li>
@@ -26,24 +42,23 @@
 				<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/viber.svg" alt=""></a></li>
 				<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/telegram.svg" alt=""></a></li>
 			</ul>
-            <h1 class="property__title">Юрист по недвижимости</h1>
-            <a href="#" class="property__btn btn">Получить консультацию <span><img src="images/dist/arrow-right.svg" alt="arrow-right"></span></a>
+            <h1 class="property__title">Юрист по&nbsp;недвижимости</h1>
+            <a href="#" class="property__btn btn cons__btn"><span>Получить консультацию </span><span><img src="images/dist/arrow-right.svg" alt="arrow-right"></span></a>
 			<div class="property__block-1 info__block">
                 <span class="info__block-title">01</span>
-                <span class="info__block-subtitle">сохраним бизнес</span>
+                <span class="info__block-subtitle">узаконит право собственности<br> на объекты недвижимости</span>
             </div>
             <div class="property__block-2 info__block">
                 <span class="info__block-title">02</span>
-                <span class="info__block-subtitle">предотвратит угрозу банкротству</span>
+                <span class="info__block-subtitle">устранит нарушения в отношении<br> прав на объект недвижимости</span>
             </div>
             <div class="property__block-3 info__block">
                 <span class="info__block-title">03</span>
-                <span class="info__block-subtitle">взаимодействие с налоговыми <br>
-                    органами возьмем на себя</span>
+                <span class="info__block-subtitle">Выделит долю, определит порядок<br> пользования недвижимостью</span>
             </div>
             <div class="property__block-4 info__block">
                 <span class="info__block-title">04</span>
-                <span class="info__block-subtitle">уменьшить
+                <span class="info__block-subtitle">уменьшит<br>
                     кадастровую стоимость</span>
             </div>
             <div class="property__color-1"></div>
@@ -53,9 +68,9 @@
 
 
         <section class="necessary">
-            <h2 class="necessary__title title">Как определить, что вам нужен юрист по недвижимости?</h2>
+            <h2 class="necessary__title title"><span>Как определить, что вам</span><br><span>нужен юрист по недвижимости?</span></h2>
             <div class="necessary__subtitle subtitle">Чем раньше вы обратились 
-                за помощью, тем больше возможностей разрешить ситуацию в вашу пользу</div>
+                за помощью, тем больше&nbsp;возможностей разрешить ситуацию в&nbsp;вашу&nbsp;пользу</div>
             <ul class="necessary__menu">
                 <li class="necessary__list">Отказали в регистрации права собственности на недвижимость</li>
                 <li class="necessary__list">Отсутствуют необходимые для регистрации права документы</li>
@@ -64,10 +79,30 @@
                 <li class="necessary__list">Достигнуть соглашение с сособственником недвижимости не удалось</li>
             </ul>
             <a href="#" class="necessary__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></a>
+            <div class="necessary__color-1"></div>
+            <div class="necessary__color-2"></div>
+            <div class="necessary__color-3"></div>
+            <div class="necessary__color-4"></div>
         </section>
-
         <section class="cost">
-            <h2 class="cost__title title">Стоимость услуг</h2>
+            <!-- <select class="cost__select-tablinks">
+                <option value="0">Реструктуризация долга</option>
+                <option value="1">Реализация имущества</option>
+                <option value="2">Внесудебное банкротство</option>
+            </select> -->
+            <div class="select cost__select-tablinks">
+                <div class="select__header">
+                    <span class="select__current">Реализация имущества</span>
+                    <div class="select__icon"></div>
+                </div>
+                <div class="select__body">
+                    <div class="select__item select__cost">Определение надлежащего способа защиты права</div>
+                    <div class="select__item select__cost">Сопровождение дела в суде 1-й инстанции</div>
+                    <div class="select__item select__cost">Сопровождение дела в суде апелляционной инстанции</div>
+                    <div class="select__item select__cost">Сопровождение дела в суде кассационной инстанции</div>
+                </div>
+            </div>
+            <h2 class="cost__title title">Стоимость<br>услуг</h2>
             <h3 class="cost__tablinks-1 tablinks" id="defaultOpens">Определение надлежащего способа защиты права</h3>
             <h3 class="cost__tablinks-2 tablinks">Сопровождение дела в суде 1-й инстанции</h3>
             <h3 class="cost__tablinks-3 tablinks">Сопровождение дела в суде апелляционной инстанции</h3>
@@ -142,27 +177,15 @@
                 <div class="tabcontainer__price">от 40000 руб.</div>
                 <a href="#" class="tabcontainer__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></a>
             </div>
-
-
+            <div class="cost__color-1"></div>
+            <div class="cost__color-2"></div>
+            <div class="cost__color-3"></div>
         </section>
-
-
-        <section class="params">
-            <div class="params__info">Стоимость услуг юриста по недвижимости зависит от нескольких параметров</div>
-            <div class="params__block">
-                <div class="params__text">Категории сложности дела</div>
-                <div class="params__text">Объем исследуемой документации</div>
-                <div class="params__text">Срок рассмотрения спора</div>
-            </div>
-        </section>
-
-
 
         <section class="spec">
-            <h2 class="spec__title title">Есть вопрос? 
+            <h2 class="spec__title title">Есть вопрос?<br>
             Задайте его специалисту</h2>
             <div class="spec__img">
-                <img src="images/dist/woman_4.jpg" alt="man">
             </div>
             <form class="spec__form form js-scroll slide-right">
                 <input class="form__name" name="name" type="text" placeholder="Имя"> 
@@ -170,8 +193,8 @@
                 <input class="form__quest" name="question" type="text" placeholder="Вопрос"> 
                 <input type="submit" value="" class="form__btn-primary">
             </form>
-            <div class="spec__name"><span>вера соколова</span><span> Адвокат по недвижимости</span>
-            </div>
+            <div class="spec__name">Вера<br><span>Соколова</span></div>
+            <div class="spec__prof">Адвокат по недвижимости</div>
             <div class="spec__color-1"></div>
             <div class="spec__color-2"></div>
             <div class="spec__color-3"></div>
@@ -186,28 +209,36 @@
 
 
         <section class="get">
-			<h2 class="get__title title js-scroll fade-in-bottom">Выбрав нас, 
-				вы получаете</h2>
+			<h2 class="title get__title js-scroll fade-in-bottom">При помощи юриста<br class="br__1"> по<br class="br__2"> недвижимости вы&nbsp;получите</h2>
 			<div class="get__block-1 get__block js-scroll fade-in-bottom">
 				<div class="get__block-square"></div>
-				<h3 class="get__block-title">решение</h3>
-				<p class="get__block-description">правового вопроса по фиксированной стоимости</p>
+				<div class="get__block-text">
+					<h3 class="get__block-title">Решение</h3>
+					<p class="get__block-description">правового вопроса по фиксированной стоимости</p>
+				</div>
 			</div>
 			<div class="get__block-2 get__block js-scroll fade-in-bottom">
 				<div class="get__block-square"></div>
-				<h3 class="get__block-title">Защиту</h3>
-				<p class="get__block-description">ваших прав</p>
+				<div class="get__block-text">
+					<h3 class="get__block-title">Защиту</h3>
+					<p class="get__block-description">ваших прав</p>
+				</div>
 			</div>
 			<div class="get__block-3 get__block js-scroll fade-in-bottom">
 				<div class="get__block-square"></div>
-				<h3 class="get__block-title">результат</h3>
-				<p class="get__block-description">разрешения спора</p>
+				<div class="get__block-text">
+					<h3 class="get__block-title">Результат</h3>
+					<p class="get__block-description">разрешения спора</p>
+				</div>
 			</div>
+            <div class="get__color-1"></div>
+            <div class="get__color-2"></div>
+            <div class="get__color-3"></div>
 		</section>
 
 
         <section class="experts">
-            <h2 class="experts__title title">наша экспертиза 
+            <h2 class="experts__title title">наша экспертиза<br>
                 на вашей службе</h2>
             <div class="experts__block-1 green__block">
                 <div class="green__block-work">Опыт</div>
@@ -234,16 +265,157 @@
 
         <section class="ask">
             <h2 class="ask__title title">
-                Ответьте на вопросы
-                и получите решение 
+                Ответьте<br>на вопросы
             </h2>
+            <p class="ask__subtitle">и получите предложение с условиями сотрудничества</p>
             <div class="ask_quiz">
                 <form action="" class="quiz">
-                    <div class="quiz__number">01</div>
-                    <div class="quiz__prev">Назад</div>
-                    <div class="quiz__next btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></div>
-                    <div class="quiz__block"></div>
-                    
+                    <button class="quiz__prev" disabled>Назад</button>
+                    <button class="quiz__next btn" disabled><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
+                    <div class="quiz__step quiz__step-active" data-step="0">
+                        <div class="quiz__number">01</div>
+                        <div class="quiz__title">К какой категории спора относится вопрос?</div>
+                        <div class="quiz__block">
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="marshruts" name="firstAsk" value="Оспаривание ненормативный правовых актов" type="radio">
+                                <label class="quiz__radioLabel" for="marshruts">
+                                    <span>Оспаривание ненормативный правовых актов</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="pols" name="firstAsk" value="Признание права собственности" type="radio">
+                                <label class="quiz__radioLabel" for="pols">
+                                    <span>Признание права собственности</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="thins" name="firstAsk" value="Наследственный спор" type="radio">
+                                <label class="quiz__radioLabel" for="thins">
+                                    <span>Наследственный спор</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="razd" name="firstAsk" value="Раздел/выдел/определение порядка пользования имущества" type="radio">
+                                <label class="quiz__radioLabel" for="razd">
+                                    <span>Раздел/выдел/определение порядка пользования имущества</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="kada" name="firstAsk" value="Кадастровая стоимость" type="radio">
+                                <label class="quiz__radioLabel" for="kada">
+                                    <span>Кадастровая стоимость</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="zem" name="firstAsk" value="Земельные правоотношения" type="radio">
+                                <label class="quiz__radioLabel" for="zem">
+                                    <span>Земельные правоотношения</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="finch" name="firstAsk" value="Другое" type="radio">
+                                <label class="quiz__radioLabel" for="finch">
+                                    <span>Другое</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__step" data-step="1">
+                        <div class="quiz__number">02</div>
+                        <div class="quiz__title">Как нарушили ваше право?</div>
+                        <div class="quiz__block">
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="otk" name="secondAsk" value="Отказали в регистрации" type="radio">
+                                <label class="quiz__radioLabel" for="otk">
+                                    <span>Отказали в регистрации</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="fotk" name="secondAsk" value="Отказали в оформлении наследственных прав" type="radio">
+                                <label class="quiz__radioLabel" for="fotk">
+                                    <span>Отказали в оформлении наследственных прав</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="zav" name="secondAsk" value="Завышена кадастровая стоимость на объект недвижимости" type="radio">
+                                <label class="quiz__radioLabel" for="zav">
+                                    <span>Завышена кадастровая стоимость на объект недвижимости</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="ob" name="secondAsk" value="Объект недвижимости используется без согласия" type="radio">
+                                <label class="quiz__radioLabel" for="ob">
+                                    <span>Объект недвижимости используется без согласия</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="nedog" name="secondAsk" value="Не достигнуто соглашение с собственником" type="radio">
+                                <label class="quiz__radioLabel" for="nedog">
+                                    <span>Не достигнуто соглашение с собственником</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="kinch" name="secondAsk" value="Другое" type="radio">
+                                <label class="quiz__radioLabel" for="kinch">
+                                    <span>Другое</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__step" data-step="2">
+                        <div class="quiz__number">03</div>
+                        <div class="quiz__title">Стадия разрешения вопроса?</div>
+                        <div class="quiz__block">
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="regi" name="thirdAsk" value="Регистрация права" type="radio">
+                                <label class="quiz__radioLabel" for="regi">
+                                    <span>Регистрация права</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="dosf" name="thirdAsk" value="Досудебное разбирательство" type="radio">
+                                <label class="quiz__radioLabel" for="dosf">
+                                    <span>Досудебное разбирательство</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="sugr" name="thirdAsk" value="Суд первой инстанции" type="radio">
+                                <label class="quiz__radioLabel" for="sugr">
+                                    <span>Суд первой инстанции</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="apel" name="thirdAsk" value="Апеляционная инстанция" type="radio">
+                                <label class="quiz__radioLabel" for="apel">
+                                    <span>Апеляционная инстанция</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="kasa" name="thirdAsk" value="Кассационная инстанция" type="radio">
+                                <label class="quiz__radioLabel" for="kasa">
+                                    <span>Кассационная инстанция</span>
+                                </label>
+                            </div>
+                            <div class="quiz__item">
+                                <input class="quiz__radioinput" id="licnh" name="thirdAsk" value="Другое" type="radio">
+                                <label class="quiz__radioLabel" for="licnh">
+                                    <span>Другое</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__step" data-step="3">
+                        <div class="quiz__number">04</div>
+                        <div class="quiz__title">Куда отправить решение?</div>
+                        <div class="quiz__block">  
+                            <input class="quiz__input" name="phone" type="text" placeholder="Телефон" required> 
+						    <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" class="quiz__input" type="email" name="email" placeholder="E-mail" required>
+                        </div>
+                    </div>
+                    <div class="quiz__finish">
+                        <img src="images/dist/icon/check.svg" alt="chek" class="quiz__check">
+                        <div class="quiz__message">Спасибо, ваша<br>заявка получена!</div>
+                    </div>
                 </form>
             </div>
 
@@ -278,26 +450,28 @@
 			<div class="trust__btn-next trust__btn">></div>
 
 			<div class="trust__block-1 trust__block">
-				<img src="images/dist/company/vtb.jpg" alt="vtb">
+
 			</div>
 			<div class="trust__block-2 trust__block">
-				<img src="images/dist/company/rusgidro.jpg" alt="rusgidro">
+
 			</div>
 			<div class="trust__block-3 trust__block">
-				<img src="images/dist/company/open.jpg" alt="open">
+
 			</div>
 			<div class="trust__block-4 trust__block">
-				<img src="images/dist/company/rosbank.jpg" alt="rosbank">
+
 			</div>
 			<div class="trust__block-5 trust__block">
-				<img src="images/dist/company/bmbank.jpg" alt="bmbank">
+
 			</div>
 			<div class="trust__block-6 trust__block">
-				<img src="images/dist/company/noksbank.jpg" alt="noksbank">
+
 			</div>
 			<div class="trust__block-7 trust__block">
-				<img src="images/dist/company/unicredit.jpg" alt="unicredit">
+
 			</div>
+
+			
 		</section>
 
 

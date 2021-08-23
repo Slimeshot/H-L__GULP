@@ -3,6 +3,9 @@
     grid-template-columns: 1fr;
     grid-template-rows: span 4;
 }
+.navigation__social {
+    display: none;
+}
 .social__list {
     &:nth-child(1) {
         .social__link {
@@ -35,3 +38,11 @@
     }
 }
 
+
+
+
+@media (max-width: 768px) {
+    .navigation__social {
+        display: grid;
+    }
+}
