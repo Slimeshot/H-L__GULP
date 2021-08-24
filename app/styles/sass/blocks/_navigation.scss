@@ -8,7 +8,7 @@
     margin-right: 3.2em;
 }
 .navigation__link {
-    font-family: Gilroy;
+    font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 2em;
@@ -20,6 +20,9 @@
     }
 }
 .navigation__social {
+    display: none;
+}
+.navigation__logo {
     display: none;
 }
 
@@ -54,22 +57,45 @@
         transition: all .2s ease-in-out;
 
     }
-
+    .navigation__logo {
+        display: block;
+        font-family: 'Forum', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
+        text-decoration: none;
+        grid-column: 4 / 6;
+        grid-row: 1 / 2;
+        align-self: center;
+        &:hover {
+            color: #fff;
+        }
+    }
     .navigation__menu {
-        grid-column: 1 / 9;
-        grid-row: 2 / 11;
+        position: fixed;
+        height: 90%;
+        width: 100%;
+        top: -100%;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         // display: none;
+        transition: all .2s ease;
     }
+    .navigation__menu.active {
+        top: 9%;
+    }
+    
 
     .navigation.open__menu {
         top: 0px;
         opacity: 1;
     }
     .navigation__list {
-        font-family: Forum;
+        font-family: 'Forum', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 2em;
@@ -100,7 +126,11 @@
         
 
     }
-
+    .navigation__logo {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        align-self: center;
+    }
     .navigation__menu {
         grid-column: 1 / 6;
         grid-row: 2 / 10;

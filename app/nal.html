@@ -1,4 +1,4 @@
-<!--#set var="title" value="nal" -->
+<!--#set var="title" value="Налоговое право" -->
 <!--#include virtual="/parts/header.html" -->
 
 <div class="agent">
@@ -7,11 +7,11 @@
         <section class="call">
 			<img src="../images/dist/cross.png" alt="cross" class="call__button">
 			<h6 class="call__title">Свяжитесь с нами</h6>
-			<form class="call__form" id="index__call">
+			<form method="POST" class="call__form" id="nalCall">
 				<input class="call__name" name="name" type="text" placeholder="Имя" required> 
 				<input class="call__phone" name="phone" type="text" placeholder="Телефон" required> 
-				<input class="call__text" name="text" type="text" placeholder="Вопрос" required> 
-				<input type="submit" id="sendCall__index" value="Оставить заявку" class="btn call__btn">
+				<input class="call__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
+				<input type="submit" id="sendNalCall" value="Оставить заявку" class="btn call__btn">
 			</form>
 		</section>
         <header class="nal">
@@ -21,6 +21,7 @@
             <div class="bg__nal"></div>
             <div class="burger"></div>
 			<nav class="nal__navigation navigation">
+                <a href="index.html" class="navigation__logo">H&L</a>
                 <img src="images/dist/green__block.jpg" class="grid__sizers" alt="block" aria-hidden="true">
 				<ul class="navigation__social social">
 					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/search.svg" alt=""></a></li>
@@ -44,7 +45,7 @@
 			</ul>
             <h1 class="nal__title">Налоговый <br> адвокат</h1>
             <span class="nal__subtitle">защитит ваши активы</span>
-            <a href="#" class="nal__btn btn cons__btn"><span>Получить консультацию</span><span><img src="images/dist/arrow-right.svg" alt="arrow-right"></span></a>
+            <button class="nal__btn btn cons__btn"><span>Получить консультацию</span><span><img src="images/dist/arrow-right.svg" alt="arrow-right"></span></button>
 			<div class="nal__block-1 info__block">
                 <span class="info__block-title">01</span>
                 <span class="info__block-subtitle">сохраним бизнес</span>
@@ -65,7 +66,7 @@
 
 
         <section class="necessary">
-            <h2 class="necessary__title title">Как определить,<br class="necessary__br-1"> что вам <br class="necessary__br-2"> нужен<br class="necessary__br-3"> налоговый адвокат?</h2>
+            <h2 class="necessary__title title">Как определить,<br class="necessary__br-1"> что вам <br class="necessary__br-2"><span>нужен<br class="necessary__br-3"> налоговый адвокат?</span></h2>
             <div class="necessary__subtitle subtitle">Чем раньше вы обратились 
                 за помощью, тем больше&nbsp;возможностей разрешить ситуацию в&nbsp;вашу&nbsp;пользу</div>
             <ul class="necessary__menu">
@@ -116,7 +117,7 @@
                     <li class="tabcontainer__list">Подготовка заключений</li>
                 </ul>
                 <div class="tabcontainer__price">от 15000 руб.</div>
-                <a href="#" class="tabcontainer__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></a>
+                <button class="tabcontainer__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
             </div>
 
             <div class="cost__tabcontainer tabcontainer">
@@ -131,7 +132,7 @@
                     <li class="tabcontainer__list">Подготовка письменных ответов на требования инспеции</li>
                 </ul>
                 <div class="tabcontainer__price">от 25000 руб.</div>
-                <a href="#" class="tabcontainer__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></a>
+                <button class="tabcontainer__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
             </div>
 
             <div class="cost__tabcontainer tabcontainer">
@@ -149,7 +150,7 @@
                     <li class="tabcontainer__list">Подготовка письменных ответов на требования инспекции</li>
                 </ul>
                 <div class="tabcontainer__price">от 40000 руб.</div>
-                <a href="#" class="tabcontainer__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></a>
+                <button class="tabcontainer__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
             </div>
 
             <div class="cost__tabcontainer tabcontainer">
@@ -168,7 +169,7 @@
                     <li class="tabcontainer__list">Подготовка письменных ответов на требования инспекции</li>
                 </ul>
                 <div class="tabcontainer__price">от 40000 руб.</div>
-                <a href="#" class="tabcontainer__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></a>
+                <button class="tabcontainer__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
             </div>
 
             <div class="cost__tabcontainer tabcontainer">
@@ -189,7 +190,7 @@
                    
                 </ul>
                 <div class="tabcontainer__price">от 50000 руб.</div>
-                <a href="#" class="tabcontainer__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></a>
+                <button class="tabcontainer__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
             </div>
             <div class="cost__color-1"></div>
             <div class="cost__color-2"></div>
@@ -209,16 +210,16 @@
 
 
         <section class="spec">
-            <h2 class="spec__title title">Есть вопрос? 
+            <h2 class="spec__title title">Есть вопрос?<br>
             Задайте его специалисту</h2>
             <div class="spec__img">
             </div>
-            <form class="spec__form form js-scroll slide-right">
-                <input class="form__name" name="name" type="text" placeholder="Имя"> 
-                <input class="form__phone" name="phone" type="text" placeholder="Телефон"> 
-                <input class="form__quest" name="question" type="text" placeholder="Вопрос"> 
-                <input type="submit" value="" class="form__btn-primary">
-            </form>
+            <form method="POST" class="spec__form form js-scroll slide-right" id="nalSpec">
+				<input class="form__name" name="name" type="text" placeholder="Имя" required> 
+				<input class="form__phone" name="phone" type="text" placeholder="Телефон" required> 
+				<input class="form__mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
+				<input type="submit" id="sendNalSpec" value="" class="form__btn-primary">
+			</form>
             <div class="spec__name">анна<br><span>байдарик</span></div>
             <div class="spec__prof">Налоговый адвокат</div>
             <div class="spec__color-1"></div>
@@ -235,27 +236,27 @@
 
 
         <section class="get">
-			<h2 class="title get__title js-scroll fade-in-bottom">Выбрав нас, 
-				вы получаете</h2>
+			<h2 class="title get__title js-scroll fade-in-bottom">При помощи налогового<br>
+                адвоката вы получите</h2>
 			<div class="get__block-1 get__block js-scroll fade-in-bottom">
 				<div class="get__block-square"></div>
 				<div class="get__block-text">
 					<h3 class="get__block-title">Уверенность</h3>
-					<p class="get__block-description">в сохранении ваших активов</p>
+					<p class="get__block-description">в сохранении<br> ваших активов</p>
 				</div>
 			</div>
 			<div class="get__block-2 get__block js-scroll fade-in-bottom">
 				<div class="get__block-square"></div>
 				<div class="get__block-text">
 					<h3 class="get__block-title">Защиту</h3>
-					<p class="get__block-description">от незаконных действий налоговых органов</p>
+					<p class="get__block-description">от незаконных действий<br> налоговых органов</p>
 				</div>
 			</div>
 			<div class="get__block-3 get__block js-scroll fade-in-bottom">
 				<div class="get__block-square"></div>
 				<div class="get__block-text">
 					<h3 class="get__block-title">Надежность</h3>
-					<p class="get__block-description">при представительстве в суде и налоговых органах</p>
+					<p class="get__block-description">при представительстве<br> в суде и налоговых органах</p>
 				</div>
 			</div>
             <div class="get__color-1"></div>
@@ -265,7 +266,7 @@
 
 
         <section class="experts">
-            <h2 class="experts__title title">наша экспертиза 
+            <h2 class="experts__title title">наша экспертиза<br>
                 на вашей службе</h2>
             <div class="experts__block-1 green__block">
                 <div class="green__block-work">Опыт</div>

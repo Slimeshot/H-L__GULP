@@ -3,6 +3,7 @@
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(2, 1fr);
     input {
+        color: #A5C8AF;
         border: none;
         &:not(:last-child) {
             align-self: flex-end;
@@ -39,7 +40,7 @@
     grid-column: 4 / 6;
     grid-row: 1 / 2;
 }
-.form__quest {
+.form__mail {
     grid-column: 1 / 6;
     grid-row: 2 / 3;
 }
@@ -62,7 +63,7 @@
             grid-column: 4 / 6;
             grid-row: 1 / 2;
         }
-        .form__quest {
+        .form__mail {
             grid-column: 1 / 6;
             grid-row: 2 / 3;
         }
@@ -79,7 +80,7 @@
         grid-column: 1 / 3;
         grid-row: 2 / 3;
     }
-    .form__quest {
+    .form__mail {
         grid-column: 1 / 3;
         grid-row: 3 / 4;
     }
@@ -109,7 +110,7 @@
         overflow: hidden;
         margin-left: 1.5em;
     }
-    .form__quest {
+    .form__mail {
         grid-column: 1 / 4;
         grid-row: 3 / 4;
         overflow: hidden;
@@ -138,7 +139,7 @@
             overflow: hidden;
             margin-left: 1.5em;
         }
-        .form__quest {
+        .form__mail {
             grid-column: 1 / 4;
             grid-row: 3 / 4;
             overflow: hidden;

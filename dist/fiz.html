@@ -7,7 +7,9 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>Fiz</title>
+	<title>Банкротство физических лиц</title>
+	<meta name="yandex-verification" content="14edccde990fa06a" />
+	
 	<meta name="description" content="Startup HTML template OptimizedHTML 5">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -31,11 +33,11 @@
         <section class="call">
 			<img src="../images/dist/cross.png" alt="cross" class="call__button">
 			<h6 class="call__title">Свяжитесь с нами</h6>
-			<form class="call__form" id="index__call">
+			<form method="POST" class="call__form" id="fizCall">
 				<input class="call__name" name="name" type="text" placeholder="Имя" required> 
 				<input class="call__phone" name="phone" type="text" placeholder="Телефон" required> 
-				<input class="call__text" name="text" type="text" placeholder="Вопрос" required> 
-				<input type="submit" id="sendCall__index" value="Оставить заявку" class="btn call__btn">
+				<input class="call__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
+				<input type="submit" id="sendFizCall" value="Оставить заявку" class="btn call__btn">
 			</form>
 		</section>
         <header class="fiz">
@@ -44,6 +46,7 @@
 			</div>
             <a href="index.html" class="fiz__logo">H&L</a>
             <nav class="fiz__navigation navigation">
+                <a href="index.html" class="navigation__logo">H&L</a>
                 <img src="images/dist/green__block.jpg" class="grid__sizers" alt="block" aria-hidden="true">
 				<ul class="navigation__social social">
 					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/search.svg" alt=""></a></li>
@@ -67,7 +70,7 @@
             </ul>
             <h1 class="fiz__title">Юрист <br> по банкротству</h1>
             <span class="fiz__subtitle">Для физических лиц</span>
-            <a href="#" class="fiz__btn btn cons__btn"><span>Получить консультацию</span> <span><img src="images/dist/arrow-right.svg" alt="arrow-right"></span></a>
+            <button class="fiz__btn btn cons__btn"><span>Получить консультацию</span> <span><img src="images/dist/arrow-right.svg" alt="arrow-right"></span></button>
             <div class="bg__fiz"></div>
             <div class="fiz__block-1 info__block">
                 <span class="info__block-title">01</span>
@@ -102,9 +105,9 @@
                     <div class="select__icon"></div>
                 </div>
                 <div class="select__body">
-                    <div class="select__item option__select">Реструктуризация долга</div>
-                    <div class="select__item option__select">Реализация имущества</div>
-                    <div class="select__item option__select">Внесудебное банкротство</div>
+                    <h3 class="select__item option__select">Реструктуризация долга</h3>
+                    <h3 class="select__item option__select">Реализация имущества</h3>
+                    <h3 class="select__item option__select">Внесудебное банкротство</h3>
                 </div>
             </div>
             <h3 class="option__tabs-1 option__tabs" id="defaultOpen">Реструктуризация долга</h3>
@@ -120,6 +123,7 @@
                 <ul class="option__menu-2 option__menu">
                     <li class="option__list">Все штрафы и пени перестают начисляться</li>
                     <li class="option__list">Исполнение производится только в рамках дела несостоятельность</li>
+                    <li class="option__list">Реализация имущества не производится</li>
                     <!-- <li class="option__list">Реализация имущества не производится</li> -->
                 </ul>             
             </div>
@@ -156,12 +160,13 @@
             <h2 class="spec__title title">Есть вопрос? <br>
             Задайте его специалисту</h2>
             <div class="spec__img"></div>
-            <form class="spec__form form js-scroll slide-right">
-                <input class="form__name" name="name" type="text" placeholder="Имя"> 
-                <input class="form__phone" name="phone" type="text" placeholder="Телефон"> 
-                <input class="form__quest" name="question" type="text" placeholder="Вопрос"> 
-                <input type="submit" value="" class="form__btn-primary">
-            </form>
+            <form method="POST" class="spec__form form js-scroll slide-right" id="fizSpec">
+				<input class="form__name" name="name" type="text" placeholder="Имя" required> 
+				<input class="form__phone" name="phone" type="text" placeholder="Телефон" required> 
+				<input class="form__mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
+				<input type="submit" id="sendFizSpec" value="" class="form__btn-primary">
+			</form>
+            
             <div class="spec__name">Дмитрий<br><span>Кузнецов</span></div>
             <div class="spec__prof"><span>Адвокат по банкротству<br>
                 и административному праву</span></div>
@@ -194,9 +199,9 @@
                     <div class="select__icon"></div>
                 </div>
                 <div class="select__body">
-                    <div class="select__item select__price">Реструктуризация долга</div>
-                    <div class="select__item select__price">Реализация имущества</div>
-                    <div class="select__item select__price">Внесудебное банкротство</div>
+                    <h3 class="select__item select__price">Реструктуризация долга</h3>
+                    <h3 class="select__item select__price">Реализация имущества</h3>
+                    <h3 class="select__item select__price">Внесудебное банкротство</h3>
                 </div>
             </div>
             <div class="price__tabcontent tabcontent">
@@ -207,23 +212,23 @@
                     <li class="tabcontent__list">Представление интересов должника во взаимоотношениях с финансовым управляющим при выполнении всех, предусмотренных Законом РФ «О несостоятельности (банкротстве)»</li>
                 </ul>
                 <div class="tabcontent__price">от 50000 руб.</div>
-                <a href="#" class="tabcontent__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></a>
+                <button class="tabcontent__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
             </div>
             <div class="price__tabcontent tabcontent">
                 <ul class="tabcontent__menu">
                     <li class="tabcontent__list">Подготовка необходимого для обращения в суд пакета документов</li>
                     <li class="tabcontent__list">Представление интересов должника в арбитражном суде</li>
-                    <li class="tabcontent__list">Подготовка плана реструктуризации долгов и помощь в его реализации</li>
+                    <li class="tabcontent__list">Представление интересов должника во взаимоотношениях с финансовым управляющим при выполнении всех, предусмотренных Законом РФ «О несостоятельности (банкротстве)»</li>
                 </ul>
                 <div class="tabcontent__price">от 60000 руб.</div>
-                <a href="#" class="tabcontent__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></a>
+                <button class="tabcontent__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
             </div>
             <div class="price__tabcontent tabcontent">
                 <ul class="tabcontent__menu">
                     <li class="tabcontent__list">Подготовка необходимого для подачи в МФЦ заявления о признании гражданина банкротом во внесудебном порядке пакета документов</li>
                 </ul>
                 <div class="tabcontent__price">от 100000 руб.</div>
-                <a href="#" class="tabcontent__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></a>
+                <button class="tabcontent__btn btn"><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
             </div>
 
             <div class="price__color-1"></div>
@@ -234,9 +239,7 @@
 
 
         <section class="ask">
-            <h2 class="ask__title title">
-                Ответьте на вопросы<br>и получите решение 
-            </h2>
+            <h2 class="ask__title title">Ответьте на вопросы<br>и получите решение</h2>
             <div class="ask_quiz">
                 <form action="" class="quiz">
                     <button class="quiz__prev" disabled>Назад</button>
@@ -467,10 +470,8 @@
 	</div>
 </div>
 
-	<script
-	src="https://code.jquery.com/jquery-3.6.0.min.js"
-	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-	crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
 	<script src="js/app.min.js"></script>
 </body>
 </html>

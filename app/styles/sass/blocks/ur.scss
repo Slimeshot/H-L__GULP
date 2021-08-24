@@ -30,7 +30,7 @@
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     align-self: center;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 3.6em;
@@ -57,7 +57,7 @@
     grid-column: 8 / 14;
     grid-row: 4 / 6;
     align-self: center;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 9.6em;
@@ -68,14 +68,15 @@
 .ur__subtitle {
     grid-column: 12 / 14;
     grid-row: 4 / 5;
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 2.4em;
     line-height: 1.2em;
     text-align: right;
     color: #FFFFFF;
-    align-self: center;
+    align-self: flex-end;
+    margin-bottom: 16px;
     justify-self: start;
 }
 .ur__btn {

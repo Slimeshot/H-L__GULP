@@ -45,4 +45,9 @@
     .navigation__social {
         display: grid;
     }
+    .navigation__social {
+        .social__link {
+            background-color: transparent;
+        }
+    }
 }

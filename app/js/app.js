@@ -28,15 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
 	  });
 
 
-	  const burgerBtn = document.querySelector('.burger');
-	  const headerNav = document.querySelector('.navigation');
+	  
+	$(".call__phone").mask("+7(999) 999-9999");
+	$(".form__phone").mask("+7(999) 999-9999");
 
 
-	  burgerBtn.addEventListener("click", () => {
-		  headerNav.classList.toggle('open__menu');
-		  burgerBtn.classList.toggle('burger__active');
-		  document.body.classList.toggle('active');
-	  })
+	const burgerBtn = document.querySelector('.burger');
+	const headerNav = document.querySelector('.navigation');
+	const navMenu = document.querySelector('.navigation__menu');
+
+
+	burgerBtn.addEventListener("click", () => {
+		headerNav.classList.toggle('open__menu');
+		navMenu.classList.toggle('active');
+		burgerBtn.classList.toggle('burger__active');
+		document.body.classList.toggle('active');
+	})
 
 	
 	
@@ -143,39 +150,41 @@ document.addEventListener('DOMContentLoaded', () => {
 	const selectPrice = document.querySelectorAll(".select__price");
 	const selectCost = document.querySelectorAll(".select__cost");
 	
-	tabLinks.forEach ((item, index) => {
-		// console.log(index);
-		item.addEventListener('click', () => {
-			tabLinks.forEach(elem => {
-				elem.classList.remove('active');
+	if (tabcontent) {
+		tabLinks.forEach ((item, index) => {
+			// console.log(index);
+			item.addEventListener('click', () => {
+				tabLinks.forEach(elem => {
+					elem.classList.remove('active');
+				})
+				tabcontent.forEach((item, counter) => {
+					item.style.opacity = 0;
+					if (index === counter) {
+						item.style.opacity = 1;
+					}
+				})
+				item.classList.toggle('active');
 			})
-			tabcontent.forEach((item, counter) => {
-				item.style.opacity = 0;
-				if (index === counter) {
-					item.style.opacity = 1;
-				}
-			})
-			item.classList.toggle('active');
+			
 		})
-		
-	})
-
-	selectPrice.forEach ((item, index) => {
-		// console.log(index);
-		item.addEventListener('click', () => {
-			selectPrice.forEach(elem => {
-				elem.classList.remove('active');
+	
+		selectPrice.forEach ((item, index) => {
+			// console.log(index);
+			item.addEventListener('click', () => {
+				selectPrice.forEach(elem => {
+					elem.classList.remove('active');
+				})
+				tabcontent.forEach((item, counter) => {
+					item.style.opacity = 0;
+					if (index === counter) {
+						item.style.opacity = 1;
+					}
+				})
+				item.classList.toggle('active');
 			})
-			tabcontent.forEach((item, counter) => {
-				item.style.opacity = 0;
-				if (index === counter) {
-					item.style.opacity = 1;
-				}
-			})
-			item.classList.toggle('active');
+			
 		})
-		
-	})
+	}
 
 
 
@@ -184,45 +193,52 @@ document.addEventListener('DOMContentLoaded', () => {
 	const tabContainer = document.querySelectorAll(".tabcontainer");
 
 	
-	tabLinks.forEach ((item, index) => {
-		// console.log(index);
-		item.addEventListener('click', () => {
-			tabLinks.forEach(elem => {
-				elem.classList.remove('active');
+	if (tabContainer) {
+		tabLinks.forEach ((item, index) => {
+			// console.log(index);
+			item.addEventListener('click', () => {
+				tabLinks.forEach(elem => {
+					elem.classList.remove('active');
+				})
+				tabContainer.forEach((item, counter) => {
+					item.style.opacity = 0;
+					if (index === counter) {
+						item.style.opacity = 1;
+					}
+				})
+				item.classList.toggle('active');
 			})
-			tabContainer.forEach((item, counter) => {
-				item.style.opacity = 0;
-				if (index === counter) {
-					item.style.opacity = 1;
-				}
-			})
-			item.classList.toggle('active');
+			
 		})
-		
-	})
-
-	selectCost.forEach ((item, index) => {
-		// console.log(index);
-		item.addEventListener('click', () => {
-			selectCost.forEach(elem => {
-				elem.classList.remove('active');
+	
+		selectCost.forEach ((item, index) => {
+			// console.log(index);
+			item.addEventListener('click', () => {
+				selectCost.forEach(elem => {
+					elem.classList.remove('active');
+				})
+				tabContainer.forEach((item, counter) => {
+					item.style.opacity = 0;
+					if (index === counter) {
+						item.style.opacity = 1;
+					}
+				})
+				item.classList.toggle('active');
 			})
-			tabContainer.forEach((item, counter) => {
-				item.style.opacity = 0;
-				if (index === counter) {
-					item.style.opacity = 1;
-				}
-			})
-			item.classList.toggle('active');
+			
 		})
-		
-	})
+	}
 	
 	
 	const bg = document.querySelector('.bg__black');
 	const call = document.querySelector('.call');
 	const callBtn = document.querySelector('.call__button');
 	const consBtn = document.querySelector('.cons__btn');
+	
+	
+	const tabContentBtn = document.querySelectorAll('.tabcontent__btn');
+	const tabContainerBtn = document.querySelectorAll('.tabcontainer__btn');
+	
 
 
 
@@ -243,34 +259,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-	//custom select
+	if (tabContentBtn) {
+		tabContentBtn.forEach(item => {
+			item.addEventListener('click', openCall);
+		})
+	}
 
-	let select = function () {
-		let selectHeader = document.querySelectorAll('.select__header');
-		let selectItem = document.querySelectorAll('.select__item');
-	
-		selectHeader.forEach(item => {
-			item.addEventListener('click', selectToggle)
-		});
-	
-		selectItem.forEach(item => {
-			item.addEventListener('click', selectChoose)
-		});
-	
-		function selectToggle() {
-			this.parentElement.classList.toggle('is-active');
-		}
-	
-		function selectChoose() {
-			let text = this.innerText,
-				select = this.closest('.select'),
-				currentText = select.querySelector('.select__current');
-			currentText.innerText = text;
-			select.classList.remove('is-active');
-	
-		}
-	
-	};
+	if (tabContainerBtn) {
+		tabContainerBtn.forEach(item => {
+			item.addEventListener('click', openCall);
+		})
+	}
+
+
+	//custom select
+		let select = function () {
+			let selectHeader = document.querySelectorAll('.select__header');
+			let selectItem = document.querySelectorAll('.select__item');
+		
+			selectHeader.forEach(item => {
+				item.addEventListener('click', selectToggle)
+			});
+		
+			selectItem.forEach(item => {
+				item.addEventListener('click', selectChoose)
+			});
+		
+			function selectToggle() {
+				this.parentElement.classList.toggle('is-active');
+			}
+		
+			function selectChoose() {
+				let text = this.innerText,
+					select = this.closest('.select'),
+					currentText = select.querySelector('.select__current');
+				currentText.innerText = text;
+				select.classList.remove('is-active');
+		
+			}
+		
+		};
 
 	$(document).on('click', '.quiz__next', function () {
 		nextStep()
@@ -425,7 +453,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		return false;
 	});
 
-	select();
+	if (document.querySelectorAll('.select__header')) {
+		select();
+	}
+
 	if (document.querySelector(".option")) {
 		document.querySelector(".option__select").click();
 		document.querySelector(".option__tabs").click();
@@ -436,7 +467,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (document.querySelector('.cost')) {
 		document.querySelector(".select__cost").click();
 	}
-
-	document.querySelector(".tablinks").click();
+	if (document.querySelector(".tablinks")) {
+		document.querySelector(".tablinks").click();
+	}
 })
 

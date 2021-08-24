@@ -31,6 +31,13 @@
         }
     }
 }
+.agent {
+    .necessary__title {
+        .necessary__br-2 {
+            display: block;
+        }
+    }
+}
 
 .necessary__subtitle {
     grid-column: 12 / 15;
@@ -44,7 +51,7 @@
     justify-content: space-around;
 }
 .necessary__list {
-    font-family: Gilroy;
+    font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 2em;

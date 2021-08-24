@@ -8,6 +8,8 @@
 	<!-- <base href="/"> -->
 
 	<title>H&L</title>
+	<meta name="yandex-verification" content="14edccde990fa06a" />
+	
 	<meta name="description" content="Startup HTML template OptimizedHTML 5">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -31,11 +33,11 @@
 		<section class="call">
 			<img src="../images/dist/cross.png" alt="cross" class="call__button">
 			<h6 class="call__title">Свяжитесь с нами</h6>
-			<form class="call__form" id="index__call">
+			<form method="POST" class="call__form" id="indexCall">
 				<input class="call__name" name="name" type="text" placeholder="Имя" required> 
 				<input class="call__phone" name="phone" type="text" placeholder="Телефон" required> 
-				<input class="call__text" name="text" type="text" placeholder="Вопрос" required> 
-				<input type="submit" id="sendCall__index" value="Оставить заявку" class="btn call__btn">
+				<input class="call__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
+				<input type="submit" id="sendIndexCall" value="Оставить заявку" class="btn call__btn">
 			</form>
 		</section>
 		<header class="header">
@@ -76,6 +78,7 @@
 			<div class="header__bg"></div>	
 			<div class="burger"></div>
 			<nav class="header__navigation navigation">
+				<a href="index.html" class="navigation__logo">H&L</a>
 				<img src="images/dist/green__block.jpg" class="grid__sizers" alt="block" aria-hidden="true">
 				<ul class="navigation__social social">
 					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/search.svg" alt=""></a></li>
@@ -98,10 +101,11 @@
 				<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/telegram.svg" alt=""></a></li>
 			</ul>
 			<div class="header__text js-scroll fade-in-title">
+				<span class="header__char">&</span>
 				<h1 class="header__title ">Hear Listen</h1>
 				<span class="header__subtitle">Адвокатское бюро</span>
 			</div>
-			<a href="#" class="header__btn btn cons__btn">Получить консультацию <span><img src="images/dist/arrow-right.svg" alt="arrow-right"></span></a>
+			<button class="header__btn btn cons__btn"><span>Получить консультацию</span><span><img src="images/dist/arrow-right.svg" alt="arrow-right"></span></button>
 			<div class="header__color">
 			</div>
 			<img src="images/dist/green__block.jpg" class="grid__sizer" alt="block" aria-hidden="true">
@@ -168,11 +172,11 @@
 				<h2 class="question__title title">Не нашли<br> свой вопрос?</h2>
 				<p class="question__subtitle subtitle">Оставьте свои данные и мы вам перезвоноим</p>		
 			</div>
-			<form class="question__form form js-scroll slide-right">
-				<input class="form__name" name="name" type="text" placeholder="Имя"> 
-				<input class="form__phone" name="phone" type="text" placeholder="Телефон"> 
-				<input class="form__quest" name="question" type="text" placeholder="Вопрос"> 
-				<input type="submit" value="" class="form__btn-primary">
+			<form method="POST" class="question__form form js-scroll slide-right" id="indexQuest">
+				<input class="form__name" name="name" type="text" placeholder="Имя" required> 
+				<input class="form__phone" name="phone" type="text" placeholder="Телефон" required> 
+				<input class="form__mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
+				<input type="submit" id="sendIndexQuest" value="" class="form__btn-primary">
 			</form>
 		</section>
 
@@ -381,10 +385,8 @@
 	</div>
 </div>
 
-	<script
-	src="https://code.jquery.com/jquery-3.6.0.min.js"
-	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-	crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
 	<script src="js/app.min.js"></script>
 </body>
 </html>

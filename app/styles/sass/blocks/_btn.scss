@@ -1,35 +1,35 @@
 .btn {
     background-color: #E9A237;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: Gilroy;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 2em;
-        line-height: 24px;
-        color: #FFFFFF;
-        text-decoration: none;
-        z-index: 1;
-        border: none;
-        transition: background-color .2s ease-in-out;
-        &:hover {
-            color: #fff;
-            background-color: lighten(#E9A237, 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2em;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+    z-index: 1;
+    border: none;
+    transition: background-color .2s ease-in-out;
+    &:hover {
+        color: #fff;
+        background-color: lighten(#E9A237, 5);
+    }
+    &:active {
+        background-color: darken(#E9A237, 5);
+    }
+    &:disabled {
+        background-color: #4C915F;
+        cursor:default
+    }
+    span {
+        margin-left: .5em;
+        img {
+            height: 1em;
+            width: 1em;
         }
-        &:active {
-            background-color: darken(#E9A237, 5);
-        }
-        &:disabled {
-            background-color: #4C915F;
-            cursor:default
-        }
-        span {
-            margin-left: .5em;
-            img {
-              height: 1em;
-              width: 1em;
-            }
-        }
+    }
 
 }

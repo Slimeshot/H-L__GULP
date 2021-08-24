@@ -17,7 +17,7 @@
     justify-content: space-between;
 }
 .bankruptcy__count {
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 5.6em;
@@ -25,7 +25,7 @@
     color: #1F7537;
 }
 .bankruptcy__subtitle {
-    font-family: Gilroy;
+    font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 2em;
@@ -76,6 +76,7 @@
         grid-column: 2 / 9;
         grid-row: 2 / 3;
         justify-self: center;
+        align-self: center;
         font-size: 4.9em;
     }
     .bankruptcy__info {

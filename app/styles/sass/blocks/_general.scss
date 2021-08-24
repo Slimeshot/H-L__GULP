@@ -49,7 +49,7 @@ p,h1,h2,h3 {
 }
 
 .title {
-    font-family: Forum;
+    font-family: 'Forum', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 5.6em;
@@ -59,7 +59,7 @@ p,h1,h2,h3 {
 }
 
 .subtitle {
-    font-family: Gilroy;
+    font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 2em;
@@ -73,23 +73,10 @@ p,h1,h2,h3 {
         line-height: 1;
         font-size: 0.95vw;
     }
-    .title {
-        font-family: Forum;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 5.6em;
-        line-height: 1em;
-        text-transform: uppercase;
-        color: #134621;
-    }
     
     .subtitle {
-        font-family: Gilroy;
-        font-style: normal;
-        font-weight: normal;
         font-size: 1.8em;
         line-height: 1.4em;
-        color: #4D4D4D;
     }
 }
 
@@ -100,21 +87,12 @@ p,h1,h2,h3 {
         font-size: 1.85vw;
     }
     .title {
-        font-family: Forum;
-        font-style: normal;
-        font-weight: normal;
         font-size: 4.6em;
         line-height: 1em;
-        text-transform: uppercase;
-        color: #134621;
     }
     
     .subtitle {
-        font-family: Gilroy;
-        font-style: normal;
-        font-weight: normal;
         font-size: 1.8em;
         line-height: 1.8em;
-        color: #4D4D4D;
     }
 }

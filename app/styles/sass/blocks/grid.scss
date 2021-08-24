@@ -34,7 +34,7 @@
     --b:1px; /* border length */
     
     width: 100%;
-    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.2) 0;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
     background:
       linear-gradient(to right, var(--g)),
       linear-gradient(to bottom,var(--g));
@@ -87,7 +87,7 @@
     --b:1px; /* border length */
     
     width: 100%;
-    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.2) 0;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
     background:
       linear-gradient(to right, var(--g)),
       linear-gradient(to bottom,var(--g));
@@ -135,15 +135,15 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(60, 1fr);
+    grid-template-rows: repeat(62, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    --nr:60; /* number of rows */
+    --nr:62; /* number of rows */
     --nc:15; /* number of columns */
     --b:1px; /* border length */
     
     width: 100%;
-    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.2) 0;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
     background:
       linear-gradient(to right, var(--g)),
       linear-gradient(to bottom,var(--g));
@@ -195,7 +195,7 @@
     --b:1px; /* border length */
     
     width: 100%;
-    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.2) 0;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
     background:
       linear-gradient(to right, var(--g)),
       linear-gradient(to bottom,var(--g));
@@ -259,7 +259,7 @@
     --b:1px; /* border length */
     
     width: 100%;
-    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.2) 0;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
     background:
       linear-gradient(to right, var(--g)),
       linear-gradient(to bottom,var(--g));
@@ -309,7 +309,7 @@
     --b:1px; /* border length */
     
     width: 100%;
-    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.2) 0;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
     background:
       linear-gradient(to right, var(--g)),
       linear-gradient(to bottom,var(--g));
@@ -363,7 +363,7 @@
     --b:1px; /* border length */
     
     width: 100%;
-    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.2) 0;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
     background:
       linear-gradient(to right, var(--g)),
       linear-gradient(to bottom,var(--g));

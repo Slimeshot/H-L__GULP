@@ -53,6 +53,7 @@
     background-color: $lightorange;
     grid-column: 14 / 15;
     grid-row: 4 / 5;
+    z-index: -1;
 }
 .cost__color-3 {
     background-color: darken($lightorange, 8);
@@ -75,6 +76,14 @@
             grid-row: span 7;
         }
     }
+    .legal {
+        .cost {
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(7, 1fr);
+            grid-column: span 8;
+            grid-row: span 7;
+        }
+    }
     .cost__title {
         grid-column: 2 / 5;
         grid-row: 1 / 2;
@@ -87,22 +96,7 @@
         grid-column: 5 / 8;
         grid-row: 1 / 2;
         display: block;
-        // font-family: Gilroy;
-        // font-style: normal;
-        // font-weight: 500;
-        // font-size: 2em;
-        // line-height: 1.2em;
-        // color: #fff;
-        // border: none;
-        // background-color: #1F7537;
-        // option {
-        //     line-height: 30px;
-        //     background-color: #fff;
-        //     color: #1F7537;
-        //     &:focus {
-        //         background-color: #1F7537;
-        //     }
-        // }
+
     }
     
     .cost__tabcontainer {
@@ -129,6 +123,14 @@
         grid-row: span 11;
     }
     .agent {
+        .cost {
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(11, 1fr);
+            grid-column: span 5;
+            grid-row: span 11;
+        }
+    }
+    .legal {
         .cost {
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: repeat(11, 1fr);
