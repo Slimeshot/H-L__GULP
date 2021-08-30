@@ -11,13 +11,14 @@
     display: grid;
     grid-template-columns: repeat(13, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    background: #F1F7F3;
+    background: #1f7537;
 }
 .board__title {
     grid-column: 3 / 12;
     grid-row: 1 / 4;
     text-align: center;
     align-self: center;
+    color: #fff;
 }
 
 @media (max-width: 1024px) {

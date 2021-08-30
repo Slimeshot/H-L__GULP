@@ -3,6 +3,7 @@
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(2, 1fr);
     input {
+        background-color: transparent;
         color: #A5C8AF;
         border: none;
         &:not(:last-child) {

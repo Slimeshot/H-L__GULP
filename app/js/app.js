@@ -29,8 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	  
-	$(".call__phone").mask("+7(999) 999-9999");
-	$(".form__phone").mask("+7(999) 999-9999");
+	// $(".call__phone").mask("+7(999) 999-9999");
+	// $(".form__phone").mask("+7(999) 999-9999");
+	$("input[name='phone']").mask("+7(999) 999-9999");
 
 
 	const burgerBtn = document.querySelector('.burger');
@@ -232,7 +233,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	const bg = document.querySelector('.bg__black');
 	const call = document.querySelector('.call');
+	const dare = document.querySelector('.dare');
 	const callBtn = document.querySelector('.call__button');
+	const dareBtn = document.querySelector('.dare__button');
 	const consBtn = document.querySelector('.cons__btn');
 	
 	
@@ -253,21 +256,36 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.body.classList.remove('active');
 	}
 
+	function openDare() {
+		bg.classList.add('active');
+		dare.classList.add('active');
+		document.body.classList.add('active');
+	}
+	function closeDare() {
+		bg.classList.remove('active');
+		dare.classList.remove('active');
+		document.body.classList.remove('active');
+	}
+
 	consBtn.addEventListener('click', openCall);
 	callBtn.addEventListener('click', closeCall);
-	bg.addEventListener('click', closeCall);
+	dareBtn.addEventListener('click', closeDare);
+	bg.addEventListener('click', () => {
+		closeCall();
+		closeDare();
+	});
 
 
 
 	if (tabContentBtn) {
 		tabContentBtn.forEach(item => {
-			item.addEventListener('click', openCall);
+			item.addEventListener('click', openDare);
 		})
 	}
 
 	if (tabContainerBtn) {
 		tabContainerBtn.forEach(item => {
-			item.addEventListener('click', openCall);
+			item.addEventListener('click', openDare);
 		})
 	}
 
@@ -313,6 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		if ($('.quiz__step').length === parseInt(currentStepIndex) + 1) {
 		} else {
+			addResult(currentStep)
 			$('.quiz__prev').prop('disabled', false)
 			$('.quiz__step-active').removeClass('quiz__step-active')
 			$($('.quiz__step')[parseInt(currentStepIndex) + 1]).addClass('quiz__step-active')
@@ -330,10 +349,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		if ((parseInt(currentStepIndex) + 1) == 1) {
 		} else {
+			$('.quiz-results-item').each((ind, item) => {
+				console.log(ind);
+				if ((ind + 1) === $('.quiz-results-item').length) {
+					item.remove();
+				}
+			})
 			$('.quiz__step-active').removeClass('quiz__step-active')
 			$($('.quiz__step')[parseInt(currentStepIndex) + -1]).addClass('quiz__step-active')
 			checkCurrentStep()
 		}
+	}
+
+
+	function addResult(step) {
+	
+		// const title = step.find('.quiz__title').html()
+		const checkedInputs = step.find('input[type="radio"]:checked, input[type="checkbox"]:checked')
+		let answers = []
+		if (checkedInputs.length) {
+			checkedInputs.each(function (index, el) {
+				answers.push(el.value);
+			})
+		}
+		let vals = ''
+		answers.forEach(function(el) {
+			vals += `${el}`
+		})
+		const template =
+			`<div class="quiz-results-item">${vals}</div>`
+		$('.quiz-results').append(template)
+		
+
+
+		
+		// $('.quiz-results-item-res__val').each((index, item) => {
+
+		// 	if (index > 1) {
+
+		// 		strs = `${strs} ${$(item).text()},`
+		// 	}
+		// 	$('.quizResult').text(strs);
+		// })
+	
 	}
 	
 
@@ -342,7 +400,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const currentStep = $('.quiz__step-active')
 		const inputs = currentStep.find('input[type="radio"], input[type="checkbox"]').length
 		const checkedInputs = currentStep.find('input[type="radio"]:checked, input[type="checkbox"]:checked').length
-		const btn = $('.quiz__next')
+		const btn = $('.quiz__next');
 
 
 		if (inputs) {
@@ -352,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				btn.prop('disabled', true)
 			}
 		} else {
-			btn.prop('disabled', false)
+			btn.prop('disabled', true)
 		}
 	}
 
@@ -360,13 +418,94 @@ document.addEventListener('DOMContentLoaded', () => {
 		checkCurrentStep()
 	})
 	
+
+
+	//validation form call
+	$('.call__name').keyup(chekCallForm);
+	$('.call__phone').keyup(chekCallForm);
+	$('.call__email').keyup(chekCallForm);
+
+	$('.dare__name').keyup(chekDareForm);
+	$('.dare__phone').keyup(chekDareForm);
+	$('.dare__email').keyup(chekDareForm);
+	let val
+
+
+	function validateEmail(email) {
+        var re = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$/;
+        return re.test(email);
+    }
+
+	function chekDareForm() {
+		if ($('.dare__name').val() === '' || $('.dare__phone').val() === '' || $('.dare__email').val() === '') {
+			$('.dare__btn').prop('disabled', true)
+		} else {
+			val = $('.dare__email').val();//Получаем данные из input
+			if (validateEmail(val)) {
+				$('.dare__btn').prop('disabled', false);
+			} else {
+				$('.dare__btn').prop('disabled', true)
+			}
+		}
+	}
+
+	function chekCallForm() {
+		if ($('.call__name').val() === '' || $('.call__phone').val() === '' || $('.call__email').val() === '') {
+			$('.call__btn').prop('disabled', true)
+		} else {
+			val = $('.call__email').val();//Получаем данные из input
+			if (validateEmail(val)) {
+				$('.call__btn').prop('disabled', false);
+			} else {
+				$('.call__btn').prop('disabled', true)
+			}
+		}
+	}
+	chekDareForm();
+	chekCallForm();
+
+
+	//validation form quiz
+
+	$(".quiz__input[name='phone']").keyup(checkQuiz);
+	$(".quiz__input[name='email']").keyup(checkQuiz);
+	function checkQuiz() {
+		if ($(".quiz__input[name='phone']").val().length == 16 || $(".quiz__input[name='email']") === '') {
+			let param = $(".quiz__input[name='email']").val()
+			if (validateEmail(param)) {
+				$('.quiz__next').prop('disabled', false);
+			} else {
+				$('.quiz__next').prop('disabled', true)
+			}
+		}
+	}
+
+
+
+	
+	// open success message 
+
+	const luckBlock = document.querySelector('.luck');
+		
+	if (luckBlock) {
+		luckBlock.addEventListener('click', (event) => {
+		if (event.target.contains(luckBlock)) {
+			luckBlock.classList.remove('active');
+			document.body.classList.remove('active')
+		}
+	})
+
+	}
+
+
+
+
 	
 
 	$('form').submit(function () {
 		var formID = $(this).attr('id'); // Получение ID формы
 		var formNm = $('#' + formID);
 		console.log(formID);
-
 		$.ajax({
 			url: 'ajax/mail.php',
 			type: 'POST',
@@ -374,8 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			data: { 'formID':formID },
 			dataType: 'html',
 			error: function(data) {
-				console.log(data);
-				console.log('sdsdsds');
+				// console.log('sdsdsds');
 				// $("#errorMess").html(data);
 				// $("#errorMess").css('color', 'red');
 			}, 
@@ -387,7 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				
 			},
 			success: function(data) {
-				dataLayer.push({'event': `${formID}`})
+				// dataLayer.push({'event': `${formID}`})
 				console.log(data);
 				if ($("input[name='name']")) {
 					$("input[name='name']").val('');
@@ -399,55 +537,38 @@ document.addEventListener('DOMContentLoaded', () => {
 					$("input[name='email']").val('');
 				}
 				
-				if (formID.includes('quiz')) {
-					quizResults.classList.add('active')
-					quizMain.classList.add('active')
-					quizNext.classList.add('active')
-					quizLuck.classList.add('active')
-					quizNextClose.classList.add('active')
-					$('.quiz-sticky').css('display','none')
-					$('.quiz-bottom').css('margin-top','0px')
-					$('.quiz-content').css('padding-top','3.2em')
+				if (formID.includes('Call')) {
+					if ($('.call__success')) {
+						$('.call__success').addClass('active');
+						$('.call__form').hide();
+						$('.call__title').hide();
+					}
+					
 				}
 
-
-				if (formID.includes('call')) {
-					callForm.classList.add('active')
-					callLuck.classList.add('active')
-					callAgree.classList.add('active')
+				if (formID.includes('Dare')) {
+					if ($('.dare__success')) {
+						$('.dare__success').addClass('active');
+						$('.dare__form').hide();
+						$('.dare__title').hide();
+					}
+					
 				}
 
-				if (formID.includes('application')) {
-					applicationForm.classList.add('active')
-					applicationLuck.classList.add('active')
-					applicationAgree.classList.add('active')
-				}
-
-				if (formID.includes('calc')) {
-					calculatorInfo.classList.add('active')
-					calculatorGroup.classList.add('active')
-					calcAgree.classList.add('active')
-					calculatorLuck.classList.add('active')
-				}
-
-				if (formID.includes('flot-') || formID.includes('bur-') || formID.includes('auto-') || formID.includes('train-') || formID.includes('index-') || formID.includes('contacts-')) {
-					if (successBlock) {
-						// callBlock.classList.remove('active');
-						// callBg.classList.remove('active');
-						// application.classList.remove('active')
-						// $('.quiz_active').removeClass('quiz_active')
-						// $('body').attr('style', '');
-						//  $('body').removeClass('BodyOverflow');
-						successBlock.classList.add('active');
+				if (formID.includes('Quest') || formID.includes('Spec')) {
+					if (luckBlock) {
+						luckBlock.classList.add('active');
 						document.body.classList.add('active');
 					}
 					
 				}
 
-				// connect.classList.toggle('open');
-				// $('#sendMail').prop('disabled', false);
-				// $("#errorMess").css('color', 'green');
-				// dataLayer.push({'event': 'sendMail_1'})
+				if(formID.includes('Quiz')) {
+					$('.quiz__step').hide();
+					$('.quiz__prev').hide();
+					$('.quiz__next').hide();
+					$('.quiz__finish').addClass('active');
+				}
 			}
 		})
 		return false;

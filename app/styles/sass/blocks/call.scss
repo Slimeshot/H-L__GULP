@@ -29,6 +29,37 @@
     object-fit: cover;
     cursor: pointer;
 }
+.call__success {
+    grid-column: 1 / 5;
+    grid-row: 3 / 6;
+    align-self: center;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease;
+}
+.call__success.active {
+    opacity: 1;
+    visibility: visible;
+}
+.call__info {
+    font-family: 'Forum', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.8em;
+    line-height: 1.05em;
+    color: #134621;
+    margin-bottom: 16px;
+}
+.call__text {
+    font-family: 'Forum', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.4em;
+    color: #134621;
+}
 .call__title {
     grid-column: 1 / 5;
     grid-row: 2 / 3;
@@ -71,17 +102,17 @@
 .call__name {
     grid-column: 1 / 5;
     grid-row: 1 / 2;
-    margin: 0 25px;
+    margin: 0 32px;
 }
 .call__phone {
     grid-column: 1 / 5;
     grid-row: 2 / 3;
-    margin: 0 25px;
+    margin: 0 32px;
 }
 .call__email {
     grid-column: 1 / 5;
     grid-row: 3 / 4;
-    margin: 0 25px;
+    margin: 0 32px;
 }
 .btn {
 }
@@ -89,6 +120,9 @@
     grid-column: 1 / 5;
     grid-row: 6 / 7;
     color: #fff !important;
+    &:disabled {
+        background-color: #CDCDCD;
+    }
 }
 
 

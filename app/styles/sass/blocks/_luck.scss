@@ -1,0 +1,110 @@
+.luck {
+    position: fixed;
+    padding: 16px;
+    z-index: 400;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: .4);
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s ease;
+    br {
+        display: none;
+    }
+}
+.luck.active {
+    opacity: 1;
+    visibility: visible;
+}
+.luck__content {
+    padding: 64px;
+    background-color: #FAF9F5;
+    max-width: 590px;
+    display: flex;
+    align-items: center;
+}
+.luck__img {
+    padding-right: 32px;
+    align-self: flex-start;
+    img {
+        width: 28px;
+        height: 28px;
+    }
+}
+.luck__mes {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.luck__mes-title {
+    font-family: 'Forum', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #191919;
+    margin-bottom: 16px;
+
+}
+.luck__mes-subtitle {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #7D7D7D;
+}
+
+
+@media (max-width: 700px) {
+    .luck__content {
+        padding: 32px;
+    }
+}
+
+@media (max-width: 560px) {
+    .luck {
+        br {
+            display: block;
+        }
+    }
+    .luck__content {
+        flex-direction: column;
+    }
+    .luck__img {
+        padding-right: 0px;
+        margin-bottom: 32px;
+        align-self: center;
+        img {
+            width: 44px;
+            height: 44px;
+        }
+    }
+    .luck__mes-title {
+        text-align: center;
+    
+    }
+}
+
+@media (max-width: 560px) {
+    .luck__content {
+        padding: 32px 22px;
+    }
+    .luck__mes-title {
+        font-size: 20px;
+    
+    }
+    .luck__mes-subtitle {
+        font-size: 12px;
+    }
+}
+

@@ -22,6 +22,27 @@
 </head>
 
 <body>
+	<!--  Roistat  -->
+	<script>
+		(function(w, d, s, h, id) {
+			w.roistatProjectId = id; w.roistatHost = h;
+			var p = d.location.protocol == "https:" ? "https://" : "http://";
+			var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
+			var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+		})(window, document, 'script', 'cloud.roistat.com', 'edcd04f2cdc06a5d966accbb835b9724');
+		</script>
+		
+		<div class="luck">
+			<div class="luck__content">
+				<div class="luck__img">
+					<img src="images/dist/icon/checkGreen.svg" alt="check">
+				</div>
+				<div class="luck__mes">
+					<span class="luck__mes-title">Ваша заявка<br> получена!</span>
+					<span class="luck__mes-subtitle">Мы свяжемся с вами в ближайшее время</span>
+				</div>
+			</div>
+		</div>
 	
 	
 		
@@ -40,6 +61,32 @@
 				<input class="call__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
 				<input type="submit" id="sendArbitrCall" value="Оставить заявку" class="btn call__btn">
 			</form>
+            <div class="call__success">
+				<span class="call__info">
+					Ваша заявка получена!
+				</span>
+				<span class="call__text">
+					Мы свяжемся с вами в ближайшее время
+				</span>
+			</div>
+		</section>
+		<section class="dare">
+			<img src="../images/dist/cross.png" alt="cross" class="dare__button">
+			<h6 class="dare__title">Свяжитесь с нами</h6>
+			<form method="POST" class="dare__form" id="arbitrDare">
+				<input class="dare__name" name="name" type="text" placeholder="Имя" required> 
+				<input class="dare__phone" name="phone" type="text" placeholder="Телефон" required> 
+				<input class="dare__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
+				<input type="submit" id="sendArbitrDare" value="Оставить заявку" class="btn dare__btn">
+			</form>
+			<div class="dare__success">
+				<span class="dare__info">
+					Ваша заявка получена!
+				</span>
+				<span class="dare__text">
+					Мы свяжемся с вами в ближайшее время
+				</span>
+			</div>
 		</section>
         <header class="arb">
             <a href="index.html" class="arb__logo">H&L</a>
@@ -312,9 +359,10 @@
             </h2>
             <p class="ask__subtitle">и получите предложение с условиями сотрудничества</p>
             <div class="ask_quiz">
-                <form action="" class="quiz">
+                <form method="POST" class="quiz" id="arbitrQuiz">
+                    <div class="quiz-results"></div>
                     <button class="quiz__prev" disabled>Назад</button>
-                    <button class="quiz__next btn" disabled><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
+                    <button class="quiz__next btn" id="sendArbitrQuiz" disabled><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
                     <div class="quiz__step quiz__step-active" data-step="0">
                         <div class="quiz__number">01</div>
                         <div class="quiz__title">Какова сущность спора?</div>

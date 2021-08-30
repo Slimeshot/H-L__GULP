@@ -4,6 +4,7 @@
     grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(9, 1fr);
     display: grid;
+    background-color: #FBFDFC;
 }
 .spec__title {
     grid-column: 2 / 8;

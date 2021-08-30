@@ -8,12 +8,13 @@
 .question__text {
     grid-column: 2 / 6;
     grid-row: 2 / 5;
-    align-self: center;
+    align-self: flex-start;
 }
 .question__title {
-    margin-bottom: 0.5em;
+    margin-top: 1.5em;
 }
 .question__subtitle {
+    margin-top: 2em;
 }
 .question__form {
     grid-column: 7 / 14;

@@ -13,6 +13,32 @@
 				<input class="call__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
 				<input type="submit" id="sendPropertyCall" value="Оставить заявку" class="btn call__btn">
 			</form>
+            <div class="call__success">
+				<span class="call__info">
+					Ваша заявка получена!
+				</span>
+				<span class="call__text">
+					Мы свяжемся с вами в ближайшее время
+				</span>
+			</div>
+		</section>
+		<section class="dare">
+			<img src="../images/dist/cross.png" alt="cross" class="dare__button">
+			<h6 class="dare__title">Свяжитесь с нами</h6>
+			<form method="POST" class="dare__form" id="propertyDare">
+				<input class="dare__name" name="name" type="text" placeholder="Имя" required> 
+				<input class="dare__phone" name="phone" type="text" placeholder="Телефон" required> 
+				<input class="dare__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
+				<input type="submit" id="sendPropertyDare" value="Оставить заявку" class="btn dare__btn">
+			</form>
+			<div class="dare__success">
+				<span class="dare__info">
+					Ваша заявка получена!
+				</span>
+				<span class="dare__text">
+					Мы свяжемся с вами в ближайшее время
+				</span>
+			</div>
 		</section>
         <header class="property">
             <a href="index.html" class="property__logo">H&L</a>
@@ -265,9 +291,10 @@
             </h2>
             <p class="ask__subtitle">и получите предложение с условиями сотрудничества</p>
             <div class="ask_quiz">
-                <form action="" class="quiz">
+                <form method="POST" class="quiz" id="propertyQuiz">
+                    <div class="quiz-results"></div>
                     <button class="quiz__prev" disabled>Назад</button>
-                    <button class="quiz__next btn" disabled><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
+                    <button class="quiz__next btn" id="sendPropertyQuiz" disabled><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
                     <div class="quiz__step quiz__step-active" data-step="0">
                         <div class="quiz__number">01</div>
                         <div class="quiz__title">К какой категории спора относится вопрос?</div>
