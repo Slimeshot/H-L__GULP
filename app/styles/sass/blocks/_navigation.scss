@@ -27,7 +27,18 @@
 }
 
 
+.contacts {
+    .navigation__link {
+        color: #676767;
+    }
+}
+
 @media (max-width: 768px)  {
+    .contacts {
+        .navigation__link {
+            color: #fff;
+        }
+    }
     .navigation {
         display: grid;
         grid-template-columns: repeat(8, 1fr);

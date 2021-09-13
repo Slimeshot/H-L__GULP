@@ -10,7 +10,7 @@
 				<input class="call__name" name="name" type="text" placeholder="Имя" required> 
 				<input class="call__phone" name="phone" type="text" placeholder="Телефон" required> 
 				<input class="call__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
-				<input type="submit" id="sendFizCall" value="Оставить заявку" class="btn call__btn">
+				<input type="submit" id="sendfizCall" value="Оставить заявку" class="btn call__btn">
 			</form>
             <div class="call__success">
 				<span class="call__info">
@@ -28,7 +28,7 @@
 				<input class="dare__name" name="name" type="text" placeholder="Имя" required> 
 				<input class="dare__phone" name="phone" type="text" placeholder="Телефон" required> 
 				<input class="dare__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
-				<input type="submit" id="sendFizDare" value="Оставить заявку" class="btn dare__btn">
+				<input type="submit" id="sendfizDare" value="Оставить заявку" class="btn dare__btn">
 			</form>
 			<div class="dare__success">
 				<span class="dare__info">
@@ -48,7 +48,7 @@
                 <a href="index.html" class="navigation__logo">H&L</a>
                 <img src="images/dist/green__block.jpg" class="grid__sizers" alt="block" aria-hidden="true">
 				<ul class="navigation__social social">
-					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/search.svg" alt=""></a></li>
+					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/phone.svg" alt=""></a></li>
 					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/mail.svg" alt=""></a></li>
 					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/viber.svg" alt=""></a></li>
 					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/telegram.svg" alt=""></a></li>
@@ -62,7 +62,7 @@
                 </ul>
             </nav>
             <ul class="fiz__social social">
-                <li class="social__list"><a href="#" class="social__link"><img src="images/dist/search.svg" alt=""></a></li>
+                <li class="social__list"><a href="#" class="social__link"><img src="images/dist/phone.svg" alt=""></a></li>
                 <li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/mail.svg" alt=""></a></li>
                 <li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/viber.svg" alt=""></a></li>
                 <li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/telegram.svg" alt=""></a></li>
@@ -163,7 +163,7 @@
 				<input class="form__name" name="name" type="text" placeholder="Имя" required> 
 				<input class="form__phone" name="phone" type="text" placeholder="Телефон" required> 
 				<input class="form__mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
-				<input type="submit" id="sendFizSpec" value="" class="form__btn-primary">
+				<input type="submit" id="sendfizSpec" value="" class="form__btn-primary">
 			</form>
             
             <div class="spec__name">Дмитрий<br><span>Кузнецов</span></div>
@@ -238,12 +238,13 @@
 
 
         <section class="ask">
-            <h2 class="ask__title title">Ответьте на вопросы<br>и получите решение</h2>
+            <h2 class="ask__title title">Ответьте<br>на вопросы</h2>
+            <p class="ask__subtitle">и получите предложение с условиями сотрудничества</p>
             <div class="ask_quiz">
                 <form method="POST" class="quiz" id="fizQuiz">
                     <div class="quiz-results"></div>
                     <button class="quiz__prev" disabled>Назад</button>
-                    <button class="quiz__next btn" id="sendFizQuiz" disabled><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
+                    <button class="quiz__next btn" id="sendfizQuiz" disabled><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
                     <div class="quiz__step quiz__step-active" data-step="0">
                         <div class="quiz__number">01</div>
                         <div class="quiz__title">Кредиторы подали на вас в суд?</div>

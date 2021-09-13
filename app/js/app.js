@@ -4,6 +4,27 @@ Swiper.use([Mousewheel, Controller, Pagination, Scrollbar, Navigation ]);
 
 document.addEventListener('DOMContentLoaded', () => {
 
+
+	const reviewsSwiper = new Swiper('.reviews__slider', {
+		loop: true,
+		
+
+		navigation: {
+			nextEl: '.reviews__btn-next',
+			prevEl: '.reviews__btn-prev',
+		  },
+
+		  pagination: {
+			el: ".reviews__pagination",
+			type: "fraction",
+		  },
+	
+	  });
+
+
+
+
+
 	const peopleSwiper = new Swiper('.people__slider', {
 		loop: true,
 	  
@@ -269,7 +290,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	consBtn.addEventListener('click', openCall);
 	callBtn.addEventListener('click', closeCall);
-	dareBtn.addEventListener('click', closeDare);
+	if (dareBtn) {
+		dareBtn.addEventListener('click', closeDare);
+	}
 	bg.addEventListener('click', () => {
 		closeCall();
 		closeDare();

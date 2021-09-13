@@ -25,9 +25,21 @@
     grid-row: 5 / 6;
     background-color: $lightgreen;
 }
+.ask__subtitle {
+    grid-column: 2 / 7;
+    grid-row: 2 / 4;
+    align-self: center;
+    margin-top: 32px;
+    font-family: 'Forum', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.4em;
+    line-height: 1.2em;
+    color: #134621;
+}
 
 
-.lawyer,.arbitr,.admin {
+.lawyer,.arbitr,.admin, {
     .ask__subtitle {
         grid-column: 2 / 7;
         grid-row: 2 / 4;
@@ -36,7 +48,7 @@
         font-family: 'Forum', sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 2em;
+        font-size: 2.4em;
         line-height: 1.2em;
         color: #134621;
     }
@@ -99,22 +111,29 @@
         background-color: $lightgreen;
         display: none;
     }
+    .ask__subtitle {
+        grid-column: 2 / 7;
+        grid-row: 1 / 2;
+        align-self: center;
+        margin-top: 42px;
+    }
     .lawyer,.arbitr,.admin {
         .ask__title {
             font-size: 4.8em;
             grid-column: 2 / 7;
             grid-row: 1 / 2;
             align-self: center;
-            margin-bottom: 42px;
+            // margin-bottom: 42px;
             br {
-                display: none;
+                // display: none;
             }
         }
         .ask__subtitle {
             grid-column: 2 / 7;
-            grid-row: 1 / 2;
+            grid-row: 2 / 3;
             align-self: center;
-            margin-top: 42px;
+            margin-top: 0px;
+            margin-bottom: 42px;
         }
         .ask {
             grid-column: span 8;
@@ -165,21 +184,29 @@
     .ask__color-1 {
         display: none;
     }
+    .ask__subtitle {
+        grid-column: 1 / 6;
+        grid-row: 2 / 3;
+        align-self: flex-start;
+        margin-left: 25px;
+        margin-top: 0;
+    }
 
     .lawyer,.arbitr,.admin {
         .ask__title {
-            font-size: 3.2em;
+            font-size: 4.2em;
             grid-column: 1 / 6;
             grid-row: 1 / 2;
             br {
-                display: none;
+                // display: none;
             }
         }
         .ask__subtitle {
             grid-column: 1 / 6;
-            grid-row: 1 / 2;
-            align-self: center;
+            grid-row: 2 / 3;
+            align-self: flex-start;
             margin-left: 25px;
+            margin-bottom: 0px;
         }
         .ask {
             grid-column: span 8;

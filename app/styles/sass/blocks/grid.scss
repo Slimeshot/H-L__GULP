@@ -400,3 +400,113 @@
 }
 
 
+
+
+
+
+
+
+
+
+.contacts {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    --nr:16; /* number of rows */
+    --nc:15; /* number of columns */
+    --b:1px; /* border length */
+    
+    width: 100%;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
+    background:
+      linear-gradient(to right, var(--g)),
+      linear-gradient(to bottom,var(--g));
+    background-size:
+      calc((100% - var(--b)*(var(--nc) - 1))/var(--nc) + var(--b)) 100%,
+      100% calc((100% - var(--b)*(var(--nr) - 1))/var(--nr) + var(--b));
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .contacts {
+    .grid {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(22, 1fr);
+      --nr:22; /* number of rows */
+      --nc:8; /* number of columns */ 
+    }
+  }
+}
+
+
+
+@media (max-width: 540px) {
+  .contacts {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(26, 1fr);
+      --nr:26; /* number of rows */
+      --nc:5; /* number of columns */
+    }
+  }
+}
+
+
+
+
+
+
+.comment {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    --nr:16; /* number of rows */
+    --nc:15; /* number of columns */
+    --b:1px; /* border length */
+    
+    width: 100%;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
+    background:
+      linear-gradient(to right, var(--g)),
+      linear-gradient(to bottom,var(--g));
+    background-size:
+      calc((100% - var(--b)*(var(--nc) - 1))/var(--nc) + var(--b)) 100%,
+      100% calc((100% - var(--b)*(var(--nr) - 1))/var(--nr) + var(--b));
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .comment {
+    .grid {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(14, 1fr);
+      --nr:14; /* number of rows */
+      --nc:8; /* number of columns */ 
+    }
+  }
+}
+
+
+
+@media (max-width: 540px) {
+  .comment {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(17, 1fr);
+      --nr:17; /* number of rows */
+      --nc:5; /* number of columns */
+    }
+  }
+}
+
+
