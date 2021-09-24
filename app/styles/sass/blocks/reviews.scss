@@ -135,7 +135,7 @@
 .reviews__row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10em;
+    margin-bottom: 8em;
 }
 .reviews__company {
     font-family: 'Forum', sans-serif;
@@ -164,7 +164,7 @@
 .reviews__block {
     display: flex;
     justify-content: space-between;
-    width: 40em;
+    width: 45em;
 }
 .reviews__position {
     font-family: 'Gilroy', sans-serif;
@@ -191,6 +191,30 @@
     color: #818181;
 }
 .reviews__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.img-1 {
+    max-width: 20em;
+}
+.img-2 {
+    max-width: 8em;
+}
+.img-3 {
+    max-width: 10em;
+}
+.img-4 {
+    max-width: 10em;
+}
+.img-5 {
+    max-width: 13em;
+}
+.img-6 {
+    max-width: 20em;
+}
+.img-7 {
+    max-width: 20em;
 }
 
 
@@ -198,7 +222,15 @@
 
 
 
+
 @media (max-width: 1024px) {
+    .reviews__slide {
+        padding: 0 5em;
+    }
+    .reviews__row {
+        margin-bottom: 7em;
+    }
+
     .reviews {
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(12, 1fr);
@@ -285,6 +317,9 @@
         &:nth-child(3) {
             flex-direction: column;
         }
+    }
+    .reviews__row {
+        margin-bottom: 5em;
     }
     .reviews__block {
         flex-direction: column;

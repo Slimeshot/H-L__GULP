@@ -26,10 +26,10 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(71, 1fr);
+    grid-template-rows: repeat(69, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    --nr:71; /* number of rows */
+    --nr:69; /* number of rows */
     --nc:15; /* number of columns */
     --b:1px; /* border length */
     
@@ -50,8 +50,8 @@
   .index {
     .grid {
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(69, 1fr);
-      --nr:69; /* number of rows */
+      grid-template-rows: repeat(67, 1fr);
+      --nr:67; /* number of rows */
       --nc:8; /* number of columns */ 
     }
   }
@@ -61,8 +61,8 @@
   .index {
     .grid {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(105, 1fr);
-      --nr:105; /* number of rows */
+      grid-template-rows: repeat(100, 1fr);
+      --nr:100; /* number of rows */
       --nc:5; /* number of columns */
     }
   }
@@ -157,8 +157,8 @@
   .legal {
     .grid {
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(56, 1fr);
-      --nr:56; /* number of rows */
+      grid-template-rows: repeat(57, 1fr);
+      --nr:57; /* number of rows */
       --nc:8; /* number of columns */ 
     }
   }
@@ -251,10 +251,10 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(69, 1fr);
+    grid-template-rows: repeat(68, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    --nr:69; /* number of rows */
+    --nr:68; /* number of rows */
     --nc:15; /* number of columns */
     --b:1px; /* border length */
     

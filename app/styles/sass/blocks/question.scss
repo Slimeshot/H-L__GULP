@@ -7,14 +7,14 @@
 }
 .question__text {
     grid-column: 2 / 6;
-    grid-row: 2 / 5;
-    align-self: flex-start;
+    grid-row: 2 / 4;
+    align-self: center;
 }
 .question__title {
-    margin-top: 1.5em;
+    margin-top: 1.3em;
 }
 .question__subtitle {
-    margin-top: 2em;
+    margin-top: 1.8em;
 }
 .question__form {
     grid-column: 7 / 14;
