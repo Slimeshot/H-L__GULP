@@ -5,6 +5,7 @@
     grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(3, 1fr);
     background-color: #217237;
+    border-top: 1px solid #79ac876b;
     color: #A5C8AF;
     a {
         color: #fff;
@@ -100,6 +101,11 @@
     line-height: 1.2em;
     text-align: right;
 }
+.footer__div {
+    grid-column: 2 / 15;
+    grid-row: 3 / 4;
+    border-top: 1px solid #79AC87;
+}
 .footer__partners-name {
 }
 .footer__partners-inn {
@@ -179,6 +185,10 @@
     .footer__partners-ogrn {
         margin-left: 2.8em;
     }
+    .footer__div {
+        grid-column: 1 / 9;
+        grid-row: 2 / 3;
+    }
 }
 
 
@@ -243,6 +253,8 @@
         grid-column: 1 / 4;
         grid-row: 3 / 4;
         font-size: 1.4em;
+        display: flex;
+        flex-direction: column;
     }
 
     .footer__partners {
@@ -250,13 +262,27 @@
         grid-row: 4 / 5;
         font-size: 1.4em;
         text-align: left;
+        display: flex;
+        flex-direction: column;
     }
     .footer__partners-name {
     }
     .footer__partners-inn {
-        margin-left: 2.8em;
+        margin-left: 0;
+        margin-top: 5px;
     }
     .footer__partners-ogrn {
-        margin-left: 2.8em;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    .footer__copyright-politics {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    .footer__div {
+        grid-column: 1 / 6;
+        grid-row: 4 / 5;
+        border-top: none;
+        
     }
 }

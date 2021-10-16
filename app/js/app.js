@@ -5,6 +5,7 @@ Swiper.use([Mousewheel, Controller, Pagination, Scrollbar, Navigation ]);
 document.addEventListener('DOMContentLoaded', () => {
 
 
+
 	const reviewsSwiper = new Swiper('.reviews__slider', {
 		loop: true,
 		
@@ -20,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		  },
 	
 	  });
-
 
 
 
@@ -529,6 +529,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		var formID = $(this).attr('id'); // Получение ID формы
 		var formNm = $('#' + formID);
 		console.log(formID);
+		console.log($(`#${formID} input[name="name"]`).val())
+		console.log($(`#${formID} input[name="phone"]`).val())
+		console.log($(`#${formID} input[name="email"]`).val())
+		data.name = $(`#${formID} input[name="name"]`).val()
+		data.phone = $(`#${formID} input[name="phone"]`).val()
+		data.email = $(`#${formID} input[name="email"]`).val()
+		console.log(data)
 		$.ajax({
 			url: 'ajax/mail.php',
 			type: 'POST',
@@ -614,5 +621,228 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (document.querySelector(".tablinks")) {
 		document.querySelector(".tablinks").click();
 	}
+
+
+
+
+
+
+	
+	//get clientID
+	function get_cookie ( cookie_name ) {
+		var results = document.cookie.match ( '(^|;) ?' + cookie_name + '=([^;]*)(;|$)' );
+		if ( results )
+			return ( unescape ( results[2] ) );
+		else
+			return null;
+		}
+
+
+
+	$.getJSON('https://ipapi.co/json/', function(data) {
+		$('.header-ip').text((JSON.stringify(data.ip, null, 2).slice(1, -1)));
+		});
+
+	$('.header-ga').text(get_cookie('_ga'));
+	$('.header-fbp').text(get_cookie('_fbp'));
+	$('.header-uid').text(get_cookie('_ym_uid'));
+	$('.header-lvid').text(get_cookie('tmr_lvid'));
+
+
+
+	let data = {
+		"event_name":"PageView",
+		"event_time":Date.now(),
+		"event_source_url": window.location.href,
+		"event_id": eventPixelId,
+		"action_source":"website",
+		"client_user_agent": navigator.userAgent,
+		"_fbp": get_cookie('_fbp'),
+		"_ym_uid": get_cookie('_ym_uid'),
+		"_ga": get_cookie('_ga'),
+		"_tmr_lvid": get_cookie('tmr_lvid'),
+		"tmr_lvidTS":get_cookie('tmr_lvidTS'),
+		"roistat_first_visit":get_cookie('roistat_first_visit'),
+		"name": null,
+		"em": null,
+		"ph": null,
+		"question_1": null,
+		"question_2": null,
+		"question_3": null,
+		"question_4": null,
+	}
+
+
+
+	// function Data(eventName) {
+	// 	this.event_name = eventName,
+	// 	this.event_time = Date.now(),
+	// 	this.event_source_url = window.location.href,
+	// 	this.event_id = eventPixelId,
+	// 	this.action_source = "website",
+	// 	this.client_user_agent = navigator.userAgent,
+	// 	this._fbc = get_cookie('_fbc'),
+	// 	this._fbp = get_cookie('_fbp'),
+	// 	this._ym_uid = get_cookie('_ym_uid'),
+	// 	this._ga = get_cookie('_ga'),
+	// 	this.tmr_lvid = get_cookie('tmr_lvid'),
+	// 	this.tmr_lvidTS = get_cookie('tmr_lvidTS'),
+	// 	this.roistat_first_visit = get_cookie('roistat_first_visit'),
+	// 	this.name = ''
+	// 	this.email = '',
+	// 	this.phone = '',
+	// 	this.question_1 = '',
+	// 	this.question_2 = '',
+	// 	this.question_3 = '',
+	// 	this.question_4 = ''
+	// }
+
+	// let dt = new Data('PageView')
+	// console.log(dt.name)
+
+	// console.log(dt)
+
+
+	console.log(data)
+	
+
+	
+
+	let btnData = document.querySelector('.header__btn ');
+
+	btnData.addEventListener('click', () => {
+
+		// var json = JSON.stringify({ payload: data});
+		// var request = new XMLHttpRequest();
+		// request.open("POST", "https://api.directual.com/good/api/v5/data/data_from_integromat/postDataFromIntegromat?appID=0cdcfe4c-3f7e-4eff-b1c9-d8f418a0db2d");
+		// request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+		// var json = JSON.stringify(data);
+		// var request = new XMLHttpRequest();
+		// request.open("POST", "https://api.directual.com/good/api/v5/data/data/postData?appID=0cdcfe4c-3f7e-4eff-b1c9-d8f418a0db2d");
+		// request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+
+
+		// request.onreadystatechange = function () {
+		// if (request.readyState == 4 && request.status == 200)
+		// document.getElementById("output").innerHTML=request.responseText;
+		// }
+
+
+		// request.send(json);
+		// fetch('https://api.directual.com/good/api/v5/data/data_from_integromat/postDataFromIntegromat?appID=0cdcfe4c-3f7e-4eff-b1c9-d8f418a0db2d&sessionID=', {
+		// 	method: 'POST',
+		// 	body: JSON.stringify({payload: data}),
+		// 	headers: {
+		// 	  'Content-Type': 'application/json'
+		// 	},
+		//   }).then(res=>{
+		// 	console.log(res.json())
+		//   })
+
+
+		fetch('https://api.directual.com/good/api/v5/data/data/postDataWeb?appID=0cdcfe4c-3f7e-4eff-b1c9-d8f418a0db2d&sessionID=', {
+			method: 'POST',
+			body: JSON.stringify(data),
+			headers: {
+			  'Content-Type': 'application/json'
+			},
+		  }).then(res=>{
+			console.log(res.json())
+		  })
+	})
+
+
+
+	// fetch('http://example.com/api/users')
+	// .then((response) => {
+	// 	response.text()
+	// 	return response.json(); // Error!
+	// })
+	// .then((data) => {
+	// 	console.log(data);
+	// })
+	// .catch((error) => {
+	// 	console.log(error)
+	// })
+
+
+
+	
+
+	// btnData.addEventListener('click', () => { 
+	// })
 })
 
+// {
+// 	"leads": {
+// 	  "update": [
+// 		{
+// 		  "id": "9500779",
+// 		  "name": "Тест против &quot;Ярославский проводник&quot;",
+// 		  "status_id": "42893209",
+// 		  "old_status_id": "42893206",
+// 		  "price": "52000",
+// 		  "responsible_user_id": "7371322",
+// 		  "last_modified": "1634024342",
+// 		  "modified_user_id": "1538977",
+// 		  "created_user_id": "7371322",
+// 		  "date_create": "1632489539",
+// 		  "pipeline_id": "4680985",
+// 		  "account_id": "29694886",
+// 		  "custom_fields": [
+// 			{
+// 			  "id": "1368437",
+// 			  "name": "Дело (номер/ссылка)",
+// 			  "values": [
+// 				{
+// 				  "value": "А82-24167/2017"
+// 				}
+// 			  ],
+// 			  "code": "UR24_CASE_TARGET"
+// 			},
+// 			{
+// 			  "id": "1368439",
+// 			  "name": "Дата дела",
+// 			  "values": [
+// 				{
+// 				  "value": "07.12.2017"
+// 				}
+// 			  ],
+// 			  "code": "UR24_CASE_DATE"
+// 			},
+// 			{
+// 			  "id": "1368441",
+// 			  "name": "Тип дела",
+// 			  "values": [
+// 				{
+// 				  "value": "о несостоятельности (банкротстве) организаций и граждан"
+// 				}
+// 			  ],
+// 			  "code": "UR24_CASE_TYPE"
+// 			},
+// 			{
+// 			  "id": "1368443",
+// 			  "name": "Текущий статус",
+// 			  "values": [
+// 				{
+// 				  "value": "Рассматривается в первой инстанции"
+// 				}
+// 			  ],
+// 			  "code": "UR24_CASE_STATUS"
+// 			}
+// 		  ],
+// 		  "created_at": "1632489539",
+// 		  "updated_at": "1634024342"
+// 		}
+// 	  ]
+// 	},
+// 	"account": {
+// 	  "subdomain": "hllegal",
+// 	  "id": "29694886",
+// 	  "_links": {
+// 		"self": "https://hllegal.amocrm.ru"
+// 	  }
+// 	}
+//   }
