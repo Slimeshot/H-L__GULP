@@ -1,6 +1,6 @@
-<!--#set var="title" value="Банкротство ООО с долгами" -->
+<!--#set var="title" value="Реструктуризация долга при банкротстве" -->
 <!--#include virtual="/parts/headerInfo.html" -->
-<div class="information">
+<div class="information information-3">
     <div class="grid">
         <div class="bg__black"></div>
         <header class="info">
@@ -11,8 +11,8 @@
                 <a href="../index.html" class="navigation__logo">H&L</a>
                 <img src="../images/dist/green__block.jpg" class="grid__sizers" alt="block" aria-hidden="true">
 				<ul class="navigation__social social">
-					<li class="social__list"><a href="#" class="social__link"><img src="../images/dist/phone.svg" alt=""></a></li>
-					<li class="social__list"><a href="#" class="social__link"><img src="../images/dist/social/mail.svg" alt=""></a></li>
+					<li class="social__list"><a href="tel:88632043427" class="social__link phoneCall"><img src="../images/dist/phone.svg" alt=""></a></li>
+					<li class="social__list"><a href="mailto:info@hl.legal" class="social__link"><img src="../images/dist/social/mail.svg" alt=""></a></li>
 					<li class="social__list"><a href="#" class="social__link"><img src="../images/dist/social/viber.svg" alt=""></a></li>
 					<li class="social__list"><a href="#" class="social__link"><img src="../images/dist/social/telegram.svg" alt=""></a></li>
 				</ul>
@@ -20,18 +20,18 @@
                     <li class="navigation__list"><a href="../index.html" class="navigation__link">Услуги</a></li>
                     <li class="navigation__list"><a href="../contacts.html" class="navigation__link">Контакты</a></li>
                     <li class="navigation__list"><a href="../reviews.html" class="navigation__link">Отзывы</a></li>
-                    <li class="navigation__list"><a href="#" class="navigation__link">Статьи</a></li>
+                    <li class="navigation__list"><a href="../paper.html" class="navigation__link">Статьи</a></li>
 
                 </ul>
             </nav>
             <ul class="info__social social">
-                <li class="social__list"><a href="#" class="social__link"><img src="../images/dist/phone.svg" alt=""></a></li>
-                <li class="social__list"><a href="#" class="social__link"><img src="../images/dist/social/mailGreen.svg" alt=""></a></li>
+                <li class="social__list"><a href="tel:88632043427" class="social__link phoneCall"><img src="../images/dist/phone.svg" alt=""></a></li>
+                <li class="social__list"><a href="mailto:info@hl.legal" class="social__link"><img src="../images/dist/social/mailGreen.svg" alt=""></a></li>
                 <li class="social__list"><a href="#" class="social__link"><img src="../images/dist/social/viberGreen.svg" alt=""></a></li>
                 <li class="social__list"><a href="#" class="social__link"><img src="../images/dist/social/telegramGreen.svg" alt=""></a></li>
             </ul>
-            <img src="images/dist/green__block.jpg" class="grid__sizer" alt="block" aria-hidden="true">
-            <img src="../images/src/paper/paper-1.png" alt="img" class="info__img">
+            <img src="../images/dist/green__block.jpg" class="grid__sizer" alt="block" aria-hidden="true">
+            <div class="info__img"></div>
         </header>
 
         <section class="article">
@@ -95,19 +95,7 @@
             </div>
 
 
-            <div class="article__callForm">
-                <div class="article__callForm-text">
-                    <h2 class="article__callForm-title">Задайте вопрос специалисту</h2>
-                    <span class="article__callForm-subtitle">Оставьте свои данные и мы вам перезвоним</span>
-                </div>
-                <form class="article__callForm-form">
-                    <div>
-                        <input class="article__callForm-input" name="name" type="text" placeholder="Имя" required> 
-                        <input class="article__callForm-input" name="phone" type="text" placeholder="Телефон" required> 
-                    </div>
-                    <input type="submit" id="sendCallForm__info" value="Отправить" class="btn article__callForm-btn">
-                </form>
-            </div> 
+            <!--#include virtual="/parts/articleCallform.html" -->
 
 
             <div class="article__block">
@@ -259,19 +247,7 @@
 
 
 
-            <div class="article__callForm">
-                <div class="article__callForm-text">
-                    <h2 class="article__callForm-title">Задайте вопрос специалисту</h2>
-                    <span class="article__callForm-subtitle">Оставьте свои данные и мы вам перезвоним</span>
-                </div>
-                <form class="article__callForm-form">
-                    <div>
-                        <input class="article__callForm-input" name="name" type="text" placeholder="Имя" required> 
-                        <input class="article__callForm-input" name="phone" type="text" placeholder="Телефон" required> 
-                    </div>
-                    <input type="submit" id="sendCallForm__info" value="Отправить" class="btn article__callForm-btn">
-                </form>
-            </div> 
+            <!--#include virtual="/parts/articleCallform.html" -->
 
 
 
@@ -472,36 +448,50 @@
 
 
 
-
-
-
         </section>
+
+
+
+        <section class="linkProduct">
+           
+            <div class="linkProduct__box">
+                <h2 class="linkProduct__title">Юрист<br>
+                    по банкротству</h2>
+                <span class="linkProduct__subtitle">Для физических лиц</span>
+                <a href="../fiz.html" class="linkProduct__link"><span>Подробнее</span><span><img src="../images/dist/arrow-right.svg" alt="arrow-right"></span></a>
+                <div class="linkProduct__img"></div>
+                <div class="linkProduct__color"></div>
+    
+            </div>
+        </section>
+
 
 
 
         <section class="paper">
 			<h2 class="paper__title title js-scroll fade-in-bottom">Популярные статьи</h2>
-			<a href="#" class="paper__btn btn">Все статьи<span><img src="../images/dist/arrow-right.svg" alt="arrow-right"></span></a>
+			<a href="../paper.html" class="paper__btn btn">Все статьи<span><img src="../images/dist/arrow-right.svg" alt="arrow-right"></span></a>></span></a>
 			<div class="paper__block-1 paper__block js-scroll slide-right">
 				<p class="paper__data">8 мая 2021 г.</p>
-				<p class="paper__name">ЧТО НЕДОГОВАРИВАЮТ О БАНКРОТСТВЕ ФИЗИЧЕСКИХ ЛИЦ?</p>
+				<p class="paper__name">Банкротство юр.лиц</p>
 			</div>
 			<div class="paper__block-2 paper__block js-scroll slide-left">
 				<p class="paper__data">22 июня 2021 г.</p>
-				<p class="paper__name">БАНКРОТСТВО ФИЗИЧЕСКИХ ЛИЦ ПРИ ИПОТЕКЕ</p>
+				<p class="paper__name">Банкротство через мфц </p>
 			</div>
 			<div class="paper__block-3 paper__block js-scroll slide-right">
 				<p class="paper__data">12 марта 2021 г.</p>
-				<p class="paper__name">БАНКРОТСТВО КРЕДИТОРОМ ДОЛЖНИКА – ФИЗИЧЕСКОГО ЛИЦА, ИП</p>
+				<p class="paper__name">Процедура банкротства физ.лиц</p>
 			</div>
 
-			<a href="../fiz.html" class="paper__link-1 paper__link js-scroll slide-right">
+
+			<a href="info4.html" class="paper__link-1 paper__link js-scroll slide-right">
 				<img src="../images/dist/arrow-right-green.svg" alt="arrow-right-green">
 			</a>
-			<a href="../ur.html" class="paper__link-2 paper__link js-scroll slide-left">
+			<a href="info5.html" class="paper__link-2 paper__link js-scroll slide-left">
 				<img src="../images/dist/arrow-right-green.svg" alt="arrow-right-green">
 			</a>
-			<a href="../nal.html" class="paper__link-3 paper__link js-scroll slide-right">
+			<a href="info3.html" class="paper__link-3 paper__link js-scroll slide-right">
 				<img src="../images/dist/arrow-right-green.svg" alt="arrow-right-green">
 			</a>
 

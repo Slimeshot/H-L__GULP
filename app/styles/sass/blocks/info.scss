@@ -49,10 +49,66 @@
 .info__img {
    grid-column: 2 / 15;
    grid-row: 2 / 7; 
-   width: 100%;
-   height: auto;
-   object-fit: cover;
+//    width: 100%;
+//    height: auto;
+//    object-fit: cover;
+    // background-image: url(../../../images/dist/paper/paper-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.information-1 {
+    .info__img {
+        background-image: url(../images/dist/paper/paper-1.png);
+    }
+}
+.information-2 {
+    .info__img {
+        background-image: url(../images/dist/paper/paper-11.png);
+    }
+}
+.information-3 {
+    .info__img {
+        background-image: url(../images/dist/paper/paper-10.png);
+    }
+}
+.information-4 {
+    .info__img {
+        background-image: url(../images/dist/paper/paper-12.png);
+    }
+}
+.information-5 {
+    .info__img {
+        background-image: url(../images/dist/paper/paper-2.png);
+    }
+}
+.information-6 {
+    .info__img {
+        background-image: url(../images/dist/paper/paper-3.png);
+    }
+}
+.information-7 {
+    .info__img {
+        background-image: url(../images/dist/paper/paper-4.png);
+    }
+}
+.information-8 {
+    .info__img {
+        background-image: url(../images/dist/paper/paper-5.png);
+    }
+}
+.information-9 {
+    .info__img {
+        background-image: url(../images/dist/paper/paper-6.png);
+    }
+}
+.information-10 {
+    .info__img {
+        background-image: url(../images/dist/paper/paper-8.png);
+    }
+}
+
 
 
 @media (max-width: 1024px) {

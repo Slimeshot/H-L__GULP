@@ -1,3 +1,171 @@
+.information-1 {
+    .article {
+        grid-column: 4 / 13;
+        grid-row: span 54;
+        @media (max-width: 1024px) {
+            grid-column: 2 / 8;  
+            grid-row: span 60;
+        }
+        @media (max-width: 540px) {
+            grid-column: 1 / 6;  
+            grid-row: span 90;
+            padding: 0 2.5em;
+        }
+    }
+}
+.information-2 {
+    .article {
+        grid-column: 4 / 13;
+        grid-row: span 74;
+        @media (max-width: 1024px) {
+            grid-column: 2 / 8;  
+            grid-row: span 84;
+        }
+        @media (max-width: 540px) {
+            grid-column: 1 / 6;  
+            grid-row: span 134;
+            padding: 0 2.5em;
+        }
+    }
+}
+.information-3 {
+    .article {
+        grid-column: 4 / 13;
+        grid-row: span 73;
+        @media (max-width: 1024px) {
+            grid-column: 2 / 8;  
+            grid-row: span 82;
+        }
+        @media (max-width: 540px) {
+            grid-column: 1 / 6;  
+            grid-row: span 124;
+            padding: 0 2.5em;
+        }
+    }
+}
+.information-4 {
+    .article {
+        grid-column: 4 / 13;
+        grid-row: span 62;
+        @media (max-width: 1024px) {
+            grid-column: 2 / 8;  
+            grid-row: span 72;
+        }
+        @media (max-width: 540px) {
+            grid-column: 1 / 6;  
+            grid-row: span 116;
+            padding: 0 2.5em;
+        }
+    }
+}
+
+
+.information-5 {
+    .article {
+        grid-column: 4 / 13;
+        grid-row: span 81;
+        @media (max-width: 1024px) {
+            grid-column: 2 / 8;  
+            grid-row: span 90;
+        }
+        @media (max-width: 540px) {
+            grid-column: 1 / 6;  
+            grid-row: span 143;
+            padding: 0 2.5em;
+        }
+    }
+}
+
+
+.information-6 {
+    .article {
+        grid-column: 4 / 13;
+        grid-row: span 63;
+        @media (max-width: 1024px) {
+            grid-column: 2 / 8;  
+            grid-row: span 71;
+        }
+        @media (max-width: 540px) {
+            grid-column: 1 / 6;  
+            grid-row: span 114;
+            padding: 0 2.5em;
+        }
+    }
+}
+
+.information-7 {
+    .article {
+        grid-column: 4 / 13;
+        grid-row: span 62;
+        @media (max-width: 1024px) {
+            grid-column: 2 / 8;  
+            grid-row: span 69;
+        }
+        @media (max-width: 540px) {
+            grid-column: 1 / 6;  
+            grid-row: span 110;
+            padding: 0 2.5em;
+        }
+    }
+}
+
+
+.information-8 {
+    .article {
+        grid-column: 4 / 13;
+        grid-row: span 54;
+        @media (max-width: 1024px) {
+            grid-column: 2 / 8;  
+            grid-row: span 61;
+        }
+        @media (max-width: 540px) {
+            grid-column: 1 / 6;  
+            grid-row: span 94;
+            padding: 0 2.5em;
+        }
+    }
+}
+
+
+
+.information-9 {
+    .article {
+        grid-column: 4 / 13;
+        grid-row: span 64;
+        @media (max-width: 1024px) {
+            grid-column: 2 / 8;  
+            grid-row: span 73;
+        }
+        @media (max-width: 540px) {
+            grid-column: 1 / 6;  
+            grid-row: span 112;
+            padding: 0 2.5em;
+        }
+    }
+}
+
+
+
+.information-10 {
+    .article {
+        grid-column: 4 / 13;
+        grid-row: span 63;
+        @media (max-width: 1024px) {
+            grid-column: 2 / 8;  
+            grid-row: span 71;
+        }
+        @media (max-width: 540px) {
+            grid-column: 1 / 6;  
+            grid-row: span 112;
+            padding: 0 2.5em;
+        }
+    }
+}
+
+
+
+
+
 .article {
     grid-column: 4 / 13;
     grid-row: span 52;
@@ -155,6 +323,15 @@
         color: #4D4D4D;
         margin: 1.5em 0;
     }
+    .article__text-list {
+        font-family: Gilroy, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.6em;
+        line-height: 1.5em;
+        color: #4D4D4D;
+        margin: 0.5em 0 1.5em 0;
+    }
     .article__menu {
     }
     .article__list {
@@ -238,4 +415,6 @@
         color: #000000;
         margin: 1.5em 0 1em 0;
     }
+
+
 }

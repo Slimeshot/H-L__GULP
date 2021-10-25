@@ -27,14 +27,14 @@
 }
 
 
-.contacts, .information {
+.contacts, .information, .entrys {
     .navigation__link {
         color: #676767;
     }
 }
 
 @media (max-width: 768px)  {
-    .contacts {
+    .contacts, .information, .entrys {
         .navigation__link {
             color: #fff;
         }
@@ -120,6 +120,7 @@
         display: grid;
         grid-column: 8 / 9;
         grid-row: 1 / 5;
+        z-index: 10;
     }
   }
 

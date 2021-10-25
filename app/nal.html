@@ -1,45 +1,9 @@
 <!--#set var="title" value="Налоговое право" -->
 <!--#include virtual="/parts/header.html" -->
-
+<!--#include virtual="/parts/call.html" -->
 <div class="agent">
 	<div class="grid">
         <div class="bg__black"></div>
-        <section class="call">
-			<img src="../images/dist/cross.png" alt="cross" class="call__button">
-			<h6 class="call__title">Свяжитесь с нами</h6>
-			<form method="POST" class="call__form" id="nalCall">
-				<input class="call__name" name="name" type="text" placeholder="Имя" required> 
-				<input class="call__phone" name="phone" type="text" placeholder="Телефон" required> 
-				<input class="call__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
-				<input type="submit" id="sendNalCall" value="Оставить заявку" class="btn call__btn">
-			</form>
-            <div class="call__success">
-				<span class="call__info">
-					Ваша заявка получена!
-				</span>
-				<span class="call__text">
-					Мы свяжемся с вами в ближайшее время
-				</span>
-			</div>
-		</section>
-		<section class="dare">
-			<img src="../images/dist/cross.png" alt="cross" class="dare__button">
-			<h6 class="dare__title">Свяжитесь с нами</h6>
-			<form method="POST" class="dare__form" id="nalDare">
-				<input class="dare__name" name="name" type="text" placeholder="Имя" required> 
-				<input class="dare__phone" name="phone" type="text" placeholder="Телефон" required> 
-				<input class="dare__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
-				<input type="submit" id="sendNalDare" value="Оставить заявку" class="btn dare__btn">
-			</form>
-			<div class="dare__success">
-				<span class="dare__info">
-					Ваша заявка получена!
-				</span>
-				<span class="dare__text">
-					Мы свяжемся с вами в ближайшее время
-				</span>
-			</div>
-		</section>
         <header class="nal">
             <a href="index.html" class="nal__logo">H&L</a>
             <img src="images/dist/green__block.jpg" class="grid__sizer" alt="block" aria-hidden="true">
@@ -50,8 +14,8 @@
                 <a href="index.html" class="navigation__logo">H&L</a>
                 <img src="images/dist/green__block.jpg" class="grid__sizers" alt="block" aria-hidden="true">
 				<ul class="navigation__social social">
-					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/phone.svg" alt=""></a></li>
-					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/mail.svg" alt=""></a></li>
+					<li class="social__list"><a href="tel:88002222021" class="social__link phoneCall"><img src="images/dist/phone.svg" alt=""></a></li>
+					<li class="social__list"><a href="mailto:info@hl.legal" class="social__link"><img src="images/dist/social/mail.svg" alt=""></a></li>
 					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/viber.svg" alt=""></a></li>
 					<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/telegram.svg" alt=""></a></li>
 				</ul>
@@ -59,12 +23,12 @@
 					<li class="navigation__list"><a href="index.html" class="navigation__link">Услуги</a></li>
 					<li class="navigation__list"><a href="contacts.html" class="navigation__link">Контакты</a></li>
 					<li class="navigation__list"><a href="reviews.html" class="navigation__link">Отзывы</a></li>
-					<li class="navigation__list"><a href="#" class="navigation__link">Статьи</a></li>
+					<li class="navigation__list"><a href="paper.html" class="navigation__link">Статьи</a></li>
 				</ul>
 			</nav>
 			<ul class="nal__social social">
-				<li class="social__list"><a href="#" class="social__link"><img src="images/dist/phone.svg" alt=""></a></li>
-				<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/mail.svg" alt=""></a></li>
+				<li class="social__list"><a href="tel:88002222021" class="social__link phoneCall"><img src="images/dist/phone.svg" alt=""></a></li>
+				<li class="social__list"><a href="mailto:info@hl.legal" class="social__link"><img src="images/dist/social/mail.svg" alt=""></a></li>
 				<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/viber.svg" alt=""></a></li>
 				<li class="social__list"><a href="#" class="social__link"><img src="images/dist/social/telegram.svg" alt=""></a></li>
 			</ul>
@@ -239,11 +203,11 @@
             Задайте его специалисту</h2>
             <div class="spec__img">
             </div>
-            <form method="POST" class="spec__form form js-scroll slide-right" id="nalSpec">
+            <form method="POST" class="spec__form form js-scroll slide-right" id="Spec">
 				<input class="form__name" name="name" type="text" placeholder="Имя" required> 
 				<input class="form__phone" name="phone" type="text" placeholder="Телефон" required> 
 				<input class="form__mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" name="email" type="email" placeholder="E-mail" required> 
-				<input type="submit" id="sendNalSpec" value="" class="form__btn-primary">
+				<input type="submit" id="sendSpec" value="" class="form__btn-primary">
 			</form>
             <div class="spec__name">анна<br><span>байдарик</span></div>
             <div class="spec__prof">Адвокат по налоговым и администраитивным спорам</div>
@@ -320,10 +284,10 @@
             <h2 class="ask__title title">Ответьте<br>на вопросы</h2>
             <p class="ask__subtitle">и получите условия сотрудничества</p>
             <div class="ask_quiz">
-                <form method="POST" class="quiz" id="nalQuiz">
+                <form method="POST" class="quiz" id="Quiz">
                     <div class="quiz-results"></div>
                     <button class="quiz__prev" disabled>Назад</button>
-                    <button class="quiz__next btn" id="sendNalQuiz" disabled><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
+                    <button class="quiz__next btn" id="sendQuiz" disabled><img src="images/dist/arrow-right.svg" alt="arrow-right"></button>
                     <div class="quiz__step quiz__step-active" data-step="0">
                         <div class="quiz__number">01</div>
                         <div class="quiz__title">Какой вид документа вы получили от налоговой инспекции?</div>
@@ -426,27 +390,27 @@
 
 		<section class="paper">
 			<h2 class="paper__title title js-scroll fade-in-bottom">Популярные статьи</h2>
-			<a href="#" class="paper__btn btn">Все статьи<span><img src="images/dist/arrow-right.svg" alt="arrow-right"></span></a>
+			<a href="paper.html" class="paper__btn btn">Все статьи<span><img src="images/dist/arrow-right.svg" alt="arrow-right"></span></a>
 			<div class="paper__block-1 paper__block js-scroll slide-right">
 				<p class="paper__data">8 мая 2021 г.</p>
-				<p class="paper__name">ЧТО НЕДОГОВАРИВАЮТ О БАНКРОТСТВЕ ФИЗИЧЕСКИХ ЛИЦ?</p>
+				<p class="paper__name">ВЫЕЗДНАЯ НАЛОГОВАЯ ПРОВЕРКА</p>
 			</div>
 			<div class="paper__block-2 paper__block js-scroll slide-left">
 				<p class="paper__data">22 июня 2021 г.</p>
-				<p class="paper__name">БАНКРОТСТВО ФИЗИЧЕСКИХ ЛИЦ ПРИ ИПОТЕКЕ</p>
+				<p class="paper__name">ДОПРОС В НАЛОГОВОЙ</p>
 			</div>
 			<div class="paper__block-3 paper__block js-scroll slide-right">
 				<p class="paper__data">12 марта 2021 г.</p>
-				<p class="paper__name">БАНКРОТСТВО КРЕДИТОРОМ ДОЛЖНИКА – ФИЗИЧЕСКОГО ЛИЦА, ИП</p>
+				<p class="paper__name">АДМИНИСТРАТИВНОЕ ПРАВОНАРУШЕНИЕ</p>
 			</div>
 
-			<a href="fiz.html" class="paper__link-1 paper__link js-scroll slide-right">
+			<a href="paper/info8.html" class="paper__link-1 paper__link js-scroll slide-right">
 				<img src="images/dist/arrow-right-green.svg" alt="arrow-right-green">
 			</a>
-			<a href="ur.html" class="paper__link-2 paper__link js-scroll slide-left">
+			<a href="paper/info9.html" class="paper__link-2 paper__link js-scroll slide-left">
 				<img src="images/dist/arrow-right-green.svg" alt="arrow-right-green">
 			</a>
-			<a href="nal.html" class="paper__link-3 paper__link js-scroll slide-right">
+			<a href="paper/info.html" class="paper__link-3 paper__link js-scroll slide-right">
 				<img src="images/dist/arrow-right-green.svg" alt="arrow-right-green">
 			</a>
 
