@@ -154,6 +154,8 @@
     font-size: 3.2em;
     line-height: 1.01em;
     color: #000000;
+    display: block;
+    max-width: 14em;
 }
 .notes__block-link {
     align-self: flex-end;
@@ -169,6 +171,7 @@
     flex-direction: column;
     position: relative;
     text-decoration: none;
+    justify-content: space-between;
 }
 .notes__block-1 {
     grid-row: 4 / 10;
@@ -344,6 +347,16 @@
             font-size: 2.8em;
         }
     }
+    .notes__block-span {
+        align-self: center;
+        margin-top: -1.8em;
+    }
+    .notes__block-subtitle {
+        margin-top: -1.8em;
+    }
+    .notes__block-span {
+        max-width: 18em;
+    }
     
     
 }
@@ -432,7 +445,7 @@
     }
     .notes__block-11 {
         grid-column: 1 / 6;
-        grid-row: 35 / 41;
+        grid-row: 35 / 40;
     }
 
 
@@ -443,9 +456,18 @@
     }
         
     .notes__block-link {
-        padding: 2.8em;
+        padding: 2.4em;
  
     }
+
+    .notes__block-span {
+        align-self: center;
+        margin-top: -2em;
+        max-width: 14em;
     }
+    .notes__block-subtitle {
+        margin-top: -1.8em;
+    }
+}
     
     
