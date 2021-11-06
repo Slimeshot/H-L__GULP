@@ -507,7 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		data.em = $(`#${formID} input[name="email"]`).val()
 		data.ph = $(`#${formID} input[name="phone"]`).val()
 		data.form_id = formID
-		data.event_name = 'SumbitForm'
+		data.event_name = 'SubmitForm'
 		if (formID == 'Quiz') {
 			data.question_1 = $($('.quiz-results-item')[0]).text()
 			data.question_2 = $($('.quiz-results-item')[1]).text()
