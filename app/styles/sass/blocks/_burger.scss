@@ -17,7 +17,7 @@
       z-index: 10;
       transition: all .1s ease-in-out;
     }
-    .contacts, .information, .entrys {
+    .contacts, .information, .entrys, .services {
       .burger {
         background-image: url(../images/dist/icon/burgerGreen.svg);
       }
@@ -25,6 +25,6 @@
 
     .burger.burger__active {
       background-color: #0d5220;
-      background-image: url(../../../images/dist/icon/cross.svg);
+      background-image: url(../images/dist/icon/cross.svg);
     }
   }

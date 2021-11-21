@@ -6,14 +6,14 @@
     grid-template-rows: repeat(7, 1fr);
 }
 .experts__title {
-    grid-column: 7 / 13;
+    grid-column: 7 / 14;
     grid-row: 2 / 3;
     align-self: center;
     font-size: 5.6em;
 }
 .legal {
     .experts__title {
-        grid-column: 6 / 13;
+        grid-column: 6 / 15;
         grid-row: 2 / 3;
         align-self: center;
         font-size: 5.6em;
@@ -21,7 +21,7 @@
 }
 .physical {
     .experts__title {
-        grid-column: 7 / 14;
+        grid-column: 7 / 16;
         grid-row: 2 / 3;
         align-self: center;
         font-size: 5.6em;

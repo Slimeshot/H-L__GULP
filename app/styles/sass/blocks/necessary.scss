@@ -40,11 +40,12 @@
 }
 
 .necessary__subtitle {
-    grid-column: 12 / 15;
+    grid-column: 12 / 16;
     grid-row: 4 / 5;
+    padding-right: 2em;
 }
 .necessary__menu {
-    grid-column: 4 / 10;
+    grid-column: 4 / 11;
     grid-row: 4 / 6;
     display: flex;
     flex-direction: column;
@@ -121,9 +122,10 @@
         display: none;
     }
     .necessary__subtitle {
-        grid-column: 3 / 7;
+        grid-column: 3 / 8;
         grid-row: 7 / 8;
         align-self: center;
+        padding-right: 0;
         margin: 0 32px;
     }
     .necessary__menu {

@@ -106,7 +106,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 2em;
-    line-height: 1.6em;
+    line-height: 1.5em;
     color: #4D4D4D;
 
 }
@@ -198,6 +198,27 @@
         grid-template-columns: repeat((5, 1fr));
         grid-template-rows: repeat((9, 1fr));
     }
+    .admin,.physical,.index {
+        .get {
+            grid-column: span 5;
+            grid-row: span 8;
+            grid-template-columns: repeat((5, 1fr));
+            grid-template-rows: repeat((8, 1fr));
+        }
+        .get__block-1 {
+            grid-column: 1 / 5;
+            grid-row: 3 / 4;
+        }
+        .get__block-2 {
+            grid-column: 2 / 6;
+            grid-row: 5 / 6;
+    
+        }
+        .get__block-3 {
+            grid-column: 1 / 5;
+            grid-row: 7 / 8;
+        }
+    }
     .lawyer,.agent,.admin {
         .get__title {
             grid-column: 1 / 6;
@@ -222,7 +243,7 @@
         grid-column: 1 / 6;
         grid-row: 1 / 2;
         align-self: center;
-        margin-left: 0.5em;
+        padding-left: 0.5em;
         font-size: 3.6em;
         
     }

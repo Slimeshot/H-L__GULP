@@ -66,8 +66,8 @@
   .index {
     .grid {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(100, 1fr);
-      --nr:100; /* number of rows */
+      grid-template-rows: repeat(99, 1fr);
+      --nr:99; /* number of rows */
       --nc:5; /* number of columns */
     }
   }
@@ -441,8 +441,8 @@
   .contacts {
     .grid {
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(22, 1fr);
-      --nr:22; /* number of rows */
+      grid-template-rows: repeat(23, 1fr);
+      --nr:23; /* number of rows */
       --nc:8; /* number of columns */ 
     }
   }
@@ -454,8 +454,8 @@
   .contacts {
     .grid {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(26, 1fr);
-      --nr:26; /* number of rows */
+      grid-template-rows: repeat(27, 1fr);
+      --nr:27; /* number of rows */
       --nc:5; /* number of columns */
     }
   }
@@ -1024,3 +1024,50 @@
 
 
 
+.services {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    --nr:12; /* number of rows */
+    --nc:15; /* number of columns */
+    --b:1px; /* border length */
+    
+    width: 100%;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
+    background:
+      linear-gradient(to right, var(--g)),
+      linear-gradient(to bottom,var(--g));
+    background-size:
+      calc((100% - var(--b)*(var(--nc) - 1))/var(--nc) + var(--b)) 100%,
+      100% calc((100% - var(--b)*(var(--nr) - 1))/var(--nr) + var(--b));
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .services {
+    .grid {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(12, 1fr);
+      --nr:12; /* number of rows */
+      --nc:8; /* number of columns */ 
+    }
+  }
+}
+
+
+
+@media (max-width: 540px) {
+  .services {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(14, 1fr);
+      --nr:14; /* number of rows */
+      --nc:5; /* number of columns */
+    }
+  }
+}

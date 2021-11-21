@@ -4,7 +4,12 @@
     grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(9, 1fr);
     display: grid;
-    background-color: #FBFDFC;
+    // background-color: #FBFDFC;
+    &__bg {
+        grid-column: 1 / 16;
+        grid-row: 2 / 9;
+         background-color: #FBFDFC
+    }
 }
 .spec__title {
     grid-column: 2 / 8;
@@ -210,6 +215,11 @@
         grid-template-rows: repeat(7, 1fr);
         --nr: 7;
         --nc: 8;
+        &__bg {
+            grid-column: 1 / 9;
+            grid-row: 1 / 7;
+             background-color: #FBFDFC
+        }
     }
     .spec__title {
         grid-column: 2 / 8;
@@ -245,6 +255,11 @@
         --nc: 5;
         & + .grid__padding {
             display: none;
+        }
+        &__bg {
+            grid-column: 1 / 6;
+            grid-row: 1 / 11;
+             background-color: #FBFDFC
         }
     }
     .spec__title {

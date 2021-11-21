@@ -27,14 +27,14 @@
 }
 
 
-.contacts, .information, .entrys {
+.contacts, .information, .entrys, .services {
     .navigation__link {
         color: #676767;
     }
 }
 
 @media (max-width: 768px)  {
-    .contacts, .information, .entrys {
+    .contacts, .information, .entrys, .services {
         .navigation__link {
             color: #fff;
         }

@@ -211,25 +211,32 @@
 }
 
 .img-1 {
-    max-width: 20em;
+    max-width: 180px;
+    max-height: 70px;
 }
 .img-2 {
-    max-width: 8em;
+    max-width: 80px;
+    max-height: 120px;
 }
 .img-3 {
-    max-width: 10em;
+    max-width: 100px;
+    max-height: 110px;
 }
 .img-4 {
-    max-width: 10em;
+    max-width: 100px;
+    max-height: 105px;
 }
 .img-5 {
-    max-width: 13em;
+    max-width: 80px;
+    max-height: 73px;
 }
 .img-6 {
-    max-width: 20em;
+    max-width: 200px;
+    max-height: 115px;
 }
 .img-7 {
-    max-width: 20em;
+    max-width: 200px;
+    max-height: 80px;
 }
 
 
@@ -335,9 +342,10 @@
         &:nth-child(3) {
             flex-direction: column;
         }
+
     }
     .reviews__row {
-        margin-bottom: 5em;
+        margin-bottom: 4em;
     }
     .reviews__block {
         flex-direction: column;

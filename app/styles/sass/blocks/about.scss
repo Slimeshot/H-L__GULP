@@ -8,11 +8,24 @@
 .about__title {
     grid-column: 6 / 8;
     grid-row: 2 / 3;
+    font-family: 'Forum', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.6em;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #134621;
 }
 .about__subtitle {
     z-index: 1;
-    grid-column: 8 / 13;
+    grid-column: 8 / 14;
     grid-row: 2 / 4;
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2em;
+    line-height: 1.5em;
+    color: #4D4D4D;
 
 }
 .about__img {
@@ -69,13 +82,16 @@
     .about__title {
         grid-column: 4 / 6;
         grid-row: 2 / 3;
+        font-size: 4.8em;
+        line-height: 1.1em;
     }
     .about__subtitle {
         z-index: 1;
         grid-column: 4 / 9;
         grid-row: 2 / 4;
         align-self: center;
-    
+        font-size: 1.6em;
+        line-height: 1.5em;
     }
     .about__img {
     }
@@ -111,6 +127,22 @@
 
 
 
+@media (max-width: 768px) {
+    .about__title {
+      font-size: 5em;
+      line-height: 1.1em;
+     
+    }
+    .about__subtitle {
+      font-size: 2em;
+      line-height: 1.3em;
+      margin-top: 2em;
+    //   align-self: flex-end;
+    }
+  }
+
+
+
 @media(max-width: 540px) {
     .about {
         grid-column: span 5 ;
@@ -130,7 +162,7 @@
         grid-column: 1 / 6;
         grid-row: 5 / 9;
         align-self: center;
-        line-height: 2em;
+        line-height: 1.5em;
         margin-left: 2em;
     }
     .about__img-1 {

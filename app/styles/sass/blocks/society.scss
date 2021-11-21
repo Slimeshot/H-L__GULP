@@ -19,6 +19,7 @@
     br {
         display: none;
     }
+    border-bottom: 1px solid #E6E6E6;
 }
 .society__navigation {
     grid-column: 3 / 7;
@@ -283,7 +284,11 @@
             display: none;
         }
     }
-    
+    .society__logo {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        text-align: center;
+    }
     .society__phone {
         grid-column: 3 / 6;
         grid-row: 8 / 9;

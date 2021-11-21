@@ -2,9 +2,9 @@ import {Swiper, Mousewheel, Controller, Pagination, Scrollbar, Navigation} from 
 
 Swiper.use([Mousewheel, Controller, Pagination, Scrollbar, Navigation ]);
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
-
-
 
 	const reviewsSwiper = new Swiper('.reviews__slider', {
 		loop: true,
@@ -70,53 +70,74 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	
 	//Плавная анимация
+	if (screen.width > 1024) {
+		function onEntry(entry) {
+			entry.forEach(change => {
+			  if (change.isIntersecting) {
+				change.target.classList.add('scrolled');
+			  }
+			});
+		  }
+		  let options = { threshold: [0.2] };
+		  let observer = new IntersectionObserver(onEntry, options);
+		  let elements = document.querySelectorAll('.js-scroll');
+		  for (let elm of elements) {
+			observer.observe(elm);
+		  }
 
-	const scrollElements = document.querySelectorAll(".js-scroll");
-	const scrollElementsAnimation = document.querySelectorAll(".js-scroll-animation");
+	} else {
+		let elements = document.querySelectorAll('.js-scroll');
+		for (let elm of elements) {
+		  elm.classList.add('scrolled')
+		}
+	}
+	  
+	// const scrollElements = document.querySelectorAll(".js-scroll");
+	// const scrollElementsAnimation = document.querySelectorAll(".js-scroll-animation");
 
-	const elementInView = (el, dividend = 1) => {
-
-		const elementTop = el.getBoundingClientRect().top;
-		return ( elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend );
-
-	};
-
-	// const elementOutofView = (el) => {
+	// const elementInView = (el, dividend = 1) => {
 
 	// 	const elementTop = el.getBoundingClientRect().top;
-	// 	return ( elementTop > (window.innerHeight || document.documentElement.clientHeight) );
+	// 	return ( elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend );
 
 	// };
 
-	const displayScrollElement = (element) => {
-		element.classList.add("scrolled");
-	};
+	// // const elementOutofView = (el) => {
 
-	const hideScrollElement = (element) => {
-		element.classList.remove("scrolled");
-	};
+	// // 	const elementTop = el.getBoundingClientRect().top;
+	// // 	return ( elementTop > (window.innerHeight || document.documentElement.clientHeight) );
 
-	const handleScrollAnimation = () => {
-		scrollElementsAnimation.forEach((el) => {
-			if (elementInView(el, 1)) {
-			displayScrollElement(el);
-			}  // else if (elementOutofView(el)) {
-			// hideScrollElement(el)
-			// }
-		})
-		scrollElements.forEach((el) => {
-			if (elementInView(el, 1.25)) {
-			displayScrollElement(el);
-			}  // else if (elementOutofView(el)) {
-			// hideScrollElement(el)
-			// }
-		})
-	}
+	// // };
 
-	window.addEventListener("scroll", () => { 
-		handleScrollAnimation();
-	});
-	handleScrollAnimation();
+	// const displayScrollElement = (element) => {
+	// 	element.classList.add("scrolled");
+	// };
+
+	// const hideScrollElement = (element) => {
+	// 	element.classList.remove("scrolled");
+	// };
+
+	// const handleScrollAnimation = () => {
+	// 	scrollElementsAnimation.forEach((el) => {
+	// 		if (elementInView(el, 1)) {
+	// 		displayScrollElement(el);
+	// 		}  // else if (elementOutofView(el)) {
+	// 		// hideScrollElement(el)
+	// 		// }
+	// 	})
+	// 	scrollElements.forEach((el) => {
+	// 		if (elementInView(el, 1.25)) {
+	// 		displayScrollElement(el);
+	// 		}  // else if (elementOutofView(el)) {
+	// 		// hideScrollElement(el)
+	// 		// }
+	// 	})
+	// }
+
+	// window.addEventListener("scroll", () => { 
+	// 	handleScrollAnimation();
+	// });
+	// handleScrollAnimation();
 
 
 	// анимация переключения кнопок
@@ -172,6 +193,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const selectPrice = document.querySelectorAll(".select__price");
 	const selectCost = document.querySelectorAll(".select__cost");
 	
+
+
 	if (tabcontent) {
 		tabLinks.forEach ((item, index) => {
 			// console.log(index);
@@ -345,10 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			$('.quiz__prev').prop('disabled', false)
 			$('.quiz__step-active').removeClass('quiz__step-active')
 			$($('.quiz__step')[parseInt(currentStepIndex) + 1]).addClass('quiz__step-active')
-			// if (parseInt(currentStepIndex) + 2 == $('.quiz__step').length) {
-			// 	$('.quiz__next').remove();
-			// 	$('.quiz__prev').remove();
-			// }
+
 			checkCurrentStep()
 		}
 	}
@@ -360,7 +380,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		if ((parseInt(currentStepIndex) + 1) == 1) {
 		} else {
 			$('.quiz-results-item').each((ind, item) => {
-				console.log(ind);
 				if ((ind + 1) === $('.quiz-results-item').length) {
 					item.remove();
 				}
@@ -370,6 +389,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			checkCurrentStep()
 		}
 	}
+
+
 
 
 	function addResult(step) {
@@ -392,15 +413,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		
 
 
-		
-		// $('.quiz-results-item-res__val').each((index, item) => {
-
-		// 	if (index > 1) {
-
-		// 		strs = `${strs} ${$(item).text()},`
-		// 	}
-		// 	$('.quizResult').text(strs);
-		// })
 	
 	}
 	
@@ -505,7 +517,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		data.name = $(`#${formID} input[name="name"]`).val()
 		data.em = $(`#${formID} input[name="email"]`).val()
-		data.ph = $(`#${formID} input[name="phone"]`).val()
+		data.ph = $(`#${formID} input[name="phone"]`).val().replace(/[^\d]/g, '')
 		data.form_id = formID
 		data.event_name = 'SubmitForm'
 		if (formID == 'Quiz') {
@@ -514,7 +526,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			data.question_3 = $($('.quiz-results-item')[2]).text()
 		}
 		// console.log(data)
-		// sendDataAnalytics()
 		$.ajax({
 			url: 'ajax/mail.php',
 			type: 'POST',
@@ -522,20 +533,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			data: { 'formID':formID },
 			dataType: 'html',
 			error: function(data) {
-				// console.log('sdsdsds');
-				// $("#errorMess").html(data);
-				// $("#errorMess").css('color', 'red');
+				
 			}, 
 			/* если произойдет ошибка в элементе с id erconts выведится сообщение*/  
 			beforeSend: function() {
-				// $('#sendMail').prop('disabled', true);
-				// $("#errorMess").html("Подождите, идет отправка заявки!");
-				// $("#errorMess").css('color', 'orange');
 				
 			},
 			success: function(datas) {
-				// dataLayer.push({'event': `${formID}`})
-				console.log(datas);
 				sendDataAnalytics()
 				if ($("input[name='name']")) {
 					$("input[name='name']").val('');
@@ -610,21 +614,23 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 
-
+	let ips;
 	$.getJSON('https://ipapi.co/json/', function(data) {
-		$('.header-ip').text((JSON.stringify(data.ip, null, 2).slice(1, -1)));
+		ips = (JSON.stringify(data.ip, null, 2).slice(1, -1));
+		// console.log(JSON.stringify(data.ip, null, 2).slice(1, -1))
 		});
 
-	$('.header-ga').text(get_cookie('_ga'));
-	$('.header-fbp').text(get_cookie('_fbp'));
-	$('.header-uid').text(get_cookie('_ym_uid'));
-	$('.header-lvid').text(get_cookie('tmr_lvid'));
+	// $('.header-ga').text(get_cookie('_ga'));
+	// $('.header-fbp').text(get_cookie('_fbp'));
+	// $('.header-uid').text(get_cookie('_ym_uid'));
+	// $('.header-lvid').text(get_cookie('tmr_lvid'));
 
-
+		
 
 	let data = {
 		"event_name":"PageView",
-		"event_time":Date.now(),
+		"event_time":String(Date.now()).slice(0, 10),
+		"event_time_ga":String(Date.now()) + '000',
 		"event_source_url": window.location.href,
 		"event_id": eventPixelId,
 		"action_source":"website",
@@ -633,6 +639,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		"client_user_agent": navigator.userAgent,
 		"_fbp": get_cookie('_fbp'),
 		"_ym_uid": get_cookie('_ym_uid'),
+		// "_ga": String(get_cookie('_ga')).substr(6, (data._ga).length),
 		"_ga": get_cookie('_ga'),
 		"_tmr_lvid": get_cookie('tmr_lvid'),
 		"tmr_lvidTS": get_cookie('tmr_lvidTS'),
@@ -640,55 +647,36 @@ document.addEventListener('DOMContentLoaded', () => {
 		"name": null,
 		"em": null,
 		"ph": null,
+		"ip": ips,
 		"question_1": null,
 		"question_2": null,
 		"question_3": null,
 	}
 
 
+
+
+
+	let promiseSendData = new Promise(function(resolve, reject) {
+		setTimeout(() => {
+			resolve(
+				data.event_name = "PageView",
+				data.lead_id = get_cookie('roistat_first_visit') + 1,
+				data._fbp = get_cookie('_fbp'),
+				data._ym_uid = get_cookie('_ym_uid'),
+				data._ga = String(get_cookie('_ga')).substr(6, (data._ga).length),
+				data._tmr_lvid = get_cookie('tmr_lvid'),
+				data.tmr_lvidTS = get_cookie('tmr_lvidTS'),
+				data.roistat_first_visit = get_cookie('roistat_first_visit'),
+				data.ip = ips 
+			)
+		}, 3000)
+	})
+
+
+	promiseSendData.then(sendDataAnalytics)
+
 	
-
-
-
-	// let data = {
-	// 	"event_data": 
-	// 		{
-	// 			"event_name":"PageView",
-	// 			"event_time":Date.now(),
-	// 			"event_source_url": window.location.href,
-	// 			"event_id": eventPixelId,
-	// 			"action_source":"website",
-	// 			"form_id": null,
-	// 		},
-	// 	"ID":
-	// 		{
-	// 			"user_id":get_cookie('roistat_first_visit') + 1,
-	// 			"client_user_agent": navigator.userAgent,
-	// 			"_fbp": get_cookie('_fbp'),
-	// 			"_ym_uid": get_cookie('_ym_uid'),
-	// 			"_ga": get_cookie('_ga'),
-	// 			"tmr_lvid": get_cookie('tmr_lvid'),
-	// 			"tmr_lvidTS": get_cookie('tmr_lvidTS'),
-	// 			"roistat_first_visit": get_cookie('roistat_first_visit')
-	// 		},
-	// 	"user_data":
-	// 		{
-	// 			"name": null,
-	// 			"em": null,
-	// 			"ph": null,
-	// 		},
-	// 	"custom_data":
-	// 		{
-	// 			"question_1": null,
-	// 			"question_2": null,
-	// 			"question_3": null,
-	// 		}
-
-	//    }
-
-
-	   let sendDataPageView = setTimeout(sendDataAnalytics, 3000);
-
 	   
 	   function sendDataAnalytics() {
 		fetch('https://api.directual.com/good/api/v5/data/data/postWebData?appID=0cdcfe4c-3f7e-4eff-b1c9-d8f418a0db2d', {
@@ -698,6 +686,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			'Content-Type': 'application/json'
 			},
 		}).then(res=>{
+			console.log(data)
 			console.log(res.json())
 		})
 	   }
@@ -708,6 +697,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			sendDataAnalytics();
 		})
 	   }
+
 	   if (document.querySelector('.social')) {
 		document.querySelectorAll('.social__list').forEach(item => {
 			item.addEventListener('click', () => {
@@ -715,7 +705,15 @@ document.addEventListener('DOMContentLoaded', () => {
 				sendDataAnalytics();
 			})
 		})
+	   }	
 
+	   if (document.querySelector('.quiz')) {
+		document.querySelectorAll(".quiz__item input[name='firstAsk']").forEach(item => {
+			item.addEventListener('click', () => {
+				data.event_name = 'Initiate'
+				sendDataAnalytics();
+			})
+		})
 	   }
 
 

@@ -8,11 +8,26 @@
 .way_title {
     grid-column: 2 / 6;
     grid-row: 2 / 3;
+    font-family: 'Forum', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.6em;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #134621;
 }
 .way_subtitle {
+    border-top: 1px solid #E6E6E6;
+    padding-top: 3em;
     grid-column: 2 / 6;
     grid-row: 3 / 5;
     align-self: center;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2em;
+    line-height: 1.5em;
+    color: #4D4D4D;
 }
 .way__block {
     display: grid;
@@ -22,9 +37,14 @@
     text-decoration: none;
     position: relative;
     &:hover {
+        background-color: #FBFDFC;
         .way__block-title {
             color: #1F7537;
         }
+    }
+    border-top: 1px solid #E6E6E6;
+    &:nth-child(8) {
+        border-bottom: 1px solid #E6E6E6;
     }
     
     .way__block-title {
