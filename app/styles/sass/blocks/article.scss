@@ -1,14 +1,14 @@
 .information-1 {
     .article {
         grid-column: 4 / 13;
-        grid-row: span 54;
+        grid-row: span 68;
         @media (max-width: 1024px) {
             grid-column: 2 / 8;  
-            grid-row: span 60;
+            grid-row: span 76;
         }
         @media (max-width: 540px) {
             grid-column: 1 / 6;  
-            grid-row: span 90;
+            grid-row: span 123;
             padding: 0 2.5em;
         }
     }
@@ -16,14 +16,14 @@
 .information-2 {
     .article {
         grid-column: 4 / 13;
-        grid-row: span 74;
+        grid-row: span 90;
         @media (max-width: 1024px) {
             grid-column: 2 / 8;  
-            grid-row: span 84;
+            grid-row: span 104;
         }
         @media (max-width: 540px) {
             grid-column: 1 / 6;  
-            grid-row: span 134;
+            grid-row: span 171;
             padding: 0 2.5em;
         }
     }
@@ -31,14 +31,14 @@
 .information-3 {
     .article {
         grid-column: 4 / 13;
-        grid-row: span 73;
+        grid-row: span 85;
         @media (max-width: 1024px) {
             grid-column: 2 / 8;  
-            grid-row: span 82;
+            grid-row: span 96;
         }
         @media (max-width: 540px) {
             grid-column: 1 / 6;  
-            grid-row: span 124;
+            grid-row: span 156;
             padding: 0 2.5em;
         }
     }
@@ -46,14 +46,14 @@
 .information-4 {
     .article {
         grid-column: 4 / 13;
-        grid-row: span 62;
+        grid-row: span 80;
         @media (max-width: 1024px) {
             grid-column: 2 / 8;  
-            grid-row: span 72;
+            grid-row: span 97;
         }
         @media (max-width: 540px) {
             grid-column: 1 / 6;  
-            grid-row: span 116;
+            grid-row: span 164;
             padding: 0 2.5em;
         }
     }
@@ -63,14 +63,14 @@
 .information-5 {
     .article {
         grid-column: 4 / 13;
-        grid-row: span 81;
+        grid-row: span 103;
         @media (max-width: 1024px) {
             grid-column: 2 / 8;  
-            grid-row: span 90;
+            grid-row: span 121;
         }
         @media (max-width: 540px) {
             grid-column: 1 / 6;  
-            grid-row: span 143;
+            grid-row: span 200;
             padding: 0 2.5em;
         }
     }
@@ -80,14 +80,14 @@
 .information-6 {
     .article {
         grid-column: 4 / 13;
-        grid-row: span 63;
+        grid-row: span 77;
         @media (max-width: 1024px) {
             grid-column: 2 / 8;  
-            grid-row: span 71;
+            grid-row: span 90;
         }
         @media (max-width: 540px) {
             grid-column: 1 / 6;  
-            grid-row: span 114;
+            grid-row: span 147;
             padding: 0 2.5em;
         }
     }
@@ -96,14 +96,14 @@
 .information-7 {
     .article {
         grid-column: 4 / 13;
-        grid-row: span 62;
+        grid-row: span 78;
         @media (max-width: 1024px) {
             grid-column: 2 / 8;  
-            grid-row: span 69;
+            grid-row: span 92;
         }
         @media (max-width: 540px) {
             grid-column: 1 / 6;  
-            grid-row: span 110;
+            grid-row: span 152;
             padding: 0 2.5em;
         }
     }
@@ -113,14 +113,14 @@
 .information-8 {
     .article {
         grid-column: 4 / 13;
-        grid-row: span 54;
+        grid-row: span 66;
         @media (max-width: 1024px) {
             grid-column: 2 / 8;  
-            grid-row: span 61;
+            grid-row: span 76;
         }
         @media (max-width: 540px) {
             grid-column: 1 / 6;  
-            grid-row: span 94;
+            grid-row: span 123;
             padding: 0 2.5em;
         }
     }
@@ -131,14 +131,14 @@
 .information-9 {
     .article {
         grid-column: 4 / 13;
-        grid-row: span 64;
+        grid-row: span 76;
         @media (max-width: 1024px) {
             grid-column: 2 / 8;  
-            grid-row: span 73;
+            grid-row: span 90;
         }
         @media (max-width: 540px) {
             grid-column: 1 / 6;  
-            grid-row: span 112;
+            grid-row: span 142;
             padding: 0 2.5em;
         }
     }
@@ -149,14 +149,14 @@
 .information-10 {
     .article {
         grid-column: 4 / 13;
-        grid-row: span 63;
+        grid-row: span 75;
         @media (max-width: 1024px) {
             grid-column: 2 / 8;  
-            grid-row: span 71;
+            grid-row: span 87;
         }
         @media (max-width: 540px) {
             grid-column: 1 / 6;  
-            grid-row: span 112;
+            grid-row: span 145;
             padding: 0 2.5em;
         }
     }
@@ -184,7 +184,7 @@
         font-family: Gilroy, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 1.4em;
+        font-size: 1.8em;
         line-height: 1.1em;
         color: #676767;
         display: block;
@@ -318,7 +318,7 @@
         font-family: Gilroy, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 1.6em;
+        font-size: 2em;
         line-height: 1.5em;
         color: #4D4D4D;
         margin: 1.5em 0;
@@ -327,7 +327,7 @@
         font-family: Gilroy, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 1.6em;
+        font-size: 2em;
         line-height: 1.5em;
         color: #4D4D4D;
         margin: 0.5em 0 1.5em 0;
@@ -338,7 +338,7 @@
         font-family: Gilroy, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 1.6em;
+        font-size: 2em;
         line-height: 1.5em;
         color: #4D4D4D;
         position: relative;
@@ -365,7 +365,7 @@
         font-family: Forum, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 1.6em;
+        font-size: 2em;
         line-height: 1.5em;
         color: #1F7537;
         margin-bottom: 2em;
@@ -375,7 +375,7 @@
         font-family: Gilroy, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 1.6em;
+        font-size: 2em;
         line-height: 1.5em;
         color: #000000;
         margin: 2em 0;
@@ -390,7 +390,7 @@
         font-family: Gilroy, sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 1.6em;
+        font-size: 2em;
         line-height: 1.5em;
         color: #000000;
         margin: 1em 0;
@@ -410,7 +410,7 @@
         font-family: Gilroy, sans-serif;
         font-style: normal;
         font-weight: 500;
-        font-size: 1.6em;
+        font-size: 2em;
         line-height: 1.2em;
         color: #000000;
         margin: 1.5em 0 1em 0;

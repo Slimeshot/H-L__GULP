@@ -82,7 +82,7 @@
 .people__slide-block {
     align-self: center;
     justify-self: center;
-    font-family: 'Forum', sans-serif;
+    font-family: Forum, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 2.4em;
@@ -233,7 +233,7 @@
         
     }
     .people__slide-title {
-        margin-top: 0em;
+        margin-top: -1em;
         span {
             margin-left: 0em;
         }
@@ -374,10 +374,10 @@
     // }
     
     .people__slide-block {
-        font-size: 1.8em;
+        font-size: 2.1em;
         line-height: 1.4em;
-        text-align: center;
-        justify-self: center;
+        text-align: left;
+        justify-self: flex-start;
         display: block;
     }
     .people__slide-block1 {

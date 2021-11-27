@@ -59,85 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	const headerNav = document.querySelector('.navigation');
 	const navMenu = document.querySelector('.navigation__menu');
 
+	if (burgerBtn) {
+		burgerBtn.addEventListener("click", () => {
+			headerNav.classList.toggle('open__menu');
+			navMenu.classList.toggle('active');
+			burgerBtn.classList.toggle('burger__active');
+			document.body.classList.toggle('active');
+		})
 
-	burgerBtn.addEventListener("click", () => {
-		headerNav.classList.toggle('open__menu');
-		navMenu.classList.toggle('active');
-		burgerBtn.classList.toggle('burger__active');
-		document.body.classList.toggle('active');
-	})
-
-	
-	
-	//Плавная анимация
-	if (screen.width > 1024) {
-		function onEntry(entry) {
-			entry.forEach(change => {
-			  if (change.isIntersecting) {
-				change.target.classList.add('scrolled');
-			  }
-			});
-		  }
-		  let options = { threshold: [0.2] };
-		  let observer = new IntersectionObserver(onEntry, options);
-		  let elements = document.querySelectorAll('.js-scroll');
-		  for (let elm of elements) {
-			observer.observe(elm);
-		  }
-
-	} else {
-		let elements = document.querySelectorAll('.js-scroll');
-		for (let elm of elements) {
-		  elm.classList.add('scrolled')
-		}
 	}
-	  
-	// const scrollElements = document.querySelectorAll(".js-scroll");
-	// const scrollElementsAnimation = document.querySelectorAll(".js-scroll-animation");
 
-	// const elementInView = (el, dividend = 1) => {
-
-	// 	const elementTop = el.getBoundingClientRect().top;
-	// 	return ( elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend );
-
-	// };
-
-	// // const elementOutofView = (el) => {
-
-	// // 	const elementTop = el.getBoundingClientRect().top;
-	// // 	return ( elementTop > (window.innerHeight || document.documentElement.clientHeight) );
-
-	// // };
-
-	// const displayScrollElement = (element) => {
-	// 	element.classList.add("scrolled");
-	// };
-
-	// const hideScrollElement = (element) => {
-	// 	element.classList.remove("scrolled");
-	// };
-
-	// const handleScrollAnimation = () => {
-	// 	scrollElementsAnimation.forEach((el) => {
-	// 		if (elementInView(el, 1)) {
-	// 		displayScrollElement(el);
-	// 		}  // else if (elementOutofView(el)) {
-	// 		// hideScrollElement(el)
-	// 		// }
-	// 	})
-	// 	scrollElements.forEach((el) => {
-	// 		if (elementInView(el, 1.25)) {
-	// 		displayScrollElement(el);
-	// 		}  // else if (elementOutofView(el)) {
-	// 		// hideScrollElement(el)
-	// 		// }
-	// 	})
-	// }
-
-	// window.addEventListener("scroll", () => { 
-	// 	handleScrollAnimation();
-	// });
-	// handleScrollAnimation();
 
 
 	// анимация переключения кнопок
@@ -285,14 +216,51 @@ document.addEventListener('DOMContentLoaded', () => {
 	const tabContainerBtn = document.querySelectorAll('.tabcontainer__btn');
 	
 
+	function getScrollBarWidth () {
+		var inner = document.createElement('p');
+		inner.style.width = "100%";
+		inner.style.height = "200px";
+	  
+		var outer = document.createElement('div');
+		outer.style.position = "absolute";
+		outer.style.top = "0px";
+		outer.style.left = "0px";
+		outer.style.visibility = "hidden";
+		outer.style.width = "200px";
+		outer.style.height = "150px";
+		outer.style.overflow = "hidden";
+		outer.appendChild (inner);
+	  
+		document.body.appendChild (outer);
+		var w1 = inner.offsetWidth;
+		outer.style.overflow = 'scroll';
+		var w2 = inner.offsetWidth;
+		if (w1 == w2) w2 = outer.clientWidth;
+	  
+		document.body.removeChild (outer);
+	  
+		return (w1 - w2);
+	  };
+	
+	function compensateBody(){
+		$('body').addClass('BodyOverflow');
+		$('body').css('padding-right', getScrollBarWidth());
+	}
+	function unCompensateBody(){
+		$('body').attr('style', '');
+		$('body').removeClass('BodyOverflow');
+	}
+
 
 
 	function openCall() {
+		compensateBody()
 		bg.classList.add('active');
 		call.classList.add('active');
 		document.body.classList.add('active');
 	}
 	function closeCall() {
+		unCompensateBody()
 		bg.classList.remove('active');
 		call.classList.remove('active');
 		document.body.classList.remove('active');
@@ -411,11 +379,73 @@ document.addEventListener('DOMContentLoaded', () => {
 			`<div class="quiz-results-item">${vals}</div>`
 		$('.quiz-results').append(template)
 		
-
-
-	
 	}
 	
+
+
+	if (document.querySelector('.reference')) {
+
+		const multiLinksTitle = ['Банкротство ООО с долгами','Административное правонарушение','Руструктуризация долга при банкротстве',
+		'Процедура банкротства физ.лиц','Процедура банкротства юр.лиц','Банкротсво через МФЦ','Вероятность банкротства предприятия',
+		'Уклонение от уплаты налогов','Выездная налоговая проверка','Допрос в налоговой'];
+		const multiLinksData = ['23.05.2021','30.01.2021','10.07.2021','02.02.2021','03.05.2021','20.06.2021','17.07.2021','21.09.2021','08.08.2021','01.05.2021'];
+		const multiLinksLabel = ['#Банкротство','#Арбитраж','#Банкротство','#Банкротство','#Банкротство','#Банкротство','#Банкротство','#Налоги','#Налоги','#Налоги'];
+		const multiLinksImg = ['paper-11','paper-1','paper-10','paper-12','paper-2','paper-3','paper-4','paper-5','paper-6','paper-8'];
+		const multiLinksLink = ['info1','info','info2','info3','info4','info5','info6','info7','info8','info9'];
+
+		let i = 1
+		while (i <= 3) {
+			let randNum = Math.floor(Math.random() * 10);
+			if (($('.notes__block-title').text()).includes(multiLinksTitle[randNum])) {
+				continue;
+			} else {
+
+					let multiLinksPattern = `
+					<a href="paper/${multiLinksLink[randNum]}.html" class="notes__block-${i} notes__block">
+						<div class="notes__block__box">
+							<span class="notes__block-data notes__block-black">${multiLinksData[randNum]}</span>
+							<span class="notes__block-label notes__block-black">${multiLinksLabel[randNum]}</span>
+						</div>
+						<div class="notes__block-img">
+							<img src="images/dist/paper/${multiLinksImg[randNum]}.png" alt="img">
+						</div>
+						<div class="notes__block-info">
+							<h3 class="notes__block-title">${multiLinksTitle[randNum]}</h3>
+						</div>
+					</a>
+					`
+				
+					$('.reference').append(multiLinksPattern)	
+					i++;
+				}
+		}
+	}
+
+
+
+
+	//Плавная анимация
+	if (screen.width > 1024) {
+		function onEntry(entry) {
+			entry.forEach(change => {
+			  if (change.isIntersecting) {
+				change.target.classList.add('scrolled');
+			  }
+			});
+		  }
+		  let options = { threshold: [0.2] };
+		  let observer = new IntersectionObserver(onEntry, options);
+		  let elements = document.querySelectorAll('.js-scroll');
+		  for (let elm of elements) {
+			observer.observe(elm);
+		  }
+
+	} else {
+		let elements = document.querySelectorAll('.js-scroll');
+		for (let elm of elements) {
+		  elm.classList.add('scrolled')
+		}
+	}
 
 
 	function checkCurrentStep () {
@@ -615,19 +645,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	let ips;
-	$.getJSON('https://ipapi.co/json/', function(data) {
-		ips = (JSON.stringify(data.ip, null, 2).slice(1, -1));
-		// console.log(JSON.stringify(data.ip, null, 2).slice(1, -1))
-		});
+	// $.getJSON('https://ipapi.co/json/', function(data) {
+	// 	ips = (JSON.stringify(data.ip, null, 2).slice(1, -1));
+	// 	});
 
-	// $('.header-ga').text(get_cookie('_ga'));
-	// $('.header-fbp').text(get_cookie('_fbp'));
-	// $('.header-uid').text(get_cookie('_ym_uid'));
-	// $('.header-lvid').text(get_cookie('tmr_lvid'));
+	window.eventPixelId = Math.floor((Math.random() * 100000000))
+	// fbq('track', 'PageView', {eventID: eventPixelId});
 
-		
-
-	let data = {
+	var data = {
 		"event_name":"PageView",
 		"event_time":String(Date.now()).slice(0, 10),
 		"event_time_ga":String(Date.now()) + '000',
@@ -639,8 +664,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		"client_user_agent": navigator.userAgent,
 		"_fbp": get_cookie('_fbp'),
 		"_ym_uid": get_cookie('_ym_uid'),
-		// "_ga": String(get_cookie('_ga')).substr(6, (data._ga).length),
-		"_ga": get_cookie('_ga'),
+		"_ga": String(get_cookie('_ga')).substr(6, (String(get_cookie('_ga'))).length),
+		"_gcl_au": get_cookie('_gcl_au'),
+		// "_ga": get_cookie('_ga'),
 		"_tmr_lvid": get_cookie('tmr_lvid'),
 		"tmr_lvidTS": get_cookie('tmr_lvidTS'),
 		"roistat_first_visit": get_cookie('roistat_first_visit'),
@@ -656,7 +682,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 	let promiseSendData = new Promise(function(resolve, reject) {
 		setTimeout(() => {
 			resolve(
@@ -664,7 +689,9 @@ document.addEventListener('DOMContentLoaded', () => {
 				data.lead_id = get_cookie('roistat_first_visit') + 1,
 				data._fbp = get_cookie('_fbp'),
 				data._ym_uid = get_cookie('_ym_uid'),
-				data._ga = String(get_cookie('_ga')).substr(6, (data._ga).length),
+				data._ga = String(get_cookie('_ga')).substr(6, (String(get_cookie('_ga'))).length),
+				data._gcl_au = get_cookie('_gcl_au'),
+				// data._ga = get_cookie('_ga'),
 				data._tmr_lvid = get_cookie('tmr_lvid'),
 				data.tmr_lvidTS = get_cookie('tmr_lvidTS'),
 				data.roistat_first_visit = get_cookie('roistat_first_visit'),
@@ -673,7 +700,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}, 3000)
 	})
 
-
+	
 	promiseSendData.then(sendDataAnalytics)
 
 	

@@ -36,6 +36,14 @@
     img {
         height: 2.4em;
         width: 2.4em;
+        @media(max-width: 768px) {
+            height: 20px;
+            width: 20px;
+        }
+        @media(max-width: 400px) {
+            height: 18px;
+            width: 18px;
+        }
     }
 }
 
@@ -47,7 +55,7 @@
 }
 
 
-.contacts, .information, .entrys, .services {
+.contacts, .information, .entrys, .services, .multiLinks {
     .social__list {
         &:nth-child(1) {
             .social__link {
@@ -77,6 +85,14 @@
         img {
             height: 2.4em;
             width: 2.4em;
+            @media(max-width: 768px) {
+                height: 20px;
+                width: 20px;
+            }
+            @media(max-width: 400px) {
+                height: 18px;
+                width: 18px;
+            }
         }
     }
 }

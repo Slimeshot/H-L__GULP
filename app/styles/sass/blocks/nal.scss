@@ -373,20 +373,8 @@
         }
     }
     
-    .nal__title {
-        grid-column: 1/4;
-        grid-row: 6/8;
-        font-size: 5.2em;
-    }
-    .nal__subtitle {
-        grid-column: 3 / 5;
-        grid-row: 6 / 7;
-        font-size: 1.6em;
-        line-height: 1em;
-        align-self: end;
-        margin-bottom: 0.5em;
-        justify-self: center;
-    }
+
+
     .nal__btn {
         grid-column: 5 / 6;
         grid-row: 13 / 14;
@@ -419,8 +407,11 @@
         grid-column: 3 / 6;
         grid-row: 7 / 8;
         align-self: center;
-        margin-bottom: 12px;
-        margin-right: 0px;
+        margin-bottom: 0.8em;
+        margin-right: 1.5em;
+        font-size: 2.2em;
+        line-height: 1em;
+        justify-self: flex-end;
     }
     
     .nal__block-1 {

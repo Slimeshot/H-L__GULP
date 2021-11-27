@@ -159,6 +159,14 @@
         grid-row: 9 / 10;
         
     }
+    .way__block {
+        .way__block-char {
+            img {
+              width: 28px;
+              height: 28px;  
+            }
+        }
+    }
 }
 
 
@@ -213,5 +221,13 @@
     .way__color-2 {
         display: none;
         
+    }
+    .way__block {
+        .way__block-char {
+            img {
+              width: 24px;
+              height: 24px;  
+            }
+        }
     }
 }

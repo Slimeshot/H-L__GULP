@@ -13,10 +13,12 @@
 .trust__btn-prev {
     grid-column: 7 / 8;
     grid-row: 5 / 6;
+    border-right: 0.5px solid #F9F9F9;
 }
 .trust__btn-next {
     grid-column: 8 / 9;
     grid-row: 5 / 6;
+    border-left: 0.5px solid #F9F9F9;
 }
 .trust__btn {
     z-index: 1;
@@ -308,7 +310,7 @@
     .trust__slide-description {
         grid-column: 1 / 6;
         grid-row: 2 / 5;
-        font-size: 2.3em;
+        font-size: 2.4em;
         line-height: 1.4em;
         padding: 1em 1em 0 1em;
         
