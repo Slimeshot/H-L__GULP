@@ -1,0 +1,140 @@
+.spam {
+    grid-column: span 15;
+    grid-row: span 4;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    --nr:4; /* number of rows */
+    --nc:15; /* number of columns */
+    --b:1px; /* border length */
+    
+    width: 100%;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.2) 0;
+    background:
+      linear-gradient(to right, var(--g)),
+      linear-gradient(to bottom,var(--g)), #fff;
+    background-size:
+      calc((100% - var(--b)*(var(--nc) - 1))/var(--nc) + var(--b)) 100%,
+      100% calc((100% - var(--b)*(var(--nr) - 1))/var(--nr) + var(--b));
+      
+      @media (max-width: 1024px) {
+        grid-column: span 8;
+        grid-row: span 6;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        --nc:8; /* number of columns */
+        --nr:6; /* number of rows */
+      }
+      @media (max-width: 540px) {
+        grid-column: span 5;
+        grid-row: span 6;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        --nc:5; /* number of columns */
+        --nr:6; /* number of rows */
+      }
+}
+.spam__form {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column: 2 / 15;
+    grid-row: 1 / 4;
+    background-color: #FBFDFC;
+    padding-left: 4.8em;
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column: 1 / 9;
+        grid-row: 1 / 6;
+        padding-left: 0em;
+    }
+    @media (max-width: 540px) {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column: 1 / 6;
+        grid-row: 1 / 7;
+    }
+}
+.spam__title {
+    font-family: Forum, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.6em;
+    line-height: 1em;
+    color: #0D5220;
+    grid-column: 1 / 7;
+    grid-row: 1 / 3;
+    align-self: center;
+    @media (max-width: 1024px) {
+        grid-column: 2 / 8;
+        grid-row: 1 / 3;
+    }
+    @media (max-width: 540px) {
+        font-size: 28px;
+        line-height: 30px;
+        grid-column: 1 / 6;
+        grid-row: 1 / 3;
+        padding: 0 16px;
+    }
+}
+.spam__subtitle {
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2em;
+    line-height: 1.2em;
+    color: #0D5220;
+    grid-column: 1 / 6;
+    grid-row: 3 / 4;
+    align-self: center;
+    @media (max-width: 1024px) {
+        grid-column: 2 / 5;
+        grid-row: 2 / 3;
+        align-self: flex-end;
+    }
+    @media (max-width: 540px) {
+        font-size: 16px;
+        line-height: 20px;
+        grid-column: 1 / 6;
+        grid-row: 3 / 4;
+        align-self: flex-start;
+        padding: 0 16px;
+    }
+}
+.spam__email {
+    grid-column: 9 / 14;
+    grid-row: 1 / 2;
+    margin-right: 2.5em;
+    @media (max-width: 1024px) {
+        grid-column: 2 / 8;
+        grid-row: 3 / 4;
+        align-self: center;
+        margin-right: 0em;
+    }
+    @media (max-width: 540px) {
+        grid-column: 1 / 6;
+        grid-row: 4 / 5;
+        margin: 0 16px;
+    }
+}
+
+.spam__btn {
+    grid-column: 9 / 14;
+    grid-row: 3 / 4;
+    background-image: none!important;
+    color: #fff!important;
+    font-family: Gilroy,sans-serif;
+    font-style: normal!important;
+    font-weight: normal!important;
+    font-size: 2.4em!important;
+    line-height: 1.15em!important;
+    @media (max-width: 1024px) {
+        grid-column: 2 / 8;
+        grid-row: 5 / 6;
+    }
+    @media (max-width: 540px) {
+        grid-column: 1 / 6;
+        grid-row: 6 / 7;
+    }
+}

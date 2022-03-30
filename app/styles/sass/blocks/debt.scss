@@ -1,0 +1,110 @@
+.debt {
+    grid-column: span 15;
+    grid-row: span 4;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    --nr:4; /* number of rows */
+    --nc:15; /* number of columns */
+    --b:1px; /* border length */
+    width: 100%;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.2) 0;
+    background:
+      linear-gradient(to right, var(--g)),
+      linear-gradient(to bottom,var(--g)), #fff;
+    background-size:
+      calc((100% - var(--b)*(var(--nc) - 1))/var(--nc) + var(--b)) 100%,
+      100% calc((100% - var(--b)*(var(--nr) - 1))/var(--nr) + var(--b));
+      border-bottom: 1px solid rgba(187, 187, 187, 0.1);
+    @media (max-width: 1024px) {
+        grid-column: span 8;
+        grid-row: span 5;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        --nc:8; /* number of columns */
+        --nr:5; /* number of rows */
+    }
+    @media (max-width: 540px) {
+        grid-column: span 5;
+        grid-row: span 6;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        --nc:5; /* number of columns */
+        --nr:6; /* number of rows */
+    }
+    
+}
+.debt__title {
+    grid-column: 4 / 8;
+    grid-row: 2 / 3;
+    font-family: Forum, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.8em;
+    line-height: 1.1em;
+    color: #000000;
+    @media (max-width: 1024px) {
+        grid-column: 2 / 6;
+        grid-row: 2 / 3;
+    }
+    @media (max-width: 540px) {
+        grid-column: 1 / 6;
+        grid-row: 2 / 3;
+        padding-left: 16px;
+        font-size: 28px;
+        line-height: 30px;
+    }
+}
+.debt__subtitle {
+    grid-column: 4 / 8;
+    grid-row: 3 / 4;
+    align-self: flex-end;
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2em;
+    line-height: 1.6em;
+    color: #818181;
+    @media (max-width: 1024px) {
+        grid-column: 2 / 8;
+        grid-row: 3 / 4;
+        align-self: flex-start;
+    }
+    @media (max-width: 540px) {
+        grid-column: 1 / 6;
+        grid-row: 3 / 5;
+        font-size: 16px;
+        padding: 0 16px;
+        line-height: 24px;
+        align-self: center;
+    }
+}
+.debt__btn {
+    grid-column: 9 / 13;
+    grid-row: 3 / 4;
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2em;
+    line-height: 1.2em;
+    color: #E9A237!important;
+    border: 1px solid #E9A237;
+    color: #fff;
+    cursor: pointer;
+    background-color: transparent;
+    &:hover {
+        color: #fff!important;
+    }
+    @media (max-width: 1024px) {
+        grid-column: 2 / 8;
+        grid-row: 4 / 5;
+    }
+    @media (max-width: 540px) {
+        grid-column: 1 / 6;
+        grid-row: 5 / 6;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+.btn {
+}

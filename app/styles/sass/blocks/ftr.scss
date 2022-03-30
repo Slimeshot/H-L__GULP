@@ -1,0 +1,173 @@
+.ftr {
+    grid-column: span 15;
+    grid-row: span 3;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    --nr:3; /* number of rows */
+    --nc:15; /* number of columns */
+    background-color: #1F7537;
+    @media (max-width: 1024px) {
+        grid-column: span 8;
+        grid-row: span 3;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    @media (max-width: 540px) {
+        grid-column: span 5;
+        grid-row: span 5;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
+.ftr__block {
+    grid-column: span 15;
+    grid-row: span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 1024px) {
+        grid-column: span 8;
+        grid-row: span 3;
+    }
+    @media (max-width: 540px) {
+        grid-column: span 5;
+        grid-row: span 5;
+    }
+}
+.ftr__contacts {
+    padding-top: 6.4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    @media (max-width: 540px) {
+        padding-top: 6.4em;
+    }
+}
+.ftr__phone {
+    font-family: Forum, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 7.2em;
+    line-height: 1em;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    text-decoration: none;
+    &:hover {
+        color: #fff;
+    }
+    @media (max-width: 540px) {
+        font-size: 6em;
+        line-height: 1em;
+        margin-bottom: 8px;
+    }
+}
+.ftr__contacts-adress {
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.4em;
+    line-height: 1.5em;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    &:hover {
+        color: #fff;
+    }
+    @media (max-width: 540px) {
+        font-size: 2em;
+        line-height: 1em;
+    }
+}
+.ftr__big {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 142em;
+    padding: 3.2em 0;
+    border-top: 1px solid #79AC87;
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        border-top: none;
+        max-width: auto;
+    }
+}
+.ftr__group {
+    display: flex;
+    @media (max-width: 1024px) {
+        order: 2;
+        padding: 3.2em 0;
+    }
+    @media (max-width: 540px) {
+        order: 1;
+        padding: 32px 0;
+        border-top: 1px solid #79AC87;
+        border-bottom: 1px solid #79AC87;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.ftr__hl {
+}
+.ftr__text {
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2em;
+    line-height: 1.2em;
+    color: #A5C8AF;
+    text-decoration: none;
+    margin-right: 32px;
+    &:last-child {
+        margin-right: 0px;
+    }
+    @media (max-width: 540px) {
+        font-size: 2.1em;
+        line-height: 1em;
+        margin-right: 0px;
+        margin-bottom: 0.8em;
+        &:last-child {
+            margin-bottom: 0em;
+        }
+    }
+}
+.ftr__politics {
+    &:hover {
+        color: #A5C8AF;
+    }
+}
+.ftr__box {
+    display: flex;
+    @media (max-width: 1024px) {
+        order: 1;
+        padding: 3.2em 0;
+        border-top: 1px solid #79AC87;
+        border-bottom: 1px solid #79AC87;
+    }
+    @media (max-width: 540px) {
+        order: 2;
+        padding: 32px 0 6.4em 0;
+        border-top: none;
+        border-bottom: none;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.ftr_ftr {
+    display: flex;
+    @media (max-width: 540px) {
+        align-items: center;
+        width: 100%;
+        .ftr__text {
+            margin-bottom: 0;
+            &:last-child {
+                margin-left: 16px;
+            }
+        }
+    }
+}

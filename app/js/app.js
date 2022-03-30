@@ -1,10 +1,37 @@
-import {Swiper, Mousewheel, Controller, Pagination, Scrollbar, Navigation} from "swiper"
+import {Swiper, Mousewheel, Controller, Pagination, Scrollbar, Navigation, EffectFade} from "swiper"
 
-Swiper.use([Mousewheel, Controller, Pagination, Scrollbar, Navigation ]);
+Swiper.use([Mousewheel, Controller, Pagination, Scrollbar, Navigation, EffectFade ]);
 
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
+
+	if (document.querySelector('.entry__swiper')) {
+		const entrySlide = new Swiper('.entry__swiper', {
+			// Optional parameters
+			// direction: 'vertical',
+			loop: true,
+			effect: "fade",
+
+			navigation: {
+				nextEl: '.entry_btn-next',
+				prevEl: '.entry_btn-prev',
+			  }
+		  });
+		const entrySld = new Swiper('.entry__swpr', {
+			// Optional parameters
+			// direction: 'vertical',
+			loop: true,
+			effect: "fade",
+
+		  });
+
+
+		  entrySlide.controller.control = entrySld 
+		  entrySld.controller.control = entrySlide 
+	}
+
 
 	const reviewsSwiper = new Swiper('.reviews__slider', {
 		loop: true,
@@ -115,7 +142,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 
 
-
+	if (document.querySelector('.cooperation')) {
+		document.querySelectorAll('.cooperation__btn').forEach(item => {
+			item.addEventListener('click', openCall)
+		})
+	}
 
 
 
@@ -210,6 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const call = document.querySelector('.call');
 	const callBtn = document.querySelector('.call__button');
 	const consBtn = document.querySelector('.cons__btn');
+	const debtBtn = document.querySelector('.debt__btn');
 	
 	
 	const tabContentBtn = document.querySelectorAll('.tabcontent__btn');
@@ -266,7 +298,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.body.classList.remove('active');
 	}
 
-
+	if (debtBtn) {
+		debtBtn.addEventListener('click', openCall);
+		// callBtn.addEventListener('click', closeCall);
+		// bg.addEventListener('click', () => {
+		// 	closeCall();
+		// });
+	}
 
 	if (callBtn) {
 		consBtn.addEventListener('click', openCall);
@@ -276,7 +314,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-
+	if (document.querySelector('.bankruptcy__btn')) {
+		document.querySelector('.bankruptcy__btn').addEventListener('click', (e) => {
+			data.event_name = 'Initiate'
+			sendDataAnalytics();
+			openCall()
+		})
+	}
 
 	if (tabContentBtn) {
 		tabContentBtn.forEach(item => {
@@ -289,6 +333,38 @@ document.addEventListener('DOMContentLoaded', () => {
 			item.addEventListener('click', openCall);
 		})
 	}
+
+	 // smooth animate
+	 document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+		link.addEventListener('click', function(e) {
+			e.preventDefault();
+
+			let href = this.getAttribute('href').substring(1);
+
+			const scrollTarget = document.getElementById(href);
+
+			// let topOffset;
+				const topOffset = 0; // если не нужен отступ сверху
+
+				// if (document.querySelector('.header')) {
+				// 	topOffset = document.querySelector('.header').offsetHeight;
+                //     if (window.innerWidth <= 540) {
+                //         topOffset = 0;
+                //     }
+				// } else {
+				// 	topOffset = 0; // если не нужен отступ сверху
+				// }
+
+			const elementPosition = scrollTarget.getBoundingClientRect().top;
+			const offsetPosition = elementPosition - topOffset;
+
+			window.scrollBy({
+				top: offsetPosition,
+				behavior: 'smooth'
+			});
+		});
+	});
 
 
 	//custom select
@@ -547,7 +623,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		data.name = $(`#${formID} input[name="name"]`).val()
 		data.em = $(`#${formID} input[name="email"]`).val()
-		data.ph = $(`#${formID} input[name="phone"]`).val().replace(/[^\d]/g, '')
+		console.log($(`#${formID} input[name="phone"]`).val())
+		if ($(`#${formID} input[name="phone"]`).val()) {
+			data.ph = $(`#${formID} input[name="phone"]`).val().replace(/[^\d]/g, '')
+		}
 		data.form_id = formID
 		data.event_name = 'SubmitForm'
 		if (formID == 'Quiz') {
@@ -556,58 +635,140 @@ document.addEventListener('DOMContentLoaded', () => {
 			data.question_3 = $($('.quiz-results-item')[2]).text()
 		}
 		// console.log(data)
-		$.ajax({
-			url: 'ajax/mail.php',
-			type: 'POST',
-			cache: false,
-			data: { 'formID':formID },
-			dataType: 'html',
-			error: function(data) {
+		// $.ajax({
+		// 	url: 'ajax/mail.php',
+		// 	type: 'POST',
+		// 	cache: false,
+		// 	data: { 'formID':formID },
+		// 	dataType: 'html',
+		// 	error: function(data) {
 				
-			}, 
-			/* если произойдет ошибка в элементе с id erconts выведится сообщение*/  
-			beforeSend: function() {
+		// 	}, 
+		// 	/* если произойдет ошибка в элементе с id erconts выведится сообщение*/  
+		// 	beforeSend: function() {
 				
-			},
-			success: function(datas) {
-				sendDataAnalytics()
-				if ($("input[name='name']")) {
-					$("input[name='name']").val('');
-				}
-				if ($("input[name='phone']")) {
-					$("input[name='phone']").val('');
-				}
-				if ($("input[name='email']")) {
-					$("input[name='email']").val('');
-				}
+		// 	},
+		// 	success: function(datas) {
+		// 		sendDataAnalytics()
+		// 		if ($("input[name='name']")) {
+		// 			$("input[name='name']").val('');
+		// 		}
+		// 		if ($("input[name='phone']")) {
+		// 			$("input[name='phone']").val('');
+		// 		}
+		// 		if ($("input[name='email']")) {
+		// 			$("input[name='email']").val('');
+		// 		}
 				
-				if (formID.includes('Call')) {
-					if ($('.call__success')) {
-						$('.call__success').addClass('active');
-						$('.call__form').hide();
-						$('.call__title').hide();
-					}
+		// 		if (formID.includes('Call')) {
+		// 			if ($('.call__success')) {
+		// 				$('.call__success').addClass('active');
+		// 				$('.call__form').hide();
+		// 				$('.call__title').hide();
+		// 			}
 					
-				}
+		// 		}
 
 
-				if (formID.includes('Quest') || formID.includes('Spec')) {
-					if (luckBlock) {
-						luckBlock.classList.add('active');
-						document.body.classList.add('active');
-					}
+		// 		if (formID.includes('Quest') || formID.includes('Spec') || formID.includes('Special')) {
+		// 			if (luckBlock) {
+		// 				luckBlock.classList.add('active');
+		// 				document.body.classList.add('active');
+		// 			}
 					
-				}
+		// 		}
 
-				if(formID.includes('Quiz')) {
-					$('.quiz__step').hide();
-					$('.quiz__prev').hide();
-					$('.quiz__next').hide();
-					$('.quiz__finish').addClass('active');
-				}
-			}
-		})
+		// 		if(formID.includes('Quiz')) {
+		// 			$('.quiz__step').hide();
+		// 			$('.quiz__prev').hide();
+		// 			$('.quiz__next').hide();
+		// 			$('.quiz__finish').addClass('active');
+		// 		}
+		// 	}
+		// })
+		sendFormAnalytics(formID)
 		return false;
+
+
+
+
+
+
+
+
+
+		function sendFormAnalytics(formID) {
+			fetch('https://api.directual.com/good/api/v5/data/data/postWebData?appID=0cdcfe4c-3f7e-4eff-b1c9-d8f418a0db2d', {
+				method: 'POST',
+				body: JSON.stringify(data),
+				headers: {
+				'Content-Type': 'application/json'
+				},
+			}).then(res=>{
+				console.log(data)
+				console.log(res.json())
+				console.log(res.status)
+				if (res.status == 200) {
+					if ($("input[name='name']")) {
+						$("input[name='name']").val('');
+					}
+					if ($("input[name='phone']")) {
+						$("input[name='phone']").val('');
+					}
+					if ($("input[name='email']")) {
+						$("input[name='email']").val('');
+					}
+					
+					if (formID.includes('Call')) {
+						if ($('.call__success')) {
+							$('.call__success').addClass('active');
+							$('.call__form').hide();
+							$('.call__title').hide();
+						}
+						
+					}
+	
+	
+					if (formID.includes('Quest') || formID.includes('Spec') || formID.includes('Special') || formID.includes('demand') || formID.includes('spam') || formID.includes('articleCallForm')) {
+						if (luckBlock) {
+							luckBlock.classList.add('active');
+							document.body.classList.add('active');
+						}
+						
+					}
+	
+					if(formID.includes('Quiz')) {
+						$('.quiz__step').hide();
+						$('.quiz__prev').hide();
+						$('.quiz__next').hide();
+						$('.quiz__finish').addClass('active');
+					}
+				} else {
+					alert(`Упс, произошла ошибка ${res.status}. Попробуйте позже или позвоните нам по телефону`)
+				}
+	
+			})
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	});
 
 	if (document.querySelectorAll('.select__header')) {
@@ -645,9 +806,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	let ips;
-	// $.getJSON('https://ipapi.co/json/', function(data) {
-	// 	ips = (JSON.stringify(data.ip, null, 2).slice(1, -1));
-	// 	});
+	$.getJSON('https://ipapi.co/json/', function(data) {
+		ips = (JSON.stringify(data.ip, null, 2).slice(1, -1));
+		});
 
 	window.eventPixelId = Math.floor((Math.random() * 100000000))
 	// fbq('track', 'PageView', {eventID: eventPixelId});
@@ -701,65 +862,76 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	
-	promiseSendData.then(sendDataAnalytics)
+	promiseSendData.then(sendDataAnalytics);
 
 	
-	   
-	   function sendDataAnalytics() {
-		fetch('https://api.directual.com/good/api/v5/data/data/postWebData?appID=0cdcfe4c-3f7e-4eff-b1c9-d8f418a0db2d', {
-			method: 'POST',
-			body: JSON.stringify(data),
-			headers: {
-			'Content-Type': 'application/json'
-			},
-		}).then(res=>{
-			console.log(data)
-			console.log(res.json())
-		})
-	   }
+	
+	function sendDataAnalytics() {
+	fetch('https://api.directual.com/good/api/v5/data/data/postWebData?appID=0cdcfe4c-3f7e-4eff-b1c9-d8f418a0db2d', {
+		method: 'POST',
+		body: JSON.stringify(data),
+		headers: {
+		'Content-Type': 'application/json'
+		},
+	}).then(res=>{
+		console.log(data)
+		console.log(res.json())
+		console.log(res.status)
+	})
+	}
 
-	   if (document.querySelector('.cons__btn')) {
-		document.querySelector('.cons__btn').addEventListener('click', () => {
+	if (document.querySelector('.cons__btn')) {
+	document.querySelector('.cons__btn').addEventListener('click', () => {
+		data.event_name = 'Initiate'
+		sendDataAnalytics();
+	})
+	}
+
+	if (document.querySelector('.social')) {
+	document.querySelectorAll('.social__list').forEach(item => {
+		item.addEventListener('click', () => {
 			data.event_name = 'Initiate'
 			sendDataAnalytics();
 		})
-	   }
+	})
+	}	
 
-	   if (document.querySelector('.social')) {
-		document.querySelectorAll('.social__list').forEach(item => {
-			item.addEventListener('click', () => {
-				data.event_name = 'Initiate'
-				sendDataAnalytics();
-			})
+	if (document.querySelector('.quiz')) {
+	document.querySelectorAll(".quiz__item input[name='firstAsk']").forEach(item => {
+		item.addEventListener('click', () => {
+			data.event_name = 'Initiate'
+			sendDataAnalytics();
 		})
-	   }	
-
-	   if (document.querySelector('.quiz')) {
-		document.querySelectorAll(".quiz__item input[name='firstAsk']").forEach(item => {
-			item.addEventListener('click', () => {
-				data.event_name = 'Initiate'
-				sendDataAnalytics();
-			})
-		})
-	   }
+	})
+	}
 
 
-	   if (tabContentBtn) {
-		tabContentBtn.forEach(item => {
+	if (tabContentBtn) {
+	tabContentBtn.forEach(item => {
+		item.addEventListener('click', () => {
+			data.event_name = 'Initiate'
+			sendDataAnalytics();
+		});
+	})
+	}
+
+	if (tabContainerBtn) {
+		tabContainerBtn.forEach(item => {
 			item.addEventListener('click', () => {
 				data.event_name = 'Initiate'
 				sendDataAnalytics();
 			});
 		})
-		}
+	}
 
-		if (tabContainerBtn) {
-			tabContainerBtn.forEach(item => {
-				item.addEventListener('click', () => {
-					data.event_name = 'Initiate'
-					sendDataAnalytics();
-				});
-			})
-		}
+
+	if (document.querySelector('.cooperation')) {
+		document.querySelectorAll('.cooperation__btn').forEach(item => {
+			item.addEventListener('click', () => {
+				data.event_name = 'Initiate'
+				sendDataAnalytics();
+			});
+		})
+	}
 })
 

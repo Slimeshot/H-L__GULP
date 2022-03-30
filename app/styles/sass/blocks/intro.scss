@@ -1,0 +1,195 @@
+.intro {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column: span 15;
+    grid-row: span 7;
+    background: #FBFDFC;
+    br {
+        display: none;
+    }
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column: span 8;
+        grid-row: span 6;
+    }
+    @media (max-width: 540px) {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-column: span 5;
+        grid-row: span 8;
+
+    }
+}
+.intro__navigation {
+    grid-column: 3 / 7;
+    grid-row: 1 / 2;
+    z-index: 1;
+    @media (max-width: 1024px) {
+        grid-column: 3 / 8;
+        grid-row: 1 / 2;
+        z-index: 5;
+    }
+}
+
+.intro__social {
+    grid-column: 15 / 16;
+    grid-row: 1 / 5;
+    z-index: 1;
+    @media (max-width: 1024px) {
+        grid-column: 8 / 9;
+        grid-row: 1 / 5;
+    }
+    @media (max-width: 540px) {
+        grid-column: 5 / 6;
+        grid-row: 1 / 5;
+        .social__list {
+            &:not(:first-child) {
+                display: none;
+            }
+        }
+    }
+
+}
+
+.intro__logo {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: center;
+    font-family: 'Forum', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.6em;
+    line-height: 1em;
+    color: #1F7537;
+    text-decoration: none;
+    &:hover {
+        color: #1F7537;
+    }
+    @media (max-width: 540px) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        text-align: center;
+    }
+}
+
+
+.intro__color-1 {
+    grid-column: 13 / 14;
+    grid-row: 1 / 2;
+    background-color: $lightgreen;
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+.intro__color-2 {
+    grid-column: 7 / 8;
+    grid-row: 3 / 4;
+    background-color: $lightgreen;
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.intro__title {
+    grid-column: 2 / 7;
+    grid-row: 3 / 6;
+    font-family: Forum, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9.6em;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #0D5220;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 1024px) {
+        font-size: 6.4em;
+        line-height: 1.14em;
+        grid-column: 2 / 5;
+        grid-row: 3 / 6;
+    }
+    @media (max-width: 540px) {
+        font-size: 32px;
+        line-height: 36px;
+        text-align: center;
+        grid-column: 1 / 6;
+        grid-row: 2 / 4;
+        align-self: center;
+        br {
+            display: block;
+        }
+    }
+}
+
+.intro__subtitle {
+    grid-column: 2 / 7;
+    grid-row: 5 / 6;
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.4em;
+    line-height: 1.5em;
+    color: #0D5220;
+    align-self: flex-end;
+    position: relative;
+    z-index: 1;
+    br {
+        display: block;
+    }
+    @media (max-width: 1024px) {
+        font-size: 1.8em;
+        line-height: 1.6;
+        align-self: flex-start;
+    }
+    @media (max-width: 768px) {
+        font-size: 2em;
+        line-height: 1.5;
+        align-self: flex-start;
+    }
+    @media (max-width: 540px) {
+        font-size: 16px;
+        line-height: 24px;
+        grid-column: 1 / 6;
+        grid-row: 3 / 5;
+        align-self: center;
+        text-align: center;
+    }
+}
+.intro__btn {
+    grid-column: 2 / 5;
+    grid-row: 7 / 8;
+    @media (max-width: 1024px) {
+        grid-column: 1 / 4;
+        grid-row: 6 / 7;
+    }
+    @media (max-width: 540px) {
+        grid-column: 1 / 6;
+        grid-row: 8 / 9;
+    }
+}
+
+.bg__intro {
+    grid-column: 6 / 15;
+    grid-row: 2 / 8;
+    background-image: url(../images/dist/intro/bg-intro.png);
+    background-size: cover;
+    @media (max-width: 1024px) {
+        grid-column: 4 / 9;
+        grid-row: 3 / 7;
+    }
+    @media (max-width: 540px) {
+        grid-column: 1 / 6;
+        grid-row: 4 / 8;
+        margin-left: -30px;
+        margin-top: 20px;
+        // background-image: url(../images/dist/intro/Bg__intro-mob.png);
+    }
+}
+
+
+
+
+
+

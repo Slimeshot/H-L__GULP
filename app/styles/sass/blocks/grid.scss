@@ -84,10 +84,10 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(59, 1fr);
+    grid-template-rows: repeat(65, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    --nr:59; /* number of rows */
+    --nr:65; /* number of rows */
     --nc:15; /* number of columns */
     --b:1px; /* border length */
     
@@ -108,8 +108,8 @@
   .physical {
     .grid {
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(60, 1fr);
-      --nr:60; /* number of rows */
+      grid-template-rows: repeat(69, 1fr);
+      --nr:69; /* number of rows */
       --nc:8; /* number of columns */ 
     }
   }
@@ -121,8 +121,8 @@
   .physical {
     .grid {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(97, 1fr);
-      --nr:97; /* number of rows */
+      grid-template-rows: repeat(110, 1fr);
+      --nr:110; /* number of rows */
       --nc:5; /* number of columns */
     }
   }
@@ -140,10 +140,10 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(63, 1fr);
+    grid-template-rows: repeat(66, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    --nr:63; /* number of rows */
+    --nr:66; /* number of rows */
     --nc:15; /* number of columns */
     --b:1px; /* border length */
     
@@ -162,8 +162,8 @@
   .legal {
     .grid {
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(58, 1fr);
-      --nr:58; /* number of rows */
+      grid-template-rows: repeat(67, 1fr);
+      --nr:67; /* number of rows */
       --nc:8; /* number of columns */ 
     }
   }
@@ -175,8 +175,8 @@
   .legal {
     .grid {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(92, 1fr);
-      --nr:92; /* number of rows */
+      grid-template-rows: repeat(105, 1fr);
+      --nr:105; /* number of rows */
       --nc:5; /* number of columns */
     }
   }
@@ -192,10 +192,10 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(68, 1fr);
+    grid-template-rows: repeat(74, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    --nr:68; /* number of rows */
+    --nr:74; /* number of rows */
     --nc:15; /* number of columns */
     --b:1px; /* border length */
     
@@ -216,8 +216,8 @@
   .agent {
     .grid {
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(71, 1fr);
-      --nr:71; /* number of rows */
+      grid-template-rows: repeat(81, 1fr);
+      --nr:81; /* number of rows */
       --nc:8; /* number of columns */ 
     }
   }
@@ -229,8 +229,8 @@
   .agent {
     .grid {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(118, 1fr);
-      --nr:118; /* number of rows */
+      grid-template-rows: repeat(131, 1fr);
+      --nr:131; /* number of rows */
       --nc:5; /* number of columns */
     }
   }
@@ -256,10 +256,10 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(68, 1fr);
+    grid-template-rows: repeat(74, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    --nr:68; /* number of rows */
+    --nr:74; /* number of rows */
     --nc:15; /* number of columns */
     --b:1px; /* border length */
     
@@ -278,8 +278,8 @@
   .lawyer {
     .grid {
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(74, 1fr);
-      --nr:74; /* number of rows */
+      grid-template-rows: repeat(83, 1fr);
+      --nr:83; /* number of rows */
       --nc:8; /* number of columns */ 
     }
   }
@@ -291,8 +291,8 @@
   .lawyer {
     .grid {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(119, 1fr);
-      --nr:119; /* number of rows */
+      grid-template-rows: repeat(132, 1fr);
+      --nr:132; /* number of rows */
       --nc:5; /* number of columns */
     }
   }
@@ -306,10 +306,10 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(70, 1fr);
+    grid-template-rows: repeat(76, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    --nr:70; /* number of rows */
+    --nr:76; /* number of rows */
     --nc:15; /* number of columns */
     --b:1px; /* border length */
     
@@ -330,8 +330,8 @@
   .admin {
     .grid {
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(77, 1fr);
-      --nr:77; /* number of rows */
+      grid-template-rows: repeat(86, 1fr);
+      --nr:86; /* number of rows */
       --nc:8; /* number of columns */ 
     }
   }
@@ -343,8 +343,8 @@
   .admin {
     .grid {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(123, 1fr);
-      --nr:123; /* number of rows */
+      grid-template-rows: repeat(136, 1fr);
+      --nr:136; /* number of rows */
       --nc:5; /* number of columns */
     }
   }
@@ -360,10 +360,10 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(70, 1fr);
+    grid-template-rows: repeat(78, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    --nr:70; /* number of rows */
+    --nr:78; /* number of rows */
     --nc:15; /* number of columns */
     --b:1px; /* border length */
     
@@ -384,8 +384,8 @@
   .arbitr {
     .grid {
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(77, 1fr);
-      --nr:77; /* number of rows */
+      grid-template-rows: repeat(89, 1fr);
+      --nr:89; /* number of rows */
       --nc:8; /* number of columns */ 
     }
   }
@@ -397,8 +397,8 @@
   .arbitr {
     .grid {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(123, 1fr);
-      --nr:123; /* number of rows */
+      grid-template-rows: repeat(140, 1fr);
+      --nr:140; /* number of rows */
       --nc:5; /* number of columns */
     }
   }
@@ -490,8 +490,8 @@
   .entrys {
     .grid {
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(34, 1fr);
-      --nr:34; /* number of rows */
+      grid-template-rows: repeat(36, 1fr);
+      --nr:36; /* number of rows */
       --nc:8; /* number of columns */ 
     }
   }
@@ -503,8 +503,8 @@
   .entrys {
     .grid {
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(53, 1fr);
-      --nr:53; /* number of rows */
+      grid-template-rows: repeat(55, 1fr);
+      --nr:55; /* number of rows */
       --nc:5; /* number of columns */
     }
   }
@@ -563,6 +563,50 @@
 }
 
 
+
+
+
+.policy {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(100, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    --nr:100; /* number of rows */
+    --nc:15; /* number of columns */
+    --b:1px; /* border length */
+    
+    width: 100%;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
+    background:
+      linear-gradient(to right, var(--g)),
+      linear-gradient(to bottom,var(--g));
+    background-size:
+      calc((100% - var(--b)*(var(--nc) - 1))/var(--nc) + var(--b)) 100%,
+      100% calc((100% - var(--b)*(var(--nr) - 1))/var(--nr) + var(--b));
+  }
+}
+@media (max-width: 1024px) {
+  .policy {
+    .grid {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(118, 1fr);
+      --nr:118; /* number of rows */
+      --nc:8; /* number of columns */ 
+    }
+  }
+}
+@media (max-width: 540px) {
+  .policy {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(210, 1fr);
+      --nr:210; /* number of rows */
+      --nc:5; /* number of columns */
+    }
+  }
+}
 
 
 
@@ -1024,6 +1068,79 @@
 
 
 
+
+
+
+.information-11 {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(55, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    --nr:55; /* number of rows */
+    --nc:15; /* number of columns */
+    --b:1px; /* border length */
+    
+    width: 100%;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
+    background:
+      linear-gradient(to right, var(--g)),
+      linear-gradient(to bottom,var(--g));
+    background-size:
+      calc((100% - var(--b)*(var(--nc) - 1))/var(--nc) + var(--b)) 100%,
+      100% calc((100% - var(--b)*(var(--nr) - 1))/var(--nr) + var(--b));
+  }
+}
+@media (max-width: 1024px) {
+  .information-11 {
+    .grid {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(57, 1fr);
+      --nr:57; /* number of rows */
+      --nc:8; /* number of columns */ 
+    }
+  }
+}
+@media (max-width: 540px) {
+  .information-11 {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(97, 1fr);
+      --nr:97; /* number of rows */
+      --nc:5; /* number of columns */
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .services {
   .grid {
     display: grid;
@@ -1074,6 +1191,7 @@
 
 
 
+
 .multiLinks {
   .grid {
     max-width: 1024px;
@@ -1104,6 +1222,175 @@
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(27, 1fr);
       --nr:27; /* number of rows */
+      --nc:5; /* number of columns */
+    }
+  }
+}
+
+
+
+
+.bailiffs {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(27, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    --nr:27; /* number of rows */
+    --nc:15; /* number of columns */
+    --b:1px; /* border length */
+    
+    width: 100%;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
+    background:
+      linear-gradient(to right, var(--g)),
+      linear-gradient(to bottom,var(--g));
+    background-size:
+      calc((100% - var(--b)*(var(--nc) - 1))/var(--nc) + var(--b)) 100%,
+      100% calc((100% - var(--b)*(var(--nr) - 1))/var(--nr) + var(--b));
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .bailiffs {
+    .grid {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(29, 1fr);
+      --nr:29; /* number of rows */
+      --nc:8; /* number of columns */ 
+    }
+  }
+}
+
+
+
+@media (max-width: 540px) {
+  .bailiffs {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(50, 1fr);
+      --nr:50; /* number of rows */
+      --nc:5; /* number of columns */
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.freeconsultation {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(40, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    --nr:40; /* number of rows */
+    --nc:15; /* number of columns */
+    --b:1px; /* border length */
+    
+    width: 100%;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
+    background:
+      linear-gradient(to right, var(--g)),
+      linear-gradient(to bottom,var(--g));
+    background-size:
+      calc((100% - var(--b)*(var(--nc) - 1))/var(--nc) + var(--b)) 100%,
+      100% calc((100% - var(--b)*(var(--nr) - 1))/var(--nr) + var(--b));
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .freeconsultation {
+    .grid {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(42, 1fr);
+      --nr:42; /* number of rows */
+      --nc:8; /* number of columns */ 
+    }
+  }
+}
+
+
+
+@media (max-width: 540px) {
+  .freeconsultation {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(67, 1fr);
+      --nr:67; /* number of rows */
+      --nc:5; /* number of columns */
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.individual {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(93, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    --nr:93; /* number of rows */
+    --nc:15; /* number of columns */
+    --b:1px; /* border length */
+    
+    width: 100%;
+    --g:transparent calc(100% - var(--b)),rgba(187, 187, 187, 0.1) 0;
+    background:
+      linear-gradient(to right, var(--g)),
+      linear-gradient(to bottom,var(--g));
+    background-size:
+      calc((100% - var(--b)*(var(--nc) - 1))/var(--nc) + var(--b)) 100%,
+      100% calc((100% - var(--b)*(var(--nr) - 1))/var(--nr) + var(--b));
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .individual {
+    .grid {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(93, 1fr);
+      --nr:93; /* number of rows */
+      --nc:8; /* number of columns */ 
+    }
+  }
+}
+
+
+
+@media (max-width: 540px) {
+  .individual {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(151, 1fr);
+      --nr:151; /* number of rows */
       --nc:5; /* number of columns */
     }
   }

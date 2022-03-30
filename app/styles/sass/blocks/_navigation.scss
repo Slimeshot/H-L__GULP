@@ -27,14 +27,14 @@
 }
 
 
-.contacts, .information, .entrys, .services {
+.contacts, .information, .entrys, .services, .bailiffs, .freeconsultation, .individual{
     .navigation__link {
         color: #676767;
     }
 }
 
 @media (max-width: 768px)  {
-    .contacts, .information, .entrys, .services {
+    .contacts, .information, .entrys, .services, .bailiffs, .freeconsultation, .individual{
         .navigation__link {
             color: #fff;
         }

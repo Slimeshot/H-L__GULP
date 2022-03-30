@@ -36,7 +36,24 @@ a {
     color: #A5C8AF;
 }
 
-
+.roww {
+    display: grid;
+    grid-template-columns: 15;
+    grid-template-rows: 1;
+    grid-column: span 15;
+    grid-row: span 1;
+    display: none;
+    @media(max-width: 1024px){
+        display: block;
+        grid-template-columns: 8;
+        grid-template-rows: 1;
+        grid-column: span 8;
+        grid-row: span 1;
+    }
+    @media(max-width: 540px) {
+        display: none;
+    }
+}
 
 
 body.active {
